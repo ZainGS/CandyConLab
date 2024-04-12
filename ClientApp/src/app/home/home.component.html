@@ -125,8 +125,8 @@
               <div class="noselect nodrag title-container">
                 <span class="glow" style="color: #FF0095; font-weight:500; white-space:nowrap;">︾ CANDY CON LAB // BUILD YOUR CONTROLLER</span>
               </div>
-              <div class="noselect nodrag" style="margin-top: -12px; margin-bottom:6px; text-align: start; margin-left: 60px;">
-                <span class="shadow-text glow-anim" style="margin-left: 7vw;">POWERED BY // GAMESTOP</span>
+              <div class="noselect nodrag sub-title-container" style="margin-top: -12px; margin-bottom:6px; text-align: start; margin-left: 60px;">
+                <span class="shadow-text glow-anim sub-title-text" style="margin-left: 7vw;">POWERED BY // GAMESTOP</span>
 
               </div>
               <span class="faded-repeat-text" style="margin-left: 7vw; position: absolute; opacity: .2; font-size: 30px; margin-top: -48px;">CREATE. PLAY. REPEAT. CREATE. PLAY. REPEAT. CREATE. PLAY. REPEAT. CREATE. PLAY. REPEAT. CREATE. PLAY. REPEAT.</span>
@@ -137,7 +137,7 @@
               <div>
 
                 <!-- FACEPLATE -->
-                <div style="display: flex; align-items: start; gap: 20px;">
+                <div class="faceplate-selection-position" style="display: flex; align-items: start; gap: 20px;">
                   <div class="selection-box"
                        [ngStyle]="
                   {'box-shadow' : selectedFaceplate == null ?
@@ -169,7 +169,7 @@
                 </div>
 
                 <!-- THUMBSTICK -->
-                <div class="selection-box" style="margin-top: 24vh; backdrop-filter: blur(10px);"
+                <div class="selection-box thumbstick-selection-position" style="backdrop-filter: blur(10px);"
                      [ngStyle]="
                  {'box-shadow' : selectedRightThumbstick == null ?
                  '0 0 50px #fff, -10px 0 20px #f0f, 10px 0 20px #0ff' :
@@ -189,16 +189,16 @@
 
 
                 <!-- DPAD -->
-                <div style="display: flex; flex-direction: row; align-items: start; gap: 20px; ">
+                <div class="dpad-selection-position" style="display: flex; flex-direction: row; align-items: start; gap: 20px; ">
                   <!-- DPAD Selection Box -->
-                  <div class="selection-box" style="margin-top: 48vh; backdrop-filter: blur(10px);"
+                  <div class="selection-box" style="backdrop-filter: blur(10px);"
                        [ngStyle]="{'box-shadow': selectedDPad == null ? '0 0 50px #fff, -10px 0 80px #f0f, 10px 0 80px #0ff' : '0 0 50px ' + colorMapping[selectedDPad?.partColor] + ', -10px 0 80px #f0f, 10px 0 80px #0ff',
                     'border': selectedDPad == null ? '7px double rgba(255,255,255,.05)' : '7px double rgba(' + hexToRgb(colorMapping[selectedDPad?.partColor]).join(',') + ',.1)'}">
                     <img *ngIf="selectedDPad== null" class="default-selection-img" width="100%" src="assets/dpad.svg" alt="DPad icon" style="transform: scale(.7)">
                     <img *ngIf="selectedDPad!= null" class="selection-img" width="100%" [src]="selectedDPad.imageUrls[0]" alt="DPadicon">
                   </div>
                   <!-- DPAD Switcher -->
-                  <div class="selection-box-setting" style="margin-top: 48vh;">
+                  <div class="selection-box-setting">
                     <div>
                       <!-- Top Toggle: Classic DPad -->
                       <div>
@@ -252,10 +252,10 @@
               </div>
 
               <!-- CANDY CON Branding: Logo + Slogan -->
-              <div>
-                <img class="noselect nodrag" width="200" style="margin-top:-114px;" src="assets/candycon_logo_light.png" alt="CandyConLab">
+              <div class="candycon-logo-container">
+                <img class="noselect nodrag candycon-logo" src="assets/candycon_logo_light.png" alt="CandyConLab">
               </div>
-              <div style="margin-top: -20px !important;">
+              <div class="candycon-slogan">
                 <span class="noselect nodrag shadow-text ms-1">CREATE. PLAY. REPEAT.</span>
               </div>
             </div>
@@ -264,7 +264,7 @@
             <!-- Tools -->
             <div class="flex-item" style="align-content: end; text-align: -webkit-right; white-space: nowrap; overflow: hidden;">
               <div style="position: absolute; left: 78%; top: 11vw; margin-top: 10px;">
-                <div>
+                <div class="randomizer-container">
                   <!-- Randomizer -->
                   <button class="mat-elevation-z1" (click)="randomize()" style="z-index: 100;  max-width: 80px; max-height: 80px; width: 60px; height: 60px;  transform: scale(.95); background-color: transparent; border: 5px solid rgba(255,255,255,.05); border-radius: 10px; backdrop-filter: blur(10px); ">
                     <img [@rotate-jump]="rotateJumpState" src="assets/dice.svg" alt="randomize icon" style="opacity: .6; margin-left: -6px; transform-origin: center;" width="50" />
@@ -296,7 +296,7 @@
 
         <!-- Version Information -->
         <span class="noselect nodrag" style="font-size: 20px; position: relative; top: 0%; min-width: max-content; text-align-last: center;">
-          <div>
+          <div class="versioning">
             <span style="position: fixed; bottom: 0; right: 0; font-size: 12px; margin-right: 10px;">
               <span class="text-jump-anim ms-3">
                 <span style="color:yellow">&nbsp;●&nbsp;</span>

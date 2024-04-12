@@ -119,9 +119,6 @@ span, h5, div {
 .lockin-button-text {
   font-size: 86px;
   padding-top: 20px;
-  /*color: white;
-  opacity: .5;
-  -webkit-text-stroke: 1px white;*/
   text-shadow: 4px 4px 2px rgba(255, 0, 157, 1);
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-weight: 100;
@@ -384,6 +381,40 @@ span, h5, div {
     margin-bottom: -16px;
   }
 
+.mat-mdc-slider.mat-accent {
+  --mdc-slider-handle-color: rgba(175, 195, 201,0);
+  --mdc-slider-focus-handle-color: rgba(255,255,255,0);
+  --mdc-slider-focus-handle--shadow-color: rgba(255,255,255,0);
+  --mdc-slider-active-track-color: rgba(255,255,255,.3);
+  --mdc-slider-inactive-track-color: rgba(255,255,255,.25);
+  --mdc-slider-inactive-track-height: 16px;
+  --mdc-slider-inactive-track-shape: 8px;
+  --mdc-slider-active-track-height: 8px;
+  --mdc-slider-handle-height: 8px;
+  --mdc-slider-handle-width: 8px;
+}
+
+.mat-ripple .mat-mdc-focus-indicator .mat-ripple-element .mat-mdc-slider-active-ripple {
+  display: none !important;
+}
+
+.candycon-logo {
+  margin-top: -114px;
+  width: 200px
+}
+
+.candycon-slogan {
+  margin-top: -20px !important;
+}
+
+.thumbstick-selection-position {
+  margin-top: 24vh;
+}
+
+.dpad-selection-position {
+  margin-top: 48vh;
+}
+
 @media (max-width: 1800px) {
   .title-container {
     font-size: 70px !important;
@@ -408,6 +439,10 @@ span, h5, div {
     text-align: start;
   }
 }
+
+
+
+
 @media (max-width: 1420px) {
   .title-container {
     font-size: 54px !important;
@@ -465,24 +500,6 @@ span, h5, div {
   }
 }
 
-.mat-mdc-slider.mat-accent {
-  --mdc-slider-handle-color: rgba(175, 195, 201,0);
-  --mdc-slider-focus-handle-color: rgba(255,255,255,0);
-  --mdc-slider-focus-handle--shadow-color: rgba(255,255,255,0);
-
-  --mdc-slider-active-track-color: rgba(255,255,255,.3);
-  --mdc-slider-inactive-track-color: rgba(255,255,255,.25);
-  --mdc-slider-inactive-track-height: 16px;
-  --mdc-slider-inactive-track-shape: 8px;
-  --mdc-slider-active-track-height: 8px;
-  --mdc-slider-handle-height: 8px;
-  --mdc-slider-handle-width: 8px;
-}
-
-.mat-ripple .mat-mdc-focus-indicator .mat-ripple-element .mat-mdc-slider-active-ripple {
-  display: none !important;
-}
-
 @media (max-width: 1000px) {
   .title-container {
     font-size: 32px !important;
@@ -500,10 +517,453 @@ span, h5, div {
     background-color: transparent;
   }
 
+  .candycon-logo {
+    margin-top: -114px;
+    width: 100px
+  }
+
   .submit-button {
     white-space: nowrap;
-    margin-bottom: 100%;
+    margin-bottom: 45%;
     margin-right: 10vh;
   }
 }
 
+@media (max-height: 750px) {
+  .candycon-logo {
+    margin-top: -114px;
+    width: 140px;
+  }
+}
+
+@media (max-height: 715px) and (max-width: 1460px) {
+  .candycon-logo {
+    margin-top: -155px;
+    width: 130px;
+  }
+
+  .candycon-slogan {
+    margin-top: -50px !important;
+  }
+
+  .selection-box {
+    position: absolute;
+    margin-left: 3vw;
+    border-radius: 1vw;
+    align-content: center;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    min-width: 50px;
+    min-height: 50px;
+    max-width: 7vw;
+    max-height: 7vw;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-height: 715px) and (max-width: 1400px) {
+  .candycon-logo {
+    margin-top: -60px;
+    width: 130px;
+  }
+
+  .candycon-slogan {
+    margin-top: 0px !important;
+  }
+
+  .selection-box {
+    position: absolute;
+    margin-left: 3vw;
+    border-radius: 1vw;
+    align-content: center;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    min-width: 50px;
+    min-height: 50px;
+    max-width: 7vw;
+    max-height: 7vw;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 932px) and (max-height: 430px) {
+  .selection-box-setting {
+      display: none;
+  }
+}
+
+@media (max-width: 1100px) {
+  .selection-box-setting {
+    display: none;
+  }
+}
+
+@media (min-width: 2100px) and (max-height: 970px) {
+  .candycon-logo {
+    margin-top: -280px;
+    width: 130px;
+  }
+
+  .candycon-slogan {
+    margin-top: -100px !important;
+  }
+}
+
+@media (min-width: 2100px) and (max-height: 850px) {
+  .candycon-logo {
+    margin-top: -320px;
+    width: 120px;
+  }
+
+  .candycon-slogan {
+    margin-top: -120px !important;
+    display: none;
+  }
+}
+
+  @media (max-height: 700px) and (min-width: 1300px) {
+    .candycon-logo {
+      margin-top: -120px;
+      width: 130px;
+    }
+
+    .candycon-slogan {
+      margin-top: 0px !important;
+    }
+
+    .selection-box {
+      position: absolute;
+      margin-left: 3vw;
+      border-radius: 1vw;
+      align-content: center;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      min-width: 50px;
+      min-height: 50px;
+      max-width: 7vw;
+      max-height: 7vw;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  @media (max-height: 650px) and (min-width: 1600px) {
+
+    .candycon-slogan {
+      display: none;
+      margin-top: -50px !important;
+    }
+
+    .candycon-logo {
+      margin-top: -185px;
+      width: 110px;
+    }
+
+    .selection-box {
+      position: absolute;
+      margin-left: 3vw;
+      border-radius: 1vw;
+      align-content: center;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      min-width: 50px;
+      min-height: 50px;
+      max-width: 5vw;
+      max-height: 5vw;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  @media (max-height: 650px) and (min-width: 1550px) {
+
+    .candycon-slogan {
+      display: none;
+      margin-top: -50px !important;
+    }
+
+    .candycon-logo {
+      margin-top: -85px;
+      width: 110px;
+    }
+
+    .selection-box {
+      position: absolute;
+      margin-left: 3vw;
+      border-radius: 1vw;
+      align-content: center;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      min-width: 50px;
+      min-height: 50px;
+      max-width: 5vw;
+      max-height: 5vw;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  @media (max-height: 650px) and (max-width: 1325px) {
+
+    .candycon-slogan {
+      display: none;
+      margin-top: 0px !important;
+    }
+
+    .candycon-logo {
+      margin-top: -35px;
+      width: 110px;
+    }
+
+    .selection-box {
+      position: absolute;
+      margin-left: 3vw;
+      border-radius: 1vw;
+      align-content: center;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      min-width: 50px;
+      min-height: 50px;
+      max-width: 5vw;
+      max-height: 5vw;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+@media (max-width: 1050px) and (min-height: 750px) {
+  .candycon-slogan {
+    margin-top: -10px !important;
+  }
+
+  .candycon-logo {
+    margin-top: -15px;
+    width: 110px;
+  }
+}
+
+  @media (max-height: 595px) {
+    .candycon-logo {
+      display: none;
+      margin-top: -185px;
+      width: 110px;
+    }
+
+    .thumbstick-selection-position {
+      margin-top: 20vh;
+    }
+
+    .dpad-selection-position {
+      margin-top: 40vh;
+    }
+  }
+
+  @media (max-height: 500px) {
+
+    .thumbstick-selection-position {
+      margin-top: 18vh;
+    }
+
+    .dpad-selection-position {
+      margin-top: 36vh;
+    }
+  }
+
+@media (max-width: 650px) {
+
+  .submit-box {
+    transform: scale(.8);
+  }
+
+  .controller-container {
+      transform: scale(1);
+  }
+
+  .candycon-slogan {
+      transform: scale(1);
+  }
+
+  .candycon-logo-container {
+      transform: scale(1);
+  }
+
+  .flex-item {
+      overflow:visible;
+      white-space:normal;
+  }
+}
+
+@media (min-height: 715px) and (max-height: 750px) {
+
+  .candycon-slogan {
+    margin-top: 20px !important;
+  }
+
+  .candycon-logo {
+    margin-top: 15px;
+    width: 110px;
+  }
+  
+}
+
+@media (height: 600px) and (width: 1024px) {
+  .candycon-logo {
+    margin-top: -60px;
+    width: 130px;
+  }
+
+  .candycon-slogan {
+    margin-top: 0px !important;
+    display: inherit;
+  }
+
+  .selection-box {
+    position: absolute;
+    margin-left: 5vw;
+    border-radius: 1vw;
+    align-content: center;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    min-width: 50px;
+    min-height: 50px;
+    max-width: 10vw;
+    max-height: 10vw;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/// iPhone 12 Pro
+@media (width: 844px) and (height: 390px) {
+  .candycon-logo {
+    margin-top: -60px;
+    width: 130px;
+  }
+
+  .candycon-slogan {
+    margin-top: 0px !important;
+    display: inherit;
+  }
+
+  .selection-box {
+    position: absolute;
+    margin-left: 5vw;
+    border-radius: 1vw;
+    align-content: center;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    min-width: 50px;
+    min-height: 50px;
+    max-width: 8vw;
+    max-height: 8vw;
+    width: 100%;
+    height: 100%;
+  }
+
+  .faceplate-selection-position {
+    margin-top: -5vh;
+  }
+
+  .thumbstick-selection-position {
+    margin-top: 20vh;
+  }
+
+  .dpad-selection-position {
+    margin-top: 40vh;
+  }
+}
+
+@media (width: 390px) and (height: 844px) {
+
+  .versioning {
+      display:none;
+  }
+
+  .glow {
+    text-shadow: none;
+    font-size: 30px;
+  }
+
+  .title-container {
+    text-shadow: none;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 322px;
+    font-size: 19px;
+  }
+
+  .sub-title-container {
+      margin-top: 10px;
+  }
+
+  .sub-title-text {
+    font-size: 18px;
+  }
+
+  .candycon-logo {
+    margin-top: 100px;
+    width: 100px;
+    margin-right: 85px;
+  }
+
+  .candycon-slogan {
+    margin-top: -20px !important;
+    margin-right: 85px;
+    display: inherit;
+    transform: scale(.7);
+  }
+
+  .selection-box {
+    position: absolute;
+    margin-left: 5.5vw;
+    border-radius: 1vw;
+    align-content: center;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    min-width: 80px;
+    min-height: 80px;
+    max-width: 12vw;
+    max-height: 12vw;
+    width: 100px;
+    height: 100px;
+  }
+
+  .faceplate-selection-position {
+    position: absolute;
+    margin-top: 0vh;
+    margin-left: 2.5vh;
+  }
+
+  .thumbstick-selection-position {
+    position: absolute;
+    margin-left: 18vh;
+    margin-top: 0vh;
+  }
+
+  .dpad-selection-position {
+    position: absolute;
+    margin-top: 0vh;
+    margin-left: 28.5vh;
+  }
+
+  .controller-container {
+      min-width: 180px;
+      margin-right: 73px;
+      padding-right: 6px;
+      margin-top: 250px;
+  }
+
+  .randomizer-container {
+      margin-left: -380px;
+      margin-top: 150px;
+      transform: scale(.7);
+  }
+
+  .submit-box {
+      position:absolute;
+      margin-top: -350px;
+      margin-left: 96px;
+  }
+}
