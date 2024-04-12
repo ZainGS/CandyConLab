@@ -116,6 +116,7 @@ export class HomeComponent {
   // Sidenav
   isSidenavOpen = true;
   sidenavMode: MatDrawerMode = 'side'; // Default mode
+  browserWindow = window;
 
   // For dark/light mode theming
   mode = '#fff';
@@ -167,7 +168,7 @@ export class HomeComponent {
 
   adjustSidenavMode() {
     // Check window width and adjust sidenav mode
-    this.sidenavMode = window.innerWidth > 1200 ? 'side' : 'over';
+    this.sidenavMode = window.innerWidth > 1000 ? 'side' : 'over';
   }
 
   ngOnInit(): void {

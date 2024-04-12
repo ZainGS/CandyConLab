@@ -1,77 +1,999 @@
 .example-container {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: #eee;
-  }
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+background: #eee;
+}
 
 span, h5, div {
-    font-family: Impact;
+font-family: Impact;
 }
 
 .controller-container {
-  position: relative;
-  /* Ensure there's enough height for the images; they will overlap */
-  filter: drop-shadow(0 0 0.75rem black);
-  position: relative;
-  right: 37.5%;
-  margin-top: -50px;
-  display: block; /* Or 'block', depending on your layout needs */
+position: relative;
+/* Ensure there's enough height for the images; they will overlap */
+filter: drop-shadow(0 0 0.75rem black);
+position: relative;
+right: 37.5%;
+margin-top: -50px;
+display: block; /* Or 'block', depending on your layout needs */
 }
 
 .faceplate-overlay {
-  position: absolute;
-  width: 175%;
-  top: -23.5%;
-  transform: scale(1.5) !important;
-  right: -75%;
-  filter: drop-shadow(0 0 0.75rem black);
-  transform: scale(1.35) !important;
-  opacity: .98;
-  /* No need for 'right' and 'margin-top' properties here */
+position: absolute;
+width: 175%;
+top: -23.5%;
+transform: scale(1.5) !important;
+right: -75%;
+filter: drop-shadow(0 0 0.75rem black);
+transform: scale(1.35) !important;
+opacity: .98;
+/* No need for 'right' and 'margin-top' properties here */
 }
 
 
 .thumbstick-1-overlay {
-  position: absolute;
-  width: 100%;
-  top: 1%;
-  right: -35.5%;
-  filter: drop-shadow(0 0 0.75rem black);
-  /* No need for 'right' and 'margin-top' properties here */
+position: absolute;
+width: 100%;
+top: 1%;
+right: -35.5%;
+filter: drop-shadow(0 0 0.75rem black);
+/* No need for 'right' and 'margin-top' properties here */
   
 }
 
 
 .thumbstick-2-overlay {
-  position: absolute;
-  width: 100%;
-  top: -20%;
-  right: 27.3%;
-  filter: drop-shadow(0 0 0.75rem black);
-  /* No need for 'right' and 'margin-top' properties here */
+position: absolute;
+width: 100%;
+top: -20%;
+right: 27.3%;
+filter: drop-shadow(0 0 0.75rem black);
+/* No need for 'right' and 'margin-top' properties here */
 }
 
 
 .cropped-thumbstick {
-  width: 50%; /* width of container */
-  height: 100%; /* height of container */
-  object-fit: cover;
-  object-position: 87% 87%; /* try 20px 10px */
-  transform: scale(.73) !important;
+width: 50%; /* width of container */
+height: 100%; /* height of container */
+object-fit: cover;
+object-position: 87% 87%; /* try 20px 10px */
+transform: scale(.73) !important;
 }
 
 .cropped-thumbstick {
-  width: 50%; /* width of container */
-  height: 100%; /* height of container */
-  object-fit: cover;
-  object-position: 87% 87%; /* try 20px 10px */
-  transform: scale(.73) !important;
+width: 50%; /* width of container */
+height: 100%; /* height of container */
+object-fit: cover;
+object-position: 87% 87%; /* try 20px 10px */
+transform: scale(.73) !important;
 }
 
 .cropped-selection-thumbstick {
+width: 36%; /* width of container */
+height: 100%; /* height of container */
+object-fit: cover;
+object-position: 87% 87%; /* try 20px 10px */
+transform: scale(.73) !important;
+}
+
+.dpad-overlay {
+position: absolute;
+width: 100%;
+top: 8.5%;
+transform: scale(1.5) !important;
+right: 4.5%;
+filter: drop-shadow(0 0 0.75rem black);
+}
+
+.cropped-dpad-classic {
+width: 50%; /* width of container */
+height: 100%; /* height of container */
+object-fit: cover;
+object-position: 86.25% 87%; /* try 20px 10px */
+transform: scale(1) !important;
+margin-top: -2px !important;
+}
+
+.cropped-dpad-modern {
+width: 50%; /* width of container */
+height: 100%; /* height of container */
+object-fit: cover;
+object-position: 20.5% 17%; /* try 20px 10px */
+transform: scale(1) !important;
+margin-top: -5px !important;
+}
+
+.shadow-text {
+font-size: 28px;
+color: transparent;
+-webkit-text-stroke: 1px white;
+text-shadow: 0px 1px 4px rgba(255,0,157,.35);
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+font-weight: 400;
+}
+
+
+.lockin-button-text {
+font-size: 86px;
+padding-top: 20px;
+text-shadow: 4px 4px 2px rgba(255, 0, 157, 1);
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+font-weight: 100;
+border: none;
+background-color: transparent;
+}
+
+.faded-repeat-text {
+font-size: 86px;
+padding-top: 20px;
+/*color: white;
+opacity: .5;
+-webkit-text-stroke: 1px white;*/
+//text-shadow: 0px 1px 4px rgba(255,0,157,.35);
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+font-weight: 100;
+border: none;
+background-color: transparent;
+}
+
+.submit-box {
+position: relative;
+text-align: -webkit-center;
+max-width: fit-content;
+}
+
+.submit-button {
+white-space: nowrap;
+margin-bottom: 32%;
+margin-right: 10vh;
+}
+
+.selection-box {
+position: absolute;
+margin-left: 3vw;
+border-radius: 1vw;
+align-content: center;
+text-align: center;
+backdrop-filter: blur(10px);
+min-width: 100px;
+min-height: 100px;
+max-width: 8vw;
+max-height: 8vw;
+width: 100%;
+height: 100%;
+}
+
+.selection-box-setting {
+position: absolute;
+margin-left: 9vw;
+border-radius: 1vw;
+align-content: center;
+text-align: center;
+min-width: 100px;
+min-height: 100px;
+max-width: 8vw;
+max-height: 8vw;
+width: 100%;
+height: 100%;
+}
+
+.default-selection-img {
+opacity: .5;
+}
+
+.selection-img {
+opacity: .95;
+filter: drop-shadow(0 0 0.75rem black);
+}
+
+mat-panel-title {
+font-family: Impact;
+font-weight: 100;
+letter-spacing: 1px;
+}
+
+mat-sidenav {
+min-width: 300px;
+overflow-y: hidden !important;
+}
+
+mat-sidenav-container {
+height: 94vh; /* Adjust the height as needed */
+}
+
+mat-sidenav-content {
+background-color: white;
+}
+
+button {
+width: 100%;
+color: black;
+}
+
+.sidenav-expansion-button {
+position: absolute;
+top: 40%;
+left: 20px;
+z-index: 100;
+max-width: 4px;
+transform: scale(.6);
+min-height: 70px;
+border-radius: 10px;
+border-width: 0px;
+background-color: white;
+}
+
+.sidenav-expansion-button:hover {
+background-color: deeppink;
+}
+
+.floating-anim {
+transform: rotateZ(-2.4deg) rotateY(-20deg);
+animation: rotating 6s ease-in-out infinite alternate;
+}
+
+@keyframes rotating {
+100% {
+transform: rotateZ(1.2deg) rotateY(20deg);
+}
+}
+
+.text-jump-anim span {
+position: relative;
+font-size: 18px;
+top: 0px;
+display: inline-block;
+animation: bounce 0.3s ease infinite alternate;
+}
+
+@keyframes bounce {
+100% {
+top: -2px;
+/*
+text-shadow: 0 1px #ccc, 
+          0 2px #ccc, 
+          0 3px #ccc, 
+          0 4px #ccc, 
+          0 5px #ccc,
+          0 6px #ccc, 
+          0 7px #ccc, 
+          0 8px #ccc, 
+          0 9px #ccc, 
+          0 50px 25px rgba(0, 0, 0, 0.2);
+*/
+}
+}
+
+.text-jump-anim span:nth-child(2) {
+animation-delay: 0.1s;
+}
+
+.text-jump-anim span:nth-child(3) {
+animation-delay: 0.2s;
+}
+
+.text-jump-anim span:nth-child(4) {
+animation-delay: 0.3s;
+}
+
+.text-jump-anim span:nth-child(5) {
+animation-delay: 0.4s;
+}
+
+.text-jump-anim span:nth-child(6) {
+animation-delay: 0.5s;
+}
+
+.text-jump-anim span:nth-child(7) {
+animation-delay: 0.6s;
+}
+
+.text-jump-anim span:nth-child(8) {
+animation-delay: 0.7s;
+}
+
+.text-jump-anim span:nth-child(9) {
+animation-delay: 0.8s;
+}
+
+mat-card {
+box-shadow: none !important;
+}
+
+.socials-container {
+display: flex;
+gap: 8px; /* Adjust the gap size as needed */
+margin-right: 10px;
+justify-content: flex-end;
+}
+
+.socials-child {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.bgVideo {
+position: absolute;
+right: 0;
+bottom: 0;
+min-width: 100%;
+min-height: 100%;
+}
+
+.title-container {
+font-size: 80px !important;
+margin-left: 20px;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+text-align: start;
+}
+
+.glow {
+text-shadow: 0 0 20px #fafafa, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+}
+
+.glow-anim {
+text-align: center;
+-webkit-animation: glow 2s ease-in-out infinite alternate;
+-moz-animation: glow 1s ease-in-out infinite alternate;
+animation: glow 2s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+from {
+text-shadow: 0 0 10px #fafafa, 0 0 20px #fafafa, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+}
+
+to {
+text-shadow: 0 0 20px #fafafa, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+}
+}
+
+@keyframes glow {
+from {
+text-shadow: 0 0 10px #fafafa, 0 0 20px #fafafa, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+}
+
+to {
+text-shadow: 0 0 20px #fafafa, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+}
+}
+
+.flex-container {
+display: flex;
+flex-wrap: wrap;
+}
+
+.flex-container-mobile {
+display: flex;
+flex-wrap:wrap;
+flex-direction:column;
+}
+
+.flex-item {
+flex: 1 1 30%; /* Adjust the flex-basis to control the width of the columns */
+box-sizing: border-box;
+padding: 10px;
+text-align: center;
+}
+
+.flex-item-mobile {
+  flex: 1 1 100%; /* Adjust the flex-basis to control the width of the columns */
+  box-sizing: border-box;
+  padding: 10px;
+  text-align: center;
+}
+
+.special-overflow {
+/* You might style this specially or use JavaScript to dynamically adjust content/position */
+flex: 1 1 100%; /* Adjust the flex-basis to control the width of the columns */
+max-width: 100%;
+margin-bottom: -16px;
+}
+
+.mat-mdc-slider.mat-accent {
+--mdc-slider-handle-color: rgba(175, 195, 201,0);
+--mdc-slider-focus-handle-color: rgba(255,255,255,0);
+--mdc-slider-focus-handle--shadow-color: rgba(255,255,255,0);
+--mdc-slider-active-track-color: rgba(255,255,255,.3);
+--mdc-slider-inactive-track-color: rgba(255,255,255,.25);
+--mdc-slider-inactive-track-height: 16px;
+--mdc-slider-inactive-track-shape: 8px;
+--mdc-slider-active-track-height: 8px;
+--mdc-slider-handle-height: 8px;
+--mdc-slider-handle-width: 8px;
+}
+
+.mat-ripple .mat-mdc-focus-indicator .mat-ripple-element .mat-mdc-slider-active-ripple {
+display: none !important;
+}
+
+.candycon-logo {
+margin-top: -114px;
+width: 200px
+}
+
+.candycon-slogan {
+margin-top: -20px !important;
+}
+
+.thumbstick-selection-position {
+margin-top: 24vh;
+}
+
+.dpad-selection-position {
+margin-top: 48vh;
+}
+
+@media (max-width: 1800px) {
+.title-container {
+font-size: 70px !important;
+margin-left: 20px;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+text-align: start;
+}
+}
+@media (max-width: 1600px) {
+.title-container {
+font-size: 64px !important;
+margin-left: 20px;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+text-align: start;
+}
+}
+@media (max-width: 1500px) {
+.title-container {
+font-size: 58px !important;
+margin-left: 20px;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+text-align: start;
+}
+}
+
+
+
+
+@media (max-width: 1420px) {
+.title-container {
+font-size: 54px !important;
+margin-left: 20px;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+text-align: start;
+}
+}
+@media (max-width: 1360px) {
+.title-container {
+font-size: 48px !important;
+margin-left: 20px;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+text-align: start;
+}
+}
+@media (max-width: 1200px) {
+.title-container {
+font-size: 42px !important;
+margin-left: 20px;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+text-align: start;
+}
+
+.lockin-button-text {
+font-size: 76px;
+padding-top: 20px;
+text-shadow: 4px 4px 2px rgba(255, 0, 157, 1);
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+font-weight: 100;
+border: none;
+background-color: transparent;
+}
+}
+@media (max-width: 1100px) {
+.title-container {
+font-size: 36px !important;
+margin-left: 20px;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+text-align: start;
+}
+
+.lockin-button-text {
+font-size: 56px;
+text-shadow: 4px 4px 2px rgba(255, 0, 157, 1);
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+font-weight: 100;
+border: none;
+background-color: transparent;
+}
+.submit-button {
+white-space: nowrap;
+margin-bottom: 80%;
+margin-right: 5vh;
+}
+}
+
+@media (max-width: 1000px) {
+.title-container {
+font-size: 32px !important;
+margin-left: 20px;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+text-align: start;
+}
+
+.lockin-button-text {
+font-size: 56px;
+text-shadow: 4px 4px 2px rgba(255, 0, 157, 1);
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+font-weight: 100;
+border: none;
+background-color: transparent;
+}
+
+.candycon-logo {
+margin-top: -114px;
+width: 100px
+}
+
+.submit-button {
+white-space: nowrap;
+margin-bottom: 45%;
+margin-right: 10vh;
+}
+}
+
+@media (max-height: 750px) {
+.candycon-logo {
+margin-top: -114px;
+width: 140px;
+}
+}
+
+@media (max-height: 715px) and (max-width: 1460px) {
+.candycon-logo {
+margin-top: -155px;
+width: 130px;
+}
+
+.candycon-slogan {
+margin-top: -50px !important;
+}
+
+.selection-box {
+position: absolute;
+margin-left: 3vw;
+border-radius: 1vw;
+align-content: center;
+text-align: center;
+backdrop-filter: blur(10px);
+min-width: 50px;
+min-height: 50px;
+max-width: 7vw;
+max-height: 7vw;
+width: 100%;
+height: 100%;
+}
+}
+
+@media (max-height: 715px) and (max-width: 1400px) {
+.candycon-logo {
+margin-top: -60px;
+width: 130px;
+}
+
+.candycon-slogan {
+margin-top: 0px !important;
+}
+
+.selection-box {
+position: absolute;
+margin-left: 3vw;
+border-radius: 1vw;
+align-content: center;
+text-align: center;
+backdrop-filter: blur(10px);
+min-width: 50px;
+min-height: 50px;
+max-width: 7vw;
+max-height: 7vw;
+width: 100%;
+height: 100%;
+}
+}
+
+@media (max-width: 932px) and (max-height: 430px) {
+.selection-box-setting {
+display: none;
+}
+}
+
+@media (max-width: 1100px) {
+.selection-box-setting {
+display: none;
+}
+}
+
+@media (min-width: 2100px) and (max-height: 970px) {
+.candycon-logo {
+margin-top: -280px;
+width: 130px;
+}
+
+.candycon-slogan {
+margin-top: -100px !important;
+}
+}
+
+@media (min-width: 2100px) and (max-height: 850px) {
+.candycon-logo {
+margin-top: -320px;
+width: 120px;
+}
+
+.candycon-slogan {
+margin-top: -120px !important;
+display: none;
+}
+}
+
+@media (max-height: 700px) and (min-width: 1300px) {
+.candycon-logo {
+margin-top: -120px;
+width: 130px;
+}
+
+.candycon-slogan {
+margin-top: 0px !important;
+}
+
+.selection-box {
+position: absolute;
+margin-left: 3vw;
+border-radius: 1vw;
+align-content: center;
+text-align: center;
+backdrop-filter: blur(10px);
+min-width: 50px;
+min-height: 50px;
+max-width: 7vw;
+max-height: 7vw;
+width: 100%;
+height: 100%;
+}
+}
+
+@media (max-height: 650px) and (min-width: 1600px) {
+
+.candycon-slogan {
+display: none;
+margin-top: -50px !important;
+}
+
+.candycon-logo {
+margin-top: -185px;
+width: 110px;
+}
+
+.selection-box {
+position: absolute;
+margin-left: 3vw;
+border-radius: 1vw;
+align-content: center;
+text-align: center;
+backdrop-filter: blur(10px);
+min-width: 50px;
+min-height: 50px;
+max-width: 5vw;
+max-height: 5vw;
+width: 100%;
+height: 100%;
+}
+}
+
+@media (max-height: 650px) and (min-width: 1550px) {
+
+.candycon-slogan {
+display: none;
+margin-top: -50px !important;
+}
+
+.candycon-logo {
+margin-top: -85px;
+width: 110px;
+}
+
+.selection-box {
+position: absolute;
+margin-left: 3vw;
+border-radius: 1vw;
+align-content: center;
+text-align: center;
+backdrop-filter: blur(10px);
+min-width: 50px;
+min-height: 50px;
+max-width: 5vw;
+max-height: 5vw;
+width: 100%;
+height: 100%;
+}
+}
+
+@media (max-height: 650px) and (max-width: 1325px) {
+
+.candycon-slogan {
+display: none;
+margin-top: 0px !important;
+}
+
+.candycon-logo {
+margin-top: -35px;
+width: 110px;
+}
+
+.selection-box {
+position: absolute;
+margin-left: 3vw;
+border-radius: 1vw;
+align-content: center;
+text-align: center;
+backdrop-filter: blur(10px);
+min-width: 50px;
+min-height: 50px;
+max-width: 5vw;
+max-height: 5vw;
+width: 100%;
+height: 100%;
+}
+}
+
+@media (max-width: 1050px) and (min-height: 750px) {
+.candycon-slogan {
+margin-top: -10px !important;
+}
+
+.candycon-logo {
+margin-top: -15px;
+width: 110px;
+}
+}
+
+@media (max-height: 595px) {
+.candycon-logo {
+display: none;
+margin-top: -185px;
+width: 110px;
+}
+
+.thumbstick-selection-position {
+margin-top: 20vh;
+}
+
+.dpad-selection-position {
+margin-top: 40vh;
+}
+}
+
+@media (max-height: 500px) {
+
+.thumbstick-selection-position {
+margin-top: 18vh;
+}
+
+.dpad-selection-position {
+margin-top: 36vh;
+}
+}
+
+@media (max-width: 650px) {
+
+.submit-box {
+transform: scale(.8);
+}
+
+.controller-container {
+transform: scale(1);
+}
+
+.candycon-slogan {
+transform: scale(1);
+}
+
+.candycon-logo-container {
+transform: scale(1);
+}
+
+.flex-item {
+overflow:visible;
+white-space:normal;
+}
+}
+
+@media (min-height: 715px) and (max-height: 750px) {
+
+.candycon-slogan {
+margin-top: 20px !important;
+}
+
+.candycon-logo {
+margin-top: 15px;
+width: 110px;
+}
+  
+}
+
+@media (height: 600px) and (width: 1024px) {
+.candycon-logo {
+margin-top: -60px;
+width: 130px;
+}
+
+.candycon-slogan {
+margin-top: 0px !important;
+display: inherit;
+}
+
+.selection-box {
+position: absolute;
+margin-left: 5vw;
+border-radius: 1vw;
+align-content: center;
+text-align: center;
+backdrop-filter: blur(10px);
+min-width: 50px;
+min-height: 50px;
+max-width: 10vw;
+max-height: 10vw;
+width: 100%;
+height: 100%;
+}
+}
+
+/// iPhone 12 Pro
+@media (width: 844px) and (height: 390px) {
+.candycon-logo {
+margin-top: -60px;
+width: 130px;
+}
+
+.candycon-slogan {
+margin-top: 0px !important;
+display: inherit;
+}
+
+.selection-box {
+position: absolute;
+margin-left: 5vw;
+border-radius: 1vw;
+align-content: center;
+text-align: center;
+backdrop-filter: blur(10px);
+min-width: 50px;
+min-height: 50px;
+max-width: 8vw;
+max-height: 8vw;
+width: 100%;
+height: 100%;
+}
+
+.faceplate-selection-position {
+margin-top: -5vh;
+}
+
+.thumbstick-selection-position {
+margin-top: 20vh;
+}
+
+.dpad-selection-position {
+margin-top: 40vh;
+}
+}
+
+.title-container-mobile {
+  text-shadow: none;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 322px;
+  font-size: 30px;
+  margin-left: 60px;
+  margin-top: 10px;
+}
+
+sub-title-container-mobile {
+  margin-top: -10px;
+  margin-bottom: 6px;
+  text-align: start;
+  margin-left: 60px;
+}
+
+.selection-container-mobile {
+    display: inline-flex;
+    gap: 3vw;
+    transform: scale(2.25);
+    margin-top: 4vh;
+}
+
+.faceplate-selection-position-mobile {
+  margin-top: 0vh;
+}
+
+.thumbstick-selection-position-mobile {
+  margin-top: 0vh;
+}
+
+.dpad-selection-position-mobile {
+  margin-top: 0vh;
+}
+
+.selection-box-mobile {
+  border-radius: 1vw;
+  align-content: center;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  min-width: 50px;
+  min-height: 50px;
+  max-width: 7vw;
+  max-height: 7vw;
+  width: 100%;
+  height: 100%;
+}
+
+
+.controller-size-desktop {
+    width: 175%;
+}
+
+.controller-size-mobile {
+  width: 40%;
+}
+
+.controller-container-mobile {
+  position: relative;  /* Ensures that child elements are positioned relative to this container */
+  width: 100%;         /* Responsive width */
+  max-width: 600px;    /* Optional: maximum width */
+  margin: auto;        /* Centers the container */
+  transform: scale(2.5); /* Adjust scale for mobile, start with scale(1) and adjust as needed */
+}
+
+.faceplate-overlay-mobile {
+  position: absolute;
+  width: 68.2%; /* Relative size of the DPad */
+  top: -75%; /* Adjust vertical position */
+  left: 16%; /* Adjust horizontal position */
+  transform: scale(.8);
+  filter: drop-shadow(0 0 0.75rem black);
+}
+
+.thumbstick-1-overlay-mobile {
+  position: absolute;
+  top: -131.6%; /* Adjust vertical position */
+  left: 1.23%; /* Adjust horizontal position */
+  transform: scale(.194);
+  filter: drop-shadow(0 0 0.75rem black);
+}
+
+.thumbstick-2-overlay-mobile {
+  position: absolute;
+  top: -152.3%; /* Adjust vertical position */
+  left: -13.3%; /* Adjust horizontal position */
+  transform: scale(.194);
+  filter: drop-shadow(0 0 0.75rem black);
+}
+
+.dpad-overlay-mobile {
+  position: absolute;
+  width: 10%; /* Relative size of the DPad */
+  top: -125%; /* Adjust vertical position */
+  left: -9.38%; /* Adjust horizontal position */
+  transform: scale(.261);
+  filter: drop-shadow(0 0 0.75rem black);
+}
+
+.cropped-thumbstick-mobile {
+  width: 100%; /* width of container */
+  clip-path: inset(0% 0% 0% 50%)
+}
+
+.cropped-selection-thumbstick-mobile {
   width: 36%; /* width of container */
   height: 100%; /* height of container */
   object-fit: cover;
@@ -79,806 +1001,36 @@ span, h5, div {
   transform: scale(.73) !important;
 }
 
-.dpad-overlay {
-  position: absolute;
+.cropped-dpad-classic-mobile {
   width: 100%;
-  top: 8.5%;
-  transform: scale(1.5) !important;
-  right: 4.5%;
-  filter: drop-shadow(0 0 0.75rem black);
+  clip-path: inset(0% 0% 0% 50%);
 }
 
-.cropped-dpad-classic {
-  width: 50%; /* width of container */
-  height: 100%; /* height of container */
-  object-fit: cover;
-  object-position: 86.25% 87%; /* try 20px 10px */
-  transform: scale(1) !important;
-  margin-top: -2px !important;
+.cropped-dpad-modern-mobile {
+  width: 100%;
+  clip-path: inset(0% 50% 0% 0%);
 }
 
-.cropped-dpad-modern {
-  width: 50%; /* width of container */
-  height: 100%; /* height of container */
-  object-fit: cover;
-  object-position: 20.5% 17%; /* try 20px 10px */
-  transform: scale(1) !important;
-  margin-top: -5px !important;
+.candycon-logo-container-mobile {
+  transform: scale(1);
+  margin-top: 16vw;
 }
 
-.shadow-text {
-  font-size: 28px;
-  color: transparent;
-  -webkit-text-stroke: 1px white;
-  text-shadow: 0px 1px 4px rgba(255,0,157,.35);
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-weight: 400;
+.submit-box-mobile {
+  margin-top: 20%;
+  text-align: -webkit-center;
 }
 
-
-.lockin-button-text {
-  font-size: 86px;
-  padding-top: 20px;
-  text-shadow: 4px 4px 2px rgba(255, 0, 157, 1);
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-weight: 100;
-  border: none;
-  background-color: transparent;
-}
-
-  .faded-repeat-text {
-    font-size: 86px;
-    padding-top: 20px;
-    /*color: white;
-  opacity: .5;
-  -webkit-text-stroke: 1px white;*/
-    //text-shadow: 0px 1px 4px rgba(255,0,157,.35);
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-weight: 100;
-    border: none;
-    background-color: transparent;
-  }
-
-  .submit-box {
-    position: relative;
-    text-align: -webkit-center;
-    max-width: fit-content;
-  }
-
-  .submit-button {
-    white-space: nowrap;
-    margin-bottom: 32%;
-    margin-right: 10vh;
-  }
-
-  .selection-box {
-    position: absolute;
-    margin-left: 3vw;
-    border-radius: 1vw;
-    align-content: center;
-    text-align: center;
-    backdrop-filter: blur(10px);
-    min-width: 100px;
-    min-height: 100px;
-    max-width: 8vw;
-    max-height: 8vw;
-    width: 100%;
-    height: 100%;
-  }
-
-  .selection-box-setting {
-    position: absolute;
-    margin-left: 9vw;
-    border-radius: 1vw;
-    align-content: center;
-    text-align: center;
-    min-width: 100px;
-    min-height: 100px;
-    max-width: 8vw;
-    max-height: 8vw;
-    width: 100%;
-    height: 100%;
-  }
-
-  .default-selection-img {
-    opacity: .5;
-  }
-
-  .selection-img {
-    opacity: .95;
-    filter: drop-shadow(0 0 0.75rem black);
-  }
-
-  mat-panel-title {
-    font-family: Impact;
-    font-weight: 100;
-    letter-spacing: 1px;
-  }
-
-  mat-sidenav {
-    min-width: 300px;
-    overflow-y: hidden !important;
-  }
-
-  mat-sidenav-container {
-    height: 94vh; /* Adjust the height as needed */
-  }
-
-  mat-sidenav-content {
-    background-color: white;
-  }
-
-  button {
-    width: 100%;
-    color: black;
-  }
-
-  .sidenav-expansion-button {
-    position: absolute;
-    top: 40%;
-    left: 20px;
-    z-index: 100;
-    max-width: 4px;
-    transform: scale(.6);
-    min-height: 70px;
-    border-radius: 10px;
-    border-width: 0px;
-    background-color: white;
-  }
-
-  .sidenav-expansion-button:hover {
-    background-color: deeppink;
-  }
-
-  .floating-anim {
-    transform: rotateZ(-2.4deg) rotateY(-20deg);
-    animation: rotating 6s ease-in-out infinite alternate;
-  }
-
-  @keyframes rotating {
-    100% {
-      transform: rotateZ(1.2deg) rotateY(20deg);
-    }
-  }
-
-  .text-jump-anim span {
-    position: relative;
-    font-size: 18px;
-    top: 0px;
-    display: inline-block;
-    animation: bounce 0.3s ease infinite alternate;
-  }
-
-  @keyframes bounce {
-    100% {
-      top: -2px;
-      /*
-    text-shadow: 0 1px #ccc, 
-                 0 2px #ccc, 
-                 0 3px #ccc, 
-                 0 4px #ccc, 
-                 0 5px #ccc,
-                 0 6px #ccc, 
-                 0 7px #ccc, 
-                 0 8px #ccc, 
-                 0 9px #ccc, 
-                 0 50px 25px rgba(0, 0, 0, 0.2);
-    */
-    }
-  }
-
-  .text-jump-anim span:nth-child(2) {
-    animation-delay: 0.1s;
-  }
-
-  .text-jump-anim span:nth-child(3) {
-    animation-delay: 0.2s;
-  }
-
-  .text-jump-anim span:nth-child(4) {
-    animation-delay: 0.3s;
-  }
-
-  .text-jump-anim span:nth-child(5) {
-    animation-delay: 0.4s;
-  }
-
-  .text-jump-anim span:nth-child(6) {
-    animation-delay: 0.5s;
-  }
-
-  .text-jump-anim span:nth-child(7) {
-    animation-delay: 0.6s;
-  }
-
-  .text-jump-anim span:nth-child(8) {
-    animation-delay: 0.7s;
-  }
-
-  .text-jump-anim span:nth-child(9) {
-    animation-delay: 0.8s;
-  }
-
-  mat-card {
-    box-shadow: none !important;
-  }
-
-  .socials-container {
-    display: flex;
-    gap: 8px; /* Adjust the gap size as needed */
-    margin-right: 10px;
-    justify-content: flex-end;
-  }
-
-  .socials-child {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .bgVideo {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-  }
-
-  .title-container {
-    font-size: 80px !important;
-    margin-left: 20px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-align: start;
-  }
-
-  .glow {
-    text-shadow: 0 0 20px #fafafa, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
-  }
-
-  .glow-anim {
-    text-align: center;
-    -webkit-animation: glow 2s ease-in-out infinite alternate;
-    -moz-animation: glow 1s ease-in-out infinite alternate;
-    animation: glow 2s ease-in-out infinite alternate;
-  }
-
-  @-webkit-keyframes glow {
-    from {
-      text-shadow: 0 0 10px #fafafa, 0 0 20px #fafafa, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
-    }
-
-    to {
-      text-shadow: 0 0 20px #fafafa, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
-    }
-  }
-
-  @keyframes glow {
-    from {
-      text-shadow: 0 0 10px #fafafa, 0 0 20px #fafafa, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
-    }
-
-    to {
-      text-shadow: 0 0 20px #fafafa, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
-    }
-  }
-
-  .flex-container {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .flex-item {
-    flex: 1 1 30%; /* Adjust the flex-basis to control the width of the columns */
-    box-sizing: border-box;
-    padding: 10px;
-    text-align: center;
-  }
-
-  .special-overflow {
-    /* You might style this specially or use JavaScript to dynamically adjust content/position */
-    flex: 1 1 100%; /* Adjust the flex-basis to control the width of the columns */
-    max-width: 100%;
-    margin-bottom: -16px;
-  }
-
-.mat-mdc-slider.mat-accent {
-  --mdc-slider-handle-color: rgba(175, 195, 201,0);
-  --mdc-slider-focus-handle-color: rgba(255,255,255,0);
-  --mdc-slider-focus-handle--shadow-color: rgba(255,255,255,0);
-  --mdc-slider-active-track-color: rgba(255,255,255,.3);
-  --mdc-slider-inactive-track-color: rgba(255,255,255,.25);
-  --mdc-slider-inactive-track-height: 16px;
-  --mdc-slider-inactive-track-shape: 8px;
-  --mdc-slider-active-track-height: 8px;
-  --mdc-slider-handle-height: 8px;
-  --mdc-slider-handle-width: 8px;
-}
-
-.mat-ripple .mat-mdc-focus-indicator .mat-ripple-element .mat-mdc-slider-active-ripple {
-  display: none !important;
-}
-
-.candycon-logo {
-  margin-top: -114px;
-  width: 200px
-}
-
-.candycon-slogan {
-  margin-top: -20px !important;
-}
-
-.thumbstick-selection-position {
-  margin-top: 24vh;
-}
-
-.dpad-selection-position {
-  margin-top: 48vh;
-}
-
-@media (max-width: 1800px) {
-  .title-container {
-    font-size: 70px !important;
-    margin-left: 20px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-align: start;
-  }
-}
-@media (max-width: 1600px) {
-  .title-container {
-    font-size: 64px !important;
-    margin-left: 20px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-align: start;
-  }
-}
-@media (max-width: 1500px) {
-  .title-container {
-    font-size: 58px !important;
-    margin-left: 20px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-align: start;
-  }
-}
-
-
-
-
-@media (max-width: 1420px) {
-  .title-container {
-    font-size: 54px !important;
-    margin-left: 20px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-align: start;
-  }
-}
-@media (max-width: 1360px) {
-  .title-container {
-    font-size: 48px !important;
-    margin-left: 20px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-align: start;
-  }
-}
-@media (max-width: 1200px) {
-  .title-container {
-    font-size: 42px !important;
-    margin-left: 20px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-align: start;
-  }
-
-  .lockin-button-text {
-    font-size: 76px;
-    padding-top: 20px;
-    text-shadow: 4px 4px 2px rgba(255, 0, 157, 1);
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-weight: 100;
-    border: none;
-    background-color: transparent;
-  }
-}
-@media (max-width: 1100px) {
-  .title-container {
-    font-size: 36px !important;
-    margin-left: 20px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-align: start;
-  }
-
-  .lockin-button-text {
-    font-size: 56px;
-    text-shadow: 4px 4px 2px rgba(255, 0, 157, 1);
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-weight: 100;
-    border: none;
-    background-color: transparent;
-  }
-  .submit-button {
-    white-space: nowrap;
-    margin-bottom: 80%;
-    margin-right: 5vh;
-  }
-}
-
-@media (max-width: 1000px) {
-  .title-container {
-    font-size: 32px !important;
-    margin-left: 20px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-align: start;
-  }
-
-  .lockin-button-text {
-    font-size: 56px;
-    text-shadow: 4px 4px 2px rgba(255, 0, 157, 1);
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-weight: 100;
-    border: none;
-    background-color: transparent;
-  }
-
-  .candycon-logo {
-    margin-top: -114px;
-    width: 100px
-  }
-
-  .submit-button {
-    white-space: nowrap;
-    margin-bottom: 45%;
-    margin-right: 10vh;
-  }
-}
-
-@media (max-height: 750px) {
-  .candycon-logo {
-    margin-top: -114px;
-    width: 140px;
-  }
-}
-
-@media (max-height: 715px) and (max-width: 1460px) {
-  .candycon-logo {
-    margin-top: -155px;
-    width: 130px;
-  }
-
-  .candycon-slogan {
-    margin-top: -50px !important;
-  }
-
-  .selection-box {
-    position: absolute;
-    margin-left: 3vw;
-    border-radius: 1vw;
-    align-content: center;
-    text-align: center;
-    backdrop-filter: blur(10px);
-    min-width: 50px;
-    min-height: 50px;
-    max-width: 7vw;
-    max-height: 7vw;
-    width: 100%;
-    height: 100%;
-  }
-}
-
-@media (max-height: 715px) and (max-width: 1400px) {
-  .candycon-logo {
-    margin-top: -60px;
-    width: 130px;
-  }
-
-  .candycon-slogan {
-    margin-top: 0px !important;
-  }
-
-  .selection-box {
-    position: absolute;
-    margin-left: 3vw;
-    border-radius: 1vw;
-    align-content: center;
-    text-align: center;
-    backdrop-filter: blur(10px);
-    min-width: 50px;
-    min-height: 50px;
-    max-width: 7vw;
-    max-height: 7vw;
-    width: 100%;
-    height: 100%;
-  }
-}
-
-@media (max-width: 932px) and (max-height: 430px) {
-  .selection-box-setting {
-      display: none;
-  }
-}
-
-@media (max-width: 1100px) {
-  .selection-box-setting {
-    display: none;
-  }
-}
-
-@media (min-width: 2100px) and (max-height: 970px) {
-  .candycon-logo {
-    margin-top: -280px;
-    width: 130px;
-  }
-
-  .candycon-slogan {
-    margin-top: -100px !important;
-  }
-}
-
-@media (min-width: 2100px) and (max-height: 850px) {
-  .candycon-logo {
-    margin-top: -320px;
-    width: 120px;
-  }
-
-  .candycon-slogan {
-    margin-top: -120px !important;
-    display: none;
-  }
-}
-
-  @media (max-height: 700px) and (min-width: 1300px) {
-    .candycon-logo {
-      margin-top: -120px;
-      width: 130px;
-    }
-
-    .candycon-slogan {
-      margin-top: 0px !important;
-    }
-
-    .selection-box {
-      position: absolute;
-      margin-left: 3vw;
-      border-radius: 1vw;
-      align-content: center;
-      text-align: center;
-      backdrop-filter: blur(10px);
-      min-width: 50px;
-      min-height: 50px;
-      max-width: 7vw;
-      max-height: 7vw;
-      width: 100%;
-      height: 100%;
-    }
-  }
-
-  @media (max-height: 650px) and (min-width: 1600px) {
-
-    .candycon-slogan {
-      display: none;
-      margin-top: -50px !important;
-    }
-
-    .candycon-logo {
-      margin-top: -185px;
-      width: 110px;
-    }
-
-    .selection-box {
-      position: absolute;
-      margin-left: 3vw;
-      border-radius: 1vw;
-      align-content: center;
-      text-align: center;
-      backdrop-filter: blur(10px);
-      min-width: 50px;
-      min-height: 50px;
-      max-width: 5vw;
-      max-height: 5vw;
-      width: 100%;
-      height: 100%;
-    }
-  }
-
-  @media (max-height: 650px) and (min-width: 1550px) {
-
-    .candycon-slogan {
-      display: none;
-      margin-top: -50px !important;
-    }
-
-    .candycon-logo {
-      margin-top: -85px;
-      width: 110px;
-    }
-
-    .selection-box {
-      position: absolute;
-      margin-left: 3vw;
-      border-radius: 1vw;
-      align-content: center;
-      text-align: center;
-      backdrop-filter: blur(10px);
-      min-width: 50px;
-      min-height: 50px;
-      max-width: 5vw;
-      max-height: 5vw;
-      width: 100%;
-      height: 100%;
-    }
-  }
-
-  @media (max-height: 650px) and (max-width: 1325px) {
-
-    .candycon-slogan {
-      display: none;
-      margin-top: 0px !important;
-    }
-
-    .candycon-logo {
-      margin-top: -35px;
-      width: 110px;
-    }
-
-    .selection-box {
-      position: absolute;
-      margin-left: 3vw;
-      border-radius: 1vw;
-      align-content: center;
-      text-align: center;
-      backdrop-filter: blur(10px);
-      min-width: 50px;
-      min-height: 50px;
-      max-width: 5vw;
-      max-height: 5vw;
-      width: 100%;
-      height: 100%;
-    }
-  }
-
-@media (max-width: 1050px) and (min-height: 750px) {
-  .candycon-slogan {
-    margin-top: -10px !important;
-  }
-
-  .candycon-logo {
-    margin-top: -15px;
-    width: 110px;
-  }
-}
-
-  @media (max-height: 595px) {
-    .candycon-logo {
-      display: none;
-      margin-top: -185px;
-      width: 110px;
-    }
-
-    .thumbstick-selection-position {
-      margin-top: 20vh;
-    }
-
-    .dpad-selection-position {
-      margin-top: 40vh;
-    }
-  }
-
-  @media (max-height: 500px) {
-
-    .thumbstick-selection-position {
-      margin-top: 18vh;
-    }
-
-    .dpad-selection-position {
-      margin-top: 36vh;
-    }
-  }
-
-@media (max-width: 650px) {
-
-  .submit-box {
-    transform: scale(.8);
-  }
-
-  .controller-container {
-      transform: scale(1);
-  }
-
-  .candycon-slogan {
-      transform: scale(1);
-  }
-
-  .candycon-logo-container {
-      transform: scale(1);
-  }
-
-  .flex-item {
-      overflow:visible;
-      white-space:normal;
-  }
-}
-
-@media (min-height: 715px) and (max-height: 750px) {
-
-  .candycon-slogan {
-    margin-top: 20px !important;
-  }
-
-  .candycon-logo {
-    margin-top: 15px;
-    width: 110px;
-  }
-  
-}
-
-@media (height: 600px) and (width: 1024px) {
-  .candycon-logo {
-    margin-top: -60px;
-    width: 130px;
-  }
-
-  .candycon-slogan {
-    margin-top: 0px !important;
-    display: inherit;
-  }
-
-  .selection-box {
-    position: absolute;
-    margin-left: 5vw;
-    border-radius: 1vw;
-    align-content: center;
-    text-align: center;
-    backdrop-filter: blur(10px);
-    min-width: 50px;
-    min-height: 50px;
-    max-width: 10vw;
-    max-height: 10vw;
-    width: 100%;
-    height: 100%;
-  }
-}
-
-/// iPhone 12 Pro
-@media (width: 844px) and (height: 390px) {
-  .candycon-logo {
-    margin-top: -60px;
-    width: 130px;
-  }
-
-  .candycon-slogan {
-    margin-top: 0px !important;
-    display: inherit;
-  }
-
-  .selection-box {
-    position: absolute;
-    margin-left: 5vw;
-    border-radius: 1vw;
-    align-content: center;
-    text-align: center;
-    backdrop-filter: blur(10px);
-    min-width: 50px;
-    min-height: 50px;
-    max-width: 8vw;
-    max-height: 8vw;
-    width: 100%;
-    height: 100%;
-  }
-
-  .faceplate-selection-position {
-    margin-top: -5vh;
-  }
-
-  .thumbstick-selection-position {
-    margin-top: 20vh;
-  }
-
-  .dpad-selection-position {
-    margin-top: 40vh;
-  }
+.submit-button-mobile {
+  white-space: nowrap;
+  margin-bottom: 32%;
+  margin-right: 10vh;
 }
 
 @media (width: 390px) and (height: 844px) {
 
   .versioning {
-      display:none;
+    display: none;
   }
 
   .glow {
@@ -895,7 +1047,7 @@ span, h5, div {
   }
 
   .sub-title-container {
-      margin-top: 10px;
+    margin-top: 10px;
   }
 
   .sub-title-text {
@@ -949,21 +1101,45 @@ span, h5, div {
   }
 
   .controller-container {
-      min-width: 180px;
-      margin-right: 73px;
-      padding-right: 6px;
-      margin-top: 250px;
+    min-width: 180px;
+    margin-right: 73px;
+    padding-right: 6px;
+    margin-top: 250px;
   }
 
   .randomizer-container {
-      margin-left: -380px;
-      margin-top: 150px;
-      transform: scale(.7);
+    margin-left: -380px;
+    margin-top: 150px;
+    transform: scale(.7);
   }
 
   .submit-box {
-      position:absolute;
-      margin-top: -350px;
-      margin-left: 96px;
+    position: absolute;
+    margin-top: -350px;
+    margin-left: 96px;
+  }
+}
+
+/* Base styles - hide mobile-container by default */
+.mobile-container {
+display: none;
+}
+
+.desktop-container {
+display: block; /* Show desktop container by default */
+}
+
+/* Media Query for when the height is greater than the width */
+@media (max-aspect-ratio: 1/1.05) {
+.mobile-container {
+display: block; /* Show mobile container when width < height */
+}
+
+.desktop-container {
+display: none; /* Hide desktop container when width < height */
+}
+
+  .candycon-slogan {
+      display: none;
   }
 }

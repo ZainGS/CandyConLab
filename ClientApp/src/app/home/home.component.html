@@ -115,7 +115,7 @@
     -->
 
     <!-- DESKTOP: Base Div (Container) -->
-    <div class="desktop-container">
+    <div *ngIf="browserWindow.innerWidth/browserWindow.innerHeight >= 1" class="desktop-container">
       <div style="color: white; position: absolute; top: 0%; left: 0%; width:100%;">
         <div>
           <div class="flex-container">
@@ -316,7 +316,7 @@
     </div>
 
     <!-- MOBILE: Base Div (Container) -->
-    <div class="mobile-container">
+    <div *ngIf="browserWindow.innerWidth/browserWindow.innerHeight < 1" class="mobile-container">
       <div style="color: white; position: absolute; top: 0%; left: 0%; width:100%;">
         <div>
           <div class="flex-container-mobile">
