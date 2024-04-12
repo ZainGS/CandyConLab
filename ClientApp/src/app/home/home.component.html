@@ -1,0 +1,319 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+<mat-sidenav-container style="margin-top:-15px;" >
+  <mat-sidenav [mode]="sidenavMode" [(opened)]="isSidenavOpen" style="max-width: 500px;">
+    <div style="position: sticky; top: 0; z-index: 100;">
+      <h5 style="text-align: center; margin-top: 10px;">SELECT YOUR LOADOUT</h5>
+      <div style="text-align: center; padding-bottom: 10px;"
+           [ngStyle]="
+           {'color' : selectedCount == 4 ?
+           'deeppink' :
+           'white'}">{{selectedCount}}/4 Selected</div>
+    </div>
+    <div style="overflow-y: auto; max-height: 90vh; padding-bottom:50px;">
+      <mat-accordion>
+        <mat-expansion-panel *ngFor="let category of categories;"
+                             [expanded]="expandedCategory === category.name"
+                             (opened)="expandedCategory = category.name"
+                             (closed)="expandedCategory = null">
+          <mat-expansion-panel-header style="border-left: 3px solid deeppink">
+            <mat-panel-title style="min-width: fit-content; letter-spacing: 1px;">
+              <b *ngIf="category.name == 'LEFT THUMBSTICKS'">LEFT THUMBSTICK</b>
+              <b *ngIf="category.name == 'RIGHT THUMBSTICKS'">RIGHT THUMBSTICK</b>
+              <b *ngIf="category.name == 'DPADS'">DPAD</b>
+              <b *ngIf="category.name == 'FACEPLATES'">FACEPLATE</b>
+            </mat-panel-title>
+            <mat-panel-description *ngIf="category.name == 'FACEPLATES'" style="place-content: flex-end">
+              <span *ngIf="selectedFaceplate != null" style="border-radius: 100px; width: 10px; height: 10px; margin-right: 5px"
+                    [ngStyle]="{'background-color' : selectedFaceplate != null ? colorMapping[selectedFaceplate?.partColor] : 'red'}">&nbsp;</span>
+              <img *ngIf="selectedFaceplate != null" width="24" height="24" src="assets/task_complete_icon.svg" alt="Task Complete Icon">
+            </mat-panel-description>
+            <mat-panel-description *ngIf="category.name == 'LEFT THUMBSTICKS'" style="place-content: flex-end">
+              <span *ngIf="selectedLeftThumbstick != null" style="border-radius: 100px; width: 10px; height: 10px; margin-right: 5px "
+                    [ngStyle]="{'background-color' : selectedLeftThumbstick != null ? colorMapping[selectedLeftThumbstick?.partColor] : 'red'}">&nbsp;</span>
+              <img *ngIf="selectedLeftThumbstick != null" width="24" height="24" src="assets/task_complete_icon.svg" alt="Task Complete Icon">
+            </mat-panel-description>
+            <mat-panel-description *ngIf="category.name == 'RIGHT THUMBSTICKS'" style="place-content: flex-end">
+              <span *ngIf="selectedRightThumbstick != null" style="border-radius: 100px; width: 10px; height: 10px; margin-right: 5px "
+                    [ngStyle]="{'background-color' : selectedRightThumbstick != null ? colorMapping[selectedRightThumbstick?.partColor] : 'red'}">&nbsp;</span>
+              <img *ngIf="selectedRightThumbstick != null" width="24" height="24" src="assets/task_complete_icon.svg" alt="Task Complete Icon">
+            </mat-panel-description>
+            <mat-panel-description *ngIf="category.name == 'DPADS'" style="place-content: flex-end">
+              <span *ngIf="selectedDPad != null" style="border-radius: 100px; width: 10px; height: 10px; margin-right: 5px "
+                    [ngStyle]="{'background-color' : selectedDPad != null ? colorMapping[selectedDPad.partColor] : 'red'}">&nbsp;</span>
+              <img *ngIf="selectedDPad != null" width="24" height="24" src="assets/task_complete_icon.svg" alt="Task Complete Icon">
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <p style="word-wrap: break-word; max-width: 500px;">{{category.description}}</p>
+          <ng-container *ngFor="let product of category.products">
+            <button *ngIf="category.name == 'FACEPLATES'"
+                    style="display: flex; align-items: center; flex-wrap: nowrap; width: 100%; border-radius: 0px; border-left: 2px solid; justify-content: flex-start;"
+                    [ngStyle]="{'background-color' : product.id == selectedFaceplate?.id ? '#121212' : '#212121',
+                  'border-left-color' : colorMapping[product.partColor]}"
+                    mat-button mat-stroked-button
+                    (mouseenter)='mouseEnterProduct(product)'
+                    (mouseleave)='mouseLeaveProduct(product)'
+                    (click)="sidebarClicked(product)">
+              <span style="display: contents; flex-shrink: 1; white-space: nowrap;">{{product.partColor.toUpperCase()}}</span>
+            </button>
+            <button *ngIf="category.name == 'LEFT THUMBSTICKS'"
+                    style="display: flex; align-items: center; flex-wrap: nowrap; width: 100%; border-radius: 0px; border-left: 2px solid; justify-content: flex-start;"
+                    [ngStyle]="{'background-color' : product.id == selectedLeftThumbstick?.id ? '#121212' : '#212121',
+                  'border-left-color' : colorMapping[product.partColor]}"
+                    mat-button mat-stroked-button
+                    (mouseenter)='mouseEnterProduct(product, "left")'
+                    (mouseleave)='mouseLeaveProduct(product, "left")'
+                    (click)="sidebarClicked(product, 'left')">
+              <span style="display: contents; flex-shrink: 1; white-space: nowrap;">{{product.partColor.toUpperCase()}}</span>
+            </button>
+            <button *ngIf="category.name == 'RIGHT THUMBSTICKS'"
+                    style="display: flex; align-items: center; flex-wrap: nowrap; width: 100%; border-radius: 0px; border-left: 2px solid; justify-content: flex-start;"
+                    [ngStyle]="{'background-color' : product.id == selectedRightThumbstick?.id ? '#121212' : '#212121',
+                  'border-left-color' : colorMapping[product.partColor]}"
+                    mat-button mat-stroked-button
+                    (mouseenter)='mouseEnterProduct(product, "right")'
+                    (mouseleave)='mouseLeaveProduct(product, "right")'
+                    (click)="sidebarClicked(product, 'right')">
+              <span style="display: contents; flex-shrink: 1; white-space: nowrap;">{{product.partColor.toUpperCase()}}</span>
+            </button>
+            <button *ngIf="category.name == 'DPADS'"
+                    style="display: flex; align-items: center; flex-wrap: nowrap; width: 100%; border-radius: 0px; border-left: 2px solid; justify-content: flex-start;"
+                    [ngStyle]="{'background-color' : product.id == selectedDPad?.id ? '#121212' : '#212121',
+                  'border-left-color' : colorMapping[product.partColor]}"
+                    mat-button mat-stroked-button
+                    (mouseenter)='mouseEnterProduct(product)'
+                    (mouseleave)='mouseLeaveProduct(product)'
+                    (click)="sidebarClicked(product)">
+              <span style="display: contents; flex-shrink: 1; white-space: nowrap;">{{product.partColor.toUpperCase()}}</span>
+            </button>
+          </ng-container>
+
+        </mat-expansion-panel>
+      </mat-accordion>
+
+    </div>
+    <!-- Sidenav Bottom Branding / Icon -->
+    <!--
+    <div style="text-align: center; vertical-align: central;">
+      <img style="filter: brightness(11%); margin-top:20px;" width="160" src="assets/candycon_minimal_light.png" alt="CandyConLab">
+    </div>
+    -->
+  </mat-sidenav>
+
+  <mat-sidenav-content class="base-sidenav-pattern" style="white-space: nowrap; overflow: hidden;">
+
+    <!-- Background Video -->
+    <video #videoPlayer id="vid" autoplay muted loop onloadedmetadata="this.muted=true" preload="auto" class="bgVideo">
+      <source src="https://cclab.blob.core.windows.net/part-images/bg_video.mp4" type="video/mp4">
+    </video>
+
+    <!-- Video Loading Overlay -->
+    <!--
+    <div *ngIf="isVideoLoading" style="position:absolute; width:100vw; height:100vh; background-color: black; text-align: center; vertical-align: central;">
+      <div style="position: relative; top:40%; margin-right: 300px; font-size: 72px;">Loading...</div>
+    </div>
+    -->
+
+    <!-- Base Div (Container) -->
+    <div>
+      <div style="color: white; position: absolute; top: 0%; left: 0%; width:100%;">
+        <div>
+          <div class="flex-container">
+            <!-- Row 0 -->
+            <!-- TITLE CELL -->
+            <div class="flex-item special-overflow" style="border-bottom: double 20px rgba(1,1,1,.1); margin-top: -10px; margin-left: -10px;">
+              <div class="noselect nodrag title-container">
+                <span class="glow" style="color: #FF0095; font-weight:500; white-space:nowrap;">︾ CANDY CON LAB // BUILD YOUR CONTROLLER</span>
+              </div>
+              <div class="noselect nodrag" style="margin-top: -12px; margin-bottom:6px; text-align: start; margin-left: 60px;">
+                <span class="shadow-text glow-anim" style="margin-left: 7vw;">POWERED BY // GAMESTOP</span>
+
+              </div>
+              <span class="faded-repeat-text" style="margin-left: 7vw; position: absolute; opacity: .2; font-size: 30px; margin-top: -48px;">CREATE. PLAY. REPEAT. CREATE. PLAY. REPEAT. CREATE. PLAY. REPEAT. CREATE. PLAY. REPEAT. CREATE. PLAY. REPEAT.</span>
+            </div>
+
+            <!-- SELECTED ITEMS CELL -->
+            <div class="flex-item">
+              <div>
+
+                <!-- FACEPLATE -->
+                <div style="display: flex; align-items: start; gap: 20px;">
+                  <div class="selection-box"
+                       [ngStyle]="
+                  {'box-shadow' : selectedFaceplate == null ?
+                  '0 0 50px #fff, -10px 0 20px #f0f, 10px 0 200px #0ff' :
+                  '0 0 50px ' + colorMapping[selectedFaceplate?.partColor] + ', -10px 0 20px #f0f, 10px 0 20px #0ff',
+                  'border' : selectedFaceplate == null ?
+                  '7px double rgba(255,255,255,.05)' :
+                  '7px double rgba(' + hexToRgb(colorMapping[selectedFaceplate?.partColor]).join(',') + ',.1)'}">
+                    <img *ngIf="selectedFaceplate == null" class="default-selection-img" width="100%" src="assets/faceplate.svg" alt="Faceplate icon" style="transform:scale(.7);">
+                    <img *ngIf="selectedFaceplate != null" class="selection-img" width="100%" [src]="selectedFaceplate.imageUrls[0]" alt="Faceplate icon">
+                  </div>
+
+                  <!-- FACEPLATE Visibility Slider -->
+                  <div class="selection-box-setting" style="margin-top: -3vh; margin-left: 9vw;">
+                    <div>
+                      <!-- Slider Top Eye Icon -->
+                      <div>
+                        <img *ngIf="faceplateOpacity != 0" src="assets/eye.svg" alt="visibility icon" style="opacity: .55; margin-bottom: 34px !important;" width="24px" />
+                        <img *ngIf="faceplateOpacity == 0" src="assets/eye_off.svg" alt="visibility icon" style="opacity: .55; margin-bottom: 34px !important;" width="24px" />
+                      </div>
+                      <!-- Visibility Slider -->
+                      <div>
+                        <mat-slider color="accent" disableRipple min="0" max="1" step=".1" style="transform: rotate(-90deg); min-width: 70px; width: 5vw; ">
+                          <input matSliderThumb [(value)]="faceplateOpacity" (input)="setFaceplateOpacity($event)">
+                        </mat-slider>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- THUMBSTICK -->
+                <div class="selection-box" style="margin-top: 24vh; backdrop-filter: blur(10px);"
+                     [ngStyle]="
+                 {'box-shadow' : selectedRightThumbstick == null ?
+                 '0 0 50px #fff, -10px 0 20px #f0f, 10px 0 20px #0ff' :
+                 '0 0 50px ' + colorMapping[selectedRightThumbstick?.partColor] + ', -10px 0 20px #f0f, 10px 0 20px #0ff',
+                 'border' : selectedRightThumbstick == null ?
+                 '7px double rgba(255,255,255,.05)' :
+                 '7px double rgba(' + hexToRgb(colorMapping[selectedRightThumbstick?.partColor]).join(',') + ',.1)'}">
+                  <img *ngIf="selectedRightThumbstick == null && selectedLeftThumbstick == null" class="default-selection-img" width="100%" src="assets/joystick.svg" alt="Right Thumbstick icon" style="transform: scale(.7)">
+                  <img *ngIf="selectedLeftThumbstick != null" class="selection-img cropped-selection-thumbstick" width="100%" [src]="selectedLeftThumbstick.imageUrls[0]" alt="Left Thumbstick icon" style="margin-top: -40px;">
+                  <img *ngIf="selectedRightThumbstick != null" class="selection-img cropped-selection-thumbstick" width="100%" [src]="selectedRightThumbstick.imageUrls[0]" alt="Right Thumbstick icon" style="margin-top: 20px;">
+
+                   <!-- THUMBSTICK Swapper Button -->
+                  <button *ngIf="selectedLeftThumbstick != null && selectedRightThumbstick != null" (click)="swapThumbsticks()" style="position: absolute; max-width: 80px; max-height: 80px; width: 66px; height: 66px; margin-left: 22px; margin-top: -5px; transform: scale(.6); background-color: transparent; border: 5px solid rgba(255,255,255,.01); border-radius: 20px;">
+                    <img [@rotate]="rotateState" src="assets/cycle.svg" alt="visibility icon" style="transform: scale(1); transform-origin:center; opacity: .5" />
+                  </button>
+                </div>
+
+
+                <!-- DPAD -->
+                <div style="display: flex; flex-direction: row; align-items: start; gap: 20px; ">
+                  <!-- DPAD Selection Box -->
+                  <div class="selection-box" style="margin-top: 48vh; backdrop-filter: blur(10px);"
+                       [ngStyle]="{'box-shadow': selectedDPad == null ? '0 0 50px #fff, -10px 0 80px #f0f, 10px 0 80px #0ff' : '0 0 50px ' + colorMapping[selectedDPad?.partColor] + ', -10px 0 80px #f0f, 10px 0 80px #0ff',
+                    'border': selectedDPad == null ? '7px double rgba(255,255,255,.05)' : '7px double rgba(' + hexToRgb(colorMapping[selectedDPad?.partColor]).join(',') + ',.1)'}">
+                    <img *ngIf="selectedDPad== null" class="default-selection-img" width="100%" src="assets/dpad.svg" alt="DPad icon" style="transform: scale(.7)">
+                    <img *ngIf="selectedDPad!= null" class="selection-img" width="100%" [src]="selectedDPad.imageUrls[0]" alt="DPadicon">
+                  </div>
+                  <!-- DPAD Switcher -->
+                  <div class="selection-box-setting" style="margin-top: 48vh;">
+                    <div>
+                      <!-- Top Toggle: Classic DPad -->
+                      <div>
+                        <img src="assets/classic_dpad.svg" alt="visibility icon" style="margin-bottom: 12px; margin-left: 2px; opacity: .4;" width="24px" />
+                      </div>
+                      <!-- Toggler -->
+                      <div>
+                        <mat-slide-toggle [(ngModel)]="dPadToggle" color="accent" style="transform: rotate(-90deg) scale(1); opacity: .4;">
+                        </mat-slide-toggle>
+                      </div>
+                      <!-- Bottom Toggle: Modern DPad -->
+                      <div>
+                        <img src="assets/modern_dpad.svg" alt="visibility icon" style="margin-top: 14px; margin-left: 2px; opacity: .4;" width="24px" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CONTROLLER AND BRANDING-->
+            <div class="flex-item" style="min-height: 100vh; align-content: center; margin-top: -15vh;">
+              <div style="transform: scale(.8)">
+                <div class="controller-container floating-anim">
+
+                  <!-- Base Unit -->
+                  <img class="noselect nodrag" width="175%"
+                       src="assets/candycon_controller.png" alt="CandyConLab">
+
+                  <!-- Faceplate -->
+                  <img *ngIf="selectedFaceplate != null" class="floating-anim noselect nodrag faceplate-overlay"
+                       [src]="faceplateUrl" alt="CandyConLab" [ngStyle]="{'opacity' : faceplateOpacity}">
+
+                  <!-- Right Thumbstick -->
+                  <img *ngIf="selectedRightThumbstick != null" class="floating-anim noselect nodrag thumbstick-1-overlay cropped-thumbstick"
+                       [src]="thumbstickRightUrl" alt="CandyConLab">
+
+                  <!-- Left Thumbstick -->
+                  <img *ngIf="selectedLeftThumbstick != null" class="floating-anim noselect nodrag thumbstick-2-overlay cropped-thumbstick"
+                       [src]="thumbstickLeftUrl" alt="CandyConLab">
+
+                  <!-- DPad Classic -->
+                  <img *ngIf="selectedDPad != null && dPadToggle == true" class="floating-anim noselect nodrag dpad-overlay cropped-dpad-classic"
+                       [src]="dpadUrl" alt="CandyConLab">
+
+                  <!-- DPad Modern -->
+                  <img *ngIf="selectedDPad != null && dPadToggle == false" class="floating-anim noselect nodrag dpad-overlay cropped-dpad-modern"
+                       [src]="dpadUrl" alt="CandyConLab">
+
+                </div>
+              </div>
+
+              <!-- CANDY CON Branding: Logo + Slogan -->
+              <div>
+                <img class="noselect nodrag" width="200" style="margin-top:-114px;" src="assets/candycon_logo_light.png" alt="CandyConLab">
+              </div>
+              <div style="margin-top: -20px !important;">
+                <span class="noselect nodrag shadow-text ms-1">CREATE. PLAY. REPEAT.</span>
+              </div>
+            </div>
+
+            <!-- BUNDLES AND SUBMIT -->
+            <!-- Tools -->
+            <div class="flex-item" style="align-content: end; text-align: -webkit-right; white-space: nowrap; overflow: hidden;">
+              <div style="position: absolute; left: 78%; top: 11vw; margin-top: 10px;">
+                <div>
+                  <!-- Randomizer -->
+                  <button class="mat-elevation-z1" (click)="randomize()" style="z-index: 100;  max-width: 80px; max-height: 80px; width: 60px; height: 60px;  transform: scale(.95); background-color: transparent; border: 5px solid rgba(255,255,255,.05); border-radius: 10px; backdrop-filter: blur(10px); ">
+                    <img [@rotate-jump]="rotateJumpState" src="assets/dice.svg" alt="randomize icon" style="opacity: .6; margin-left: -6px; transform-origin: center;" width="50" />
+                  </button>
+                  <!-- Clear Parts -->
+                  <button class="mat-elevation-z1" (click)="clearParts()" style="z-index: 100; max-width: 80px; max-height: 80px; width: 60px; height: 60px; transform: scale(.95); background-color: transparent; border: 5px solid rgba(255,255,255,.05); border-radius: 10px; backdrop-filter: blur(10px); margin-left: 10px;">
+                    <img [@trash-shake]="trashShakeState" src="assets/delete_controller.svg" alt="reset icon" style="opacity: .6; margin-left: -6px; transform-origin: center;" width="50" />
+                  </button>
+                </div>
+              </div>
+
+              <!-- Lock In: Show Parts Links -->
+              <div class="submit-box" style="white-space: nowrap;">
+                <div class="submit-button" style="white-space: nowrap;">
+                  <button (click)="lockedIn()" class="lockin-button-text"
+                          [ngStyle]="{'color' : selectedCount === 4 ? 'deeppink' : 'white',
+                            'opacity' : selectedCount=== 4 ? '1' : '.5'}">
+                    LOCK IN
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Open/Close Sidenav -->
+        <button class="sidenav-expansion-button" (click)="toggleSidenav()"></button>
+
+        <!-- Version Information -->
+        <span class="noselect nodrag" style="font-size: 20px; position: relative; top: 0%; min-width: max-content; text-align-last: center;">
+          <div>
+            <span style="position: fixed; bottom: 0; right: 0; font-size: 12px; margin-right: 10px;">
+              <span class="text-jump-anim ms-3">
+                <span style="color:yellow">&nbsp;●&nbsp;</span>
+                <span style="color:tomato">●&nbsp;</span>
+                <span style="color:cyan">●&nbsp;</span>
+                <span style="color:mediumorchid">●&nbsp;</span>
+                <span style="color:orange">●&nbsp;</span>
+                <span style="color:pink">●&nbsp;</span>
+                <span style="color:teal">●&nbsp;</span>
+                <span style="color:limegreen">●&nbsp;</span>
+              </span>
+              Beta v0.2
+            </span>
+          </div>
+        </span>
+      </div>
+    </div>
+
+  </mat-sidenav-content>
+ </mat-sidenav-container>

@@ -1,0 +1,101 @@
+<header>
+  <nav
+    class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark box-shadow mb-3"
+  >
+    <div class="container" style="margin-left: 0px; min-width: -webkit-fill-available;">
+      <a class="navbar-brand" [routerLink]="['/']" style="white-space: nowrap;">
+        <img style="padding-right: 5px; filter: brightness(50%) sepia(100) saturate(100) hue-rotate(325deg);" width="45" src="assets/candycon_minimal_light.png" alt="CandyConLab">
+        <span style="font-family:Impact">Candy Con
+          <img width="42" height="26" style="transform:scale(.9); margin-left: -2px;" src="assets/lab_icon.png" alt="Lab"></span> 
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target=".navbar-collapse"
+        aria-label="Toggle navigation"
+        [attr.aria-expanded]="isExpanded"
+        (click)="toggle()"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div
+        class="navbar-collapse collapse d-sm-inline-flex"
+        [ngClass]="{ show: isExpanded }"
+           style="font-family: Impact;"
+      >
+        <ul class="navbar-nav flex-grow" style="display: flex; justify-content: space-between; width: -webkit-fill-available; white-space: nowrap;">
+          <li
+            class="nav-item"
+            style="margin-left: 100px;"
+            [routerLinkActive]="['link-active']"
+            [routerLinkActiveOptions]="{ exact: true }"
+          >
+            <a class="text-light" style="text-decoration: none; border-bottom: 6px solid deeppink" [routerLink]="['/']">CREATION LAB</a>
+          </li>
+          <li
+            class="nav-item"
+            style="margin-left: 25px;"
+            [routerLinkActive]="['link-active']"
+            [routerLinkActiveOptions]="{ exact: true }"
+          >
+            <a class="text-light" style="text-decoration: none;" href="https://www.gamestop.com/search/?q=CANDY+CON&lang=default&start=0&sz=50" target="_blank">EXPLORE PARTS</a>
+          </li>
+          <li
+            class="nav-item"
+            style="margin-left: 25px;"
+            [routerLinkActive]="['link-active']"
+            [routerLinkActiveOptions]="{ exact: true }"
+          >
+            <a class="text-light" style="text-decoration: none;" href="https://www.gamestop.com/digital-store" target="_blank">SHOP GAMES</a>
+          </li>
+          <li
+            class="nav-item"
+            style="margin-left: auto;"
+            [routerLinkActive]="['link-active']"
+            [routerLinkActiveOptions]="{ exact: true }"
+          >
+            <a class="text-light five-percent-digital" style="text-decoration: none; margin-right: -50px;" href="https://www.gamestop.com/pro-credit-card" target="_blank">
+              <img width="250" src="assets/Pro5percentDigital.png" />
+            </a>
+          </li>
+
+          
+          <!--
+          <li
+            class="nav-item"
+            [routerLinkActive]="['link-active']"
+            [routerLinkActiveOptions]="{ exact: true }"
+          >
+            <a class="nav-link text-light" [routerLink]="['/']">Explore</a>
+          </li>
+          <li class="nav-item" [routerLinkActive]="['link-active']">
+            <a class="nav-link text-light" [routerLink]="['/counter']"
+              >Problems</a
+            >
+          </li>
+          <li hidden class="nav-item" [routerLinkActive]="['link-active']">
+            <a class="nav-link text-light" [routerLink]="['/fetch-data']"
+              >Contest</a
+            >
+          </li>
+          <li class="nav-item" [routerLinkActive]="['link-active']">
+            <a class="nav-link text-light" [routerLink]="['/fetch-data']"
+              >Discuss</a
+            >
+          </li>
+          <li hidden class="nav-item" [routerLinkActive]="['link-active']">
+            <a class="nav-link text-light" [routerLink]="['/fetch-data']"
+              >Guide</a
+            >
+          </li>
+            -->
+        </ul>
+      </div>
+      
+    <mat-slide-toggle hidden color="empty" [formControl]="themeService.toggleControl"></mat-slide-toggle>
+    <button (click)="themeService.setApplicationTheme('ModeDeepPurple')" mat-icon-button></button>
+
+    </div>
+  </nav>
+</header>

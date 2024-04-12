@@ -1,0 +1,93 @@
+.part-image {
+  margin-top: -50px !important;
+  margin-left: 0px !important;
+  filter: drop-shadow(0 0 0.75rem black);
+}
+
+.header-icon {
+    margin-right: 5px;
+    margin-top: -2px;
+}
+
+h4 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+    width:fit-content;
+}
+
+h1 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif !important;
+  text-align: center;
+  font-size: 28px !important;
+  text-shadow: 1px 1px 1px rgba(255, 0, 157, 1);
+}
+
+
+button {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.view-button {
+  background-color: transparent;
+  text-shadow: 4px 4px 2px rgba(255, 0, 157, 1);
+  float: inline-end;
+  margin-top: 15px;
+  font-size: 32px;
+  color: white;
+  border: none;
+  width: fit-content;
+  height: 70px;
+}
+
+.overflow-image {
+  position: absolute;
+  top: -216px; /* Adjust as necessary */
+  left: -25px; /* Adjust as necessary */
+  z-index: 1000; /* Ensure it's above the dialog but below modal overlay if needed */
+  transform: scale(.3);
+  border-radius: 50px;
+  filter: drop-shadow(20px 20px 0.45rem black);
+}
+
+@media (max-width: 1800px) {
+  .overflow-image {
+    position: absolute;
+    top: -235px; /* Adjust as necessary */
+    left: -75px; /* Adjust as necessary */
+    z-index: 1000; /* Ensure it's above the dialog but below modal overlay if needed */
+    transform: scale(.25);
+  }
+}
+
+@media (max-width: 1600px) {
+  .overflow-image {
+    position: absolute;
+    top: -238px; /* Adjust as necessary */
+    left: -110px; /* Adjust as necessary */
+    z-index: 1000; /* Ensure it's above the dialog but below modal overlay if needed */
+    transform: scale(.225);
+  }
+}
+
+@media (max-width: 1450px) {
+  .overflow-image {
+    position: absolute;
+    top: -250px; /* Adjust as necessary */
+    left: -150px; /* Adjust as necessary */
+    z-index: 1000; /* Ensure it's above the dialog but below modal overlay if needed */
+    transform: scale(.18);
+  }
+}
+
+@media (max-width: 1350px) {
+  .overflow-image {
+    display: none;
+    position: absolute;
+    top: -200px; /* Adjust as necessary */
+    left: -25px; /* Adjust as necessary */
+    z-index: 1000; /* Ensure it's above the dialog but below modal overlay if needed */
+    transform: scale(0);
+  }
+}
+
+

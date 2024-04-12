@@ -1,0 +1,1462 @@
+@use '/node_modules/@angular/material/theming';
+@use '@angular/material' as mat;
+@import 'https://fonts.googleapis.com/css?family=Material+Icons';
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
+
+@include mat.core();
+
+// Dark Theme Palettes
+$dark-primary: mat.define-palette(mat.$deep-purple-palette, 500,100,900);
+$dark-accent:  mat.define-palette(mat.$deep-purple-palette, A200, A100, A400);
+$dark-warn:    mat.define-palette(mat.$pink-palette,800,300,900);
+
+$dark-theme: mat.define-dark-theme((
+  color: (
+    primary: $dark-primary,
+    accent: $dark-accent,
+    warn: $dark-warn,
+  )
+));
+
+// Dark Deep Purple Theme Palette
+$dark-deeppurple-primary: mat.define-palette(mat.$deep-purple-palette, 500,100,900);
+$dark-deeppurple-accent:  mat.define-palette(mat.$deep-purple-palette, A200, A100, A400);
+$dark-deeppurple-warn:    mat.define-palette(mat.$pink-palette,800,300,900);
+
+$dark-deeppurple-theme: mat.define-dark-theme((
+  color: (
+    primary: $dark-deeppurple-primary,
+    accent: $dark-deeppurple-accent,
+    warn: $dark-deeppurple-warn,
+  )
+));
+
+// Dark Purple Theme Palette
+$dark-purple-primary: mat.define-palette(mat.$purple-palette, 500,100,900);
+$dark-purple-accent:  mat.define-palette(mat.$purple-palette, A200, A100, A400);
+$dark-purple-warn:    mat.define-palette(mat.$pink-palette,800,300,900);
+
+$dark-purple-theme: mat.define-dark-theme((
+  color: (
+    primary: $dark-purple-primary,
+    accent: $dark-purple-accent,
+    warn: $dark-purple-warn,
+  )
+));
+
+// Dark Indigo Theme Palette
+$dark-indigo-primary: mat.define-palette(mat.$indigo-palette, 500,100,900);
+$dark-indigo-accent:  mat.define-palette(mat.$indigo-palette, A200, A100, A400);
+$dark-indigo-warn:    mat.define-palette(mat.$pink-palette,800,300,900);
+
+$dark-indigo-theme: mat.define-dark-theme((
+  color: (
+    primary: $dark-indigo-primary,
+    accent: $dark-indigo-accent,
+    warn: $dark-indigo-warn,
+  )
+));
+
+// Dark Blue Theme Palette
+$dark-blue-primary: mat.define-palette(mat.$blue-palette, 500,100,900);
+$dark-blue-accent:  mat.define-palette(mat.$blue-palette, A200, A100, A400);
+$dark-blue-warn:    mat.define-palette(mat.$pink-palette,800,300,900);
+
+$dark-blue-theme: mat.define-dark-theme((
+  color: (
+    primary: $dark-blue-primary,
+    accent: $dark-blue-accent,
+    warn: $dark-blue-warn,
+  )
+));
+
+// Dark Light-Blue Theme Palette
+$dark-lightblue-primary: mat.define-palette(mat.$light-blue-palette, 500,100,900);
+$dark-lightblue-accent:  mat.define-palette(mat.$light-blue-palette, A200, A100, A400);
+$dark-lightblue-warn:    mat.define-palette(mat.$pink-palette,800,300,900);
+
+$dark-lightblue-theme: mat.define-dark-theme((
+  color: (
+    primary: $dark-lightblue-primary,
+    accent: $dark-lightblue-accent,
+    warn: $dark-lightblue-warn,
+  )
+));
+
+// Dark Cyan Theme Palette
+$dark-cyan-primary: mat.define-palette(mat.$cyan-palette, 500,100,900);
+$dark-cyan-accent:  mat.define-palette(mat.$cyan-palette, A200, A100, A400);
+$dark-cyan-warn:    mat.define-palette(mat.$pink-palette,800,300,900);
+
+$dark-cyan-theme: mat.define-dark-theme((
+  color: (
+    primary: $dark-cyan-primary,
+    accent: $dark-cyan-accent,
+    warn: $dark-cyan-warn,
+  )
+));
+
+// Dark Teal Theme Palette
+$dark-teal-primary: mat.define-palette(mat.$teal-palette, 500,100,900);
+$dark-teal-accent:  mat.define-palette(mat.$teal-palette, A200, A100, A400);
+$dark-teal-warn:    mat.define-palette(mat.$pink-palette,800,300,900);
+
+$dark-teal-theme: mat.define-dark-theme((
+  color: (
+    primary: $dark-teal-primary,
+    accent: $dark-teal-accent,
+    warn: $dark-teal-warn,
+  )
+));
+
+// Dark Green Theme Palette
+$dark-green-primary: mat.define-palette(mat.$green-palette, 500,100,900);
+$dark-green-accent:  mat.define-palette(mat.$green-palette, A200, A100, A400);
+$dark-green-warn:    mat.define-palette(mat.$pink-palette,800,300,900);
+
+$dark-green-theme: mat.define-dark-theme((
+  color: (
+    primary: $dark-green-primary,
+    accent: $dark-green-accent,
+    warn: $dark-green-warn,
+  )
+));
+
+// Dark Light-Green Theme Palette
+$dark-lightgreen-primary: mat.define-palette(mat.$light-green-palette, 500,100,900);
+$dark-lightgreen-accent:  mat.define-palette(mat.$light-green-palette, A200, A100, A400);
+$dark-lightgreen-warn:    mat.define-palette(mat.$pink-palette,800,300,900);
+
+$dark-lightgreen-theme: mat.define-dark-theme((
+  color: (
+    primary: $dark-lightgreen-primary,
+    accent: $dark-lightgreen-accent,
+    warn: $dark-lightgreen-warn,
+  )
+));
+
+// Dark Blue-Grey Theme Palette
+$dark-bluegrey-primary: mat.define-palette(mat.$blue-grey-palette, 500,100,900);
+$dark-bluegrey-accent:  mat.define-palette(mat.$blue-grey-palette, A200, A100, A400);
+$dark-bluegrey-warn:    mat.define-palette(mat.$pink-palette,800,300,900);
+
+$dark-bluegrey-theme: mat.define-dark-theme((
+  color: (
+    primary: $dark-bluegrey-primary,
+    accent: $dark-bluegrey-accent,
+    warn: $dark-bluegrey-warn,
+  )
+));
+
+// Dark Grey Theme Palette
+$dark-grey-primary: mat.define-palette(mat.$grey-palette, 500,100,900);
+$dark-grey-accent:  mat.define-palette(mat.$grey-palette, A200, A100, A400);
+$dark-grey-warn:    mat.define-palette(mat.$blue-grey-palette,700,300,900);
+
+$dark-grey-theme: mat.define-dark-theme((
+  color: (
+    primary: $dark-grey-primary,
+    accent: $dark-grey-accent,
+    warn: $dark-grey-warn,
+  )
+));
+
+// Dark Orange Theme Palette
+$dark-orange-primary: mat.define-palette(mat.$orange-palette, 500,100,900);
+$dark-orange-accent:  mat.define-palette(mat.$orange-palette, A200, A100, A400);
+$dark-orange-warn:    mat.define-palette(mat.$red-palette,800,300,900);
+
+$dark-orange-theme: mat.define-dark-theme((
+  color: (
+    primary: $dark-orange-primary,
+    accent: $dark-orange-accent,
+    warn: $dark-orange-warn,
+  )
+));
+
+// Dark Deep-Orange Theme Palette
+$dark-deeporange-primary: mat.define-palette(mat.$deep-orange-palette, 700,100,900);
+$dark-deeporange-accent:  mat.define-palette(mat.$deep-orange-palette, A200, A100, A400);
+$dark-deeporange-warn:    mat.define-palette(mat.$red-palette,800,300,900);
+
+$dark-deeporange-theme: mat.define-dark-theme((
+  color: (
+    primary: $dark-deeporange-primary,
+    accent: $dark-deeporange-accent,
+    warn: $dark-deeporange-warn,
+  )
+));
+
+// Dark Brown Theme Palette
+$dark-brown-primary: mat.define-palette(mat.$brown-palette, 500,100,900);
+$dark-brown-accent:  mat.define-palette(mat.$brown-palette, A200, A100, A400);
+$dark-brown-warn:    mat.define-palette(mat.$red-palette,800,300,900);
+
+$dark-brown-theme: mat.define-dark-theme((
+  color: (
+    primary: $dark-brown-primary,
+    accent: $dark-brown-accent,
+    warn: $dark-brown-warn,
+  )
+));
+
+// Dark Red Theme Palette
+$dark-red-primary: mat.define-palette(mat.$red-palette, 600,100,900);
+$dark-red-accent:  mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$dark-red-warn:    mat.define-palette(mat.$blue-grey-palette,800,300,900);
+
+$dark-red-theme: mat.define-dark-theme((
+  color: (
+    primary: $dark-red-primary,
+    accent: $dark-red-accent,
+    warn: $dark-red-warn,
+  )
+));
+
+// Light Palettes
+$light-primary: mat.define-palette(mat.$indigo-palette);
+$light-accent:  mat.define-palette(mat.$indigo-palette, A100, A100, A100);
+$light-warn:    mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$light-theme: mat.define-light-theme((
+  color: (
+    primary: $light-primary,
+    accent: $light-accent,
+    warn: $light-warn,
+  )
+));
+
+// Light Deep Purple Theme Palette
+$light-deeppurple-primary: mat.define-palette(mat.$deep-purple-palette, 400,100,900);
+$light-deeppurple-accent:  mat.define-palette(mat.$deep-purple-palette, A100, A100, A100);
+$light-deeppurple-warn:    mat.define-palette(mat.$pink-palette,900,300,900);
+
+$light-deeppurple-theme: mat.define-light-theme((
+  color: (
+    primary: $light-deeppurple-primary,
+    accent: $light-deeppurple-accent,
+    warn: $light-deeppurple-warn,
+  )
+));
+
+// Light Purple Theme Palette
+$light-purple-primary: mat.define-palette(mat.$purple-palette, 400,100,900);
+$light-purple-accent:  mat.define-palette(mat.$purple-palette, A100, A100, A100);
+$light-purple-warn:    mat.define-palette(mat.$pink-palette,600,300,900);
+
+$light-purple-theme: mat.define-light-theme((
+  color: (
+    primary: $light-purple-primary,
+    accent: $light-purple-accent,
+    warn: $light-purple-warn,
+  )
+));
+
+// Light Indigo Theme Palette
+$light-indigo-primary: mat.define-palette(mat.$indigo-palette, 400,100,900);
+$light-indigo-accent:  mat.define-palette(mat.$indigo-palette, A100, A100, A100);
+$light-indigo-warn:    mat.define-palette(mat.$red-palette,800,300,900);
+
+$light-indigo-theme: mat.define-light-theme((
+  color: (
+    primary: $light-indigo-primary,
+    accent: $light-indigo-accent,
+    warn: $light-indigo-warn,
+  )
+));
+
+// Light Blue Theme Palette
+$light-blue-primary: mat.define-palette(mat.$blue-palette, 600,100,900);
+$light-blue-accent:  mat.define-palette(mat.$blue-palette, A100, A100, A100);
+$light-blue-warn:    mat.define-palette(mat.$red-palette,400,300,900);
+
+$light-blue-theme: mat.define-light-theme((
+  color: (
+    primary: $light-blue-primary,
+    accent: $light-blue-accent,
+    warn: $light-blue-warn,
+  )
+));
+
+// Light Light-Blue Theme Palette
+$light-lightblue-primary: mat.define-palette(mat.$light-blue-palette, 600,100,900);
+$light-lightblue-accent:  mat.define-palette(mat.$light-blue-palette, A100, A100, A100);
+$light-lightblue-warn:    mat.define-palette(mat.$red-palette,400,300,900);
+
+$light-lightblue-theme: mat.define-light-theme((
+  color: (
+    primary: $light-lightblue-primary,
+    accent: $light-lightblue-accent,
+    warn: $light-lightblue-warn,
+  )
+));
+
+// Light Cyan Theme Palette
+$light-cyan-primary: mat.define-palette(mat.$cyan-palette, 700,100,900);
+$light-cyan-accent:  mat.define-palette(mat.$cyan-palette, A100, A100, A100);
+$light-cyan-warn:    mat.define-palette(mat.$red-palette,400,300,900);
+
+$light-cyan-theme: mat.define-light-theme((
+  color: (
+    primary: $light-cyan-primary,
+    accent: $light-cyan-accent,
+    warn: $light-cyan-warn,
+  )
+));
+
+// Light Teal Theme Palette
+$light-teal-primary: mat.define-palette(mat.$teal-palette, 500,100,900);
+$light-teal-accent:  mat.define-palette(mat.$teal-palette, A100, A100, A100);
+$light-teal-warn:    mat.define-palette(mat.$red-palette,500,300,900);
+
+$light-teal-theme: mat.define-light-theme((
+  color: (
+    primary: $light-teal-primary,
+    accent: $light-teal-accent,
+    warn: $light-teal-warn,
+  )
+));
+
+// Light Green Theme Palette
+$light-green-primary: mat.define-palette(mat.$green-palette, 600,100,900);
+$light-green-accent:  mat.define-palette(mat.$green-palette, A100, A100, A100);
+$light-green-warn:    mat.define-palette(mat.$pink-palette,400,300,900);
+
+$light-green-theme: mat.define-light-theme((
+  color: (
+    primary: $light-green-primary,
+    accent: $light-green-accent,
+    warn: $light-green-warn,
+  )
+));
+
+// Light Light-Green Theme Palette
+$light-lightgreen-primary: mat.define-palette(mat.$light-green-palette, 800,100,900);
+$light-lightgreen-accent:  mat.define-palette(mat.$light-green-palette, A100, A100, A100);
+$light-lightgreen-warn:    mat.define-palette(mat.$red-palette,400,300,900);
+
+$light-lightgreen-theme: mat.define-light-theme((
+  color: (
+    primary: $light-lightgreen-primary,
+    accent: $light-lightgreen-accent,
+    warn: $light-lightgreen-warn,
+  )
+));
+
+// Light Grey Theme Palette
+$light-grey-primary: mat.define-palette(mat.$blue-grey-palette, 900,100,900);
+$light-grey-accent:  mat.define-palette(mat.$blue-grey-palette, A100, A100, A100);
+$light-grey-warn:    mat.define-palette(mat.$red-palette,700,300,900);
+
+$light-grey-theme: mat.define-light-theme((
+  color: (
+    primary: $light-grey-primary,
+    accent: $light-grey-accent,
+    warn: $light-grey-warn,
+  )
+));
+
+$light-bluegrey-primary: mat.define-palette(mat.$blue-grey-palette, 500,100,900);
+$light-bluegrey-accent:  mat.define-palette(mat.$blue-grey-palette, A100, A100, A100);
+$light-bluegrey-warn:    mat.define-palette(mat.$orange-palette,700,300,900);
+
+$light-bluegrey-theme: mat.define-light-theme((
+  color: (
+    primary: $light-bluegrey-primary,
+    accent: $light-bluegrey-accent,
+    warn: $light-bluegrey-warn,
+  )
+));
+
+// Light Orange Theme Palette
+$light-orange-primary: mat.define-palette(mat.$orange-palette, 700,100,900);
+$light-orange-accent:  mat.define-palette(mat.$orange-palette, A100, A100, A100);
+$light-orange-warn:    mat.define-palette(mat.$red-palette,400,300,900);
+
+$light-orange-theme: mat.define-light-theme((
+  color: (
+    primary: $light-orange-primary,
+    accent: $light-orange-accent,
+    warn: $light-orange-warn,
+  )
+));
+
+// Light Deep-Orange Theme Palette
+$light-deeporange-primary: mat.define-palette(mat.$deep-orange-palette, 700,100,900);
+$light-deeporange-accent:  mat.define-palette(mat.$deep-orange-palette, A100, A100, A100);
+$light-deeporange-warn:    mat.define-palette(mat.$red-palette,700,300,900);
+
+$light-deeporange-theme: mat.define-light-theme((
+  color: (
+    primary: $light-deeporange-primary,
+    accent: $light-deeporange-accent,
+    warn: $light-deeporange-warn,
+  )
+));
+
+// Light Brown Theme Palette
+$light-brown-primary: mat.define-palette(mat.$brown-palette, 500,100,900);
+$light-brown-accent:  mat.define-palette(mat.$brown-palette, 100, 100,100);
+$light-brown-warn:    mat.define-palette(mat.$red-palette,400,300,900);
+
+$light-brown-theme: mat.define-light-theme((
+  color: (
+    primary: $light-brown-primary,
+    accent: $light-brown-accent,
+    warn: $light-brown-warn,
+  )
+));
+
+// Light Red Theme Palette
+$light-red-primary: mat.define-palette(mat.$red-palette, 700,100,900);
+$light-red-accent:  mat.define-palette(mat.$red-palette, A100, A100, A100);
+$light-red-warn:    mat.define-palette(mat.$blue-grey-palette,800,300,900);
+
+$light-red-theme: mat.define-light-theme((
+  color: (
+    primary: $light-red-primary,
+    accent: $light-red-accent,
+    warn: $light-red-warn,
+  )
+));
+
+// Define a mixin that accepts a theme and outputs the theme-specific styles.
+@mixin dark-theme($theme) {
+  // Extract the palettes you need from the theme definition.
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, warn);
+
+  .topic-container {
+    background-color: rgba(#121212,.8);
+  }
+
+  .base-sidenav-pattern {
+    background: conic-gradient(from -60deg at 50% calc(100%/3),#020202 0 120deg,#0000 0), conic-gradient(from 120deg at 50% calc(200%/3),#020202 0 120deg,#0000 0), conic-gradient(from 60deg at calc(200%/3),#020202 60deg,#060003 0 120deg,#0000 0), conic-gradient(from 180deg at calc(100%/3),#040404 60deg,#020202 0 120deg,#0000 0), linear-gradient(90deg,#040404 calc(100%/6),#060003 0 50%, #040404 0 calc(500%/6), #060003 0);
+    background-size: 87px 50px;
+  }
+
+  mat-sidenav-container {
+    background-color: #212121 !important;
+  }
+
+  mat-sidenav, body, mat-sidenav-content, mat-expansion-panel {
+    background-color: #212121 !important;
+    color: rgba(255,255,255,1) !important;
+  }
+
+  mat-panel-title, mat-panel-description {
+    color: white;
+  }
+
+  .mat-expansion-indicator::after {
+    color: rgba(255,255,255,.9) !important;
+  }
+
+  button {
+    color: white !important;
+  }
+
+  span.material-symbols-outlined {
+    color: rgba(255,255,255,.7) !important;
+  }
+
+  input {
+    caret-color: rgba(map-get($primary, 400),1) !important;
+  }
+
+  .mat-toolbar {
+    background-color: #212121 !important;
+  }
+
+  .banner-container {
+    background-color: #212121 !important;
+  }
+
+  .mat-dialog-content {
+    color: white !important;
+  }
+
+  .form-panel {
+    padding: 50px 30px 30px 30px !important;
+    background: rgba(map-get($primary, 900),.3) !important;
+    margin-top: 0 !important;
+    border: 1px solid rgba(map-get($primary, 600),1) !important;
+    border-top: none !important;
+    border-radius: 0px 0px 10px 10px;
+    overflow: hidden;
+
+    .sub-banner {
+      background-color: rgba(map-get($primary, 500),1) !important;
+      color: #fff;
+      max-width: 200px;
+      text-align: center;
+      position: relative;
+      top: -35px;
+      height: 48px;
+      margin-left: 10px;
+      border-radius: 4px;
+      margin-bottom: -10px;
+    }
+
+    .mat-card-inner {
+      margin-bottom: 60px;
+      box-shadow: none;
+      border-radius: 10px !important;
+      background-color: rgba(map-get($primary, 600),.2) !important;
+      border: 1px solid rgba(map-get($primary, 700),1) !important;
+    }
+  }
+
+  .mat-mdc-raised-button.mat-primary {
+    background-color: rgba(map-get($primary, 600),1) !important;
+    outline: 1px solid;
+    outline-color: map-get($primary, 400) !important;
+  }
+
+  .mat-mdc-raised-button.mat-warn {
+    background-color: rgba(map-get($warn, 500),.7) !important;
+    outline: 1px solid;
+    outline-color: map-get($warn, 400) !important;
+  }
+
+  .modal-primary {
+    color: rgba(map-get($primary, 500),1) !important;
+  }
+
+  .mat-mdc-outlined-button[disabled][disabled] {
+    color: dimgrey !important;
+  }
+
+  .sticky-row {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 99;
+    background-color: rgba(map-get($primary, 600), 1) !important;
+    border-radius: 6px 6px 0px 0px !important;
+  }
+
+  .sticky-row-icon {
+    position: absolute;
+    top: 32%;
+    left: 2%;
+    font-size: 22px;
+    color: rgba(map-get($primary, 200), .95) !important;
+  }
+
+  .filter-button {
+    border-color: rgba(map-get($primary, 50), 1) !important;
+    background-color: rgba(map-get($primary, 600), .95) !important;
+    color: white !important;
+  }
+
+  .reset-filter-button {
+    border-color: rgba(map-get($warn, 300), 1) !important;
+    background-color: rgba(map-get($warn, 600), .9) !important;
+    color: white !important;
+  }
+
+  .mdc-evolution-chip__text-label {
+    color: white !important;
+  }
+  // All Chip Set List Items (mat-chip must have 'list-chip' class)
+  .mdc-evolution-chip.list-chip {
+    background-color: rgba(map-get($primary, 900), .5) !important;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 6px 6px 6px 6px !important;
+  }
+  // First Chip Set List Item (Uncomment as needed for UI changes)
+  .mdc-evolution-chip:nth-child(1).list-chip {
+    // Space between first chip and middle chips
+    margin-right: 0px !important;
+  }
+  // Middle Chip Set List Items
+  .mdc-evolution-chip:nth-child(n+2):nth-child(-n+2).list-chip {
+    // Space between middle chips and last chip
+    margin-right: 0px !important;
+  }
+  // Last Chip Set List Item
+  .mdc-evolution-chip:nth-last-child(-n+1).list-chip {
+    //border-radius: 0px 4px 4px 0px !important;
+  }
+
+  .mat-datepicker-toggle-default-icon {
+    color: white;
+  }
+
+  .mat-mdc-checkbox .mdc-checkbox .mdc-checkbox__native-control:enabled:checked ~ .mdc-checkbox__background,
+  .mat-mdc-checkbox .mdc-checkbox .mdc-checkbox__native-control:enabled:indeterminate ~ .mdc-checkbox__background,
+  .mat-mdc-checkbox .mdc-checkbox .mdc-checkbox__native-control[data-indeterminate=true]:enabled ~ .mdc-checkbox__background {
+    background-color: map-get($primary, 500) !important;
+    border-color: map-get($primary, 500) !important;
+  }
+
+  .mat-mdc-slide-toggle .mdc-switch:enabled .mdc-switch__track::after {
+    //background: map-get($primary, 900) !important;
+    background: rgba(255,255,255,1);
+  }
+
+  .mdc-switch__icons {
+    //background: map-get($primary, 500) !important;
+    background: white !important;
+    border-radius: 3px !important;
+  }
+
+  .mat-mdc-button.mat-accent, .mat-mdc-outlined-button.mat-accent {
+    --mat-mdc-button-persistent-ripple-color: none !important;
+    --mat-mdc-button-ripple-color: none !important;
+  }
+
+  .mat-mdc-button.mat-accent {
+    //background-color: rgba(map-get($primary, 500),.02) !important;
+    background-color: transparent !important;
+    border-bottom: 2px rgba(map-get($primary, 500),1) solid !important;
+    border-radius: 4px 4px 0px 0px !important;
+  }
+
+  .mdc-icon-button .mat-mdc-paginator-icon {
+    fill: rgba(220,220,220,1) !important;
+  }
+
+  .mat-mdc-icon-button:disabled .mat-mdc-paginator-icon {
+    fill: rgba(0,0,0,.12) !important;
+  }
+
+  .div-mobile {
+    background-color: rgba(map-get($primary, 900),.3) !important;
+    border: 1px solid;
+    border-color: map-get($primary, 400) !important;
+    border-radius: 8px 8px 8px 8px;
+    margin-top: 4px;
+    // Enable below if implementing profile box extension to top of page.
+    // This container width would need to be made dynamic, since Name text is variable
+    //border-radius: 0px 0px 8px 8px;
+    //border-top: none;
+    //margin-top: -7px;
+  }
+
+  .avatar {
+    filter: brightness(1) !important;
+  }
+
+  .fa-brush {
+    color: rgb(248, 194, 94) !important
+  }
+
+  .theming-container {
+    background-color: transparent;
+    // Enable below if implementing profile box extension to top of page.
+    // This container width would need to be made dynamic, since Name text is variable
+    //background-color: rgba(map-get($primary, 900),.3) !important;
+    //border: 1px solid map-get($primary, 400);
+    //border-top: none;
+    //border-bottom: none;
+    // border-bottom: 2px solid rgba(map-get($primary, 500),.2);
+  }
+
+  .theme-label {
+    border-bottom: solid 4px rgba(map-get($primary, 400),.85);
+    padding-bottom: 3px;
+    letter-spacing: 1px;
+  }
+
+  .mat-mdc-card {
+    // Use mat-color to extract individual colors from a palette.
+    //background-color: #212032 !important;
+    background-color: rgba(map-get($primary, 900),.3) !important;
+    border-left: 1px map-get($primary, 700) solid;
+    border-bottom: 1px map-get($primary, 700) solid;
+    border-top: none;
+    border-right: 1px map-get($primary, 500) solid;
+    // border-top: 5px solid #78909c !important;
+  }
+
+  .header-background {
+    //background-color: #212032 !important;
+    background-color: rgba(map-get($primary, 900),.4) !important;
+    border-top: 1px map-get($primary, 600) solid;
+    border-right: 1px map-get($primary, 500) solid;
+    border-left: 1px map-get($primary, 600) solid;
+  }
+
+  a.ng-star-inserted.active {
+    color: white !important;
+  }
+
+  .mat-mdc-table {
+    background-color: rgba(map-get($primary, 400),.4) !important;
+    border-radius: 0px 0px 0px 0px;
+    overflow: hidden !important;
+    border: 0px solid;
+    border-bottom: none;
+    border-color: map-get($primary, 400) !important;
+  }
+
+  .mat-mdc-table thead, .mat-mdc-header-row, .mat-mdc-header-cell {
+    background-color: rgba(map-get($primary, 400),.05) !important;
+    //outline: 1px solid;
+    //outline-color: map-get($primary, 400) !important;
+  }
+
+  .mat-mdc-paginator {
+    background-color: rgba(map-get($primary, 400),.4) !important;
+    color: white !important;
+    border-radius: 0px 0px 10px 10px;
+    overflow: hidden !important;
+    border: 0px solid;
+    border-top: none;
+    border-color: map-get($primary, 400) !important;
+  }
+
+  .mat-mdc-row:nth-child(even) {
+    background: rgba(0,0,0,0.15);
+  }
+
+  .mat-mdc-row:nth-child(odd) {
+    background: rgba(0,0,0,0.2);
+  }
+  //for dark theme
+  // .mat-mdc-row:hover {
+  //   $base-color: map-get($dark-accent, 100);
+  //   background-color: rgba(red($base-color), green($base-color), blue($base-color), 0.4) !important;
+  // }
+  // Dark theme hover effect
+  .darkModePurple .mat-mdc-row:hover,
+  .darkModeDeepPurple .mat-mdc-row:hover,
+  .darkModeIndigo .mat-mdc-row:hover,
+  .darkModeBlue .mat-mdc-row:hover,
+  .darkModeLightBlue .mat-mdc-row:hover,
+  .darkModeCyan .mat-mdc-row:hover,
+  .darkModeTeal .mat-mdc-row:hover,
+  .darkModeGreen .mat-mdc-row:hover,
+  .darkModeLightGreen .mat-mdc-row:hover,
+  .darkModeBlueGrey .mat-mdc-row:hover,
+  .darkModeGrey .mat-mdc-row:hover,
+  .darkModeOrange .mat-mdc-row:hover,
+  .darkModeDeepOrange .mat-mdc-row:hover,
+  .darkModeBrown .mat-mdc-row:hover,
+  .darkModeRed .mat-mdc-row:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important; // Light white for dark theme hover
+  }
+
+
+  .mat-mdc-chip {
+    background-color: map-get($dark-theme, 500) !important;
+  }
+
+  .mat-mdc-cell, .mat-mdc-header-cell, .mat-mdc-chip-action-label, .mat-mdc-select-value,
+  .mat-mdc-select-arrow, .mat-mdc-list-item::selection, .mdc-list-item__primary-text, .mat-mdc-dialog-title, label,
+  .mat-toolbar, .mat-sort-header-stem, .mat-sort-header-arrow, .mat-mdc-input-element,
+  .mat-mdc-form-field-hint, .mat-mdc-dialog-content, .none-found-text {
+    color: white !important;
+  }
+
+  .mat-mdc-select-panel {
+    background-color: map-get($primary, default) !important;
+    //background-color: #212121 !important;
+  }
+
+  .mdc-list-item--selected .mdc-list-item__primary-text, .mdc-list-item--activated .mdc-list-item__primary-text {
+    color: white !important;
+    font-weight: bold !important;
+  }
+
+  .mat-select-search-input {
+    color: white !important;
+  }
+
+  .mat-select-search-clear {
+    color: white !important
+  }
+
+  .mdc-checkbox__background {
+    border-color: rgba(map-get($primary, 100),1) !important;
+  }
+
+  .theme-select-container {
+    background-color: map-get($primary, 700) !important;
+    color: white !important;
+    border: solid 1px rgba(map-get($primary, 700),1) !important;
+    //border: solid 1px #121212 !important;
+  }
+
+  .theme-select-arrow-up {
+    border-bottom-color: #212121 !important;
+  }
+
+  .mat-mdc-dialog-container {
+    background-color: transparent !important;
+  }
+
+  .mat-mdc-dialog-surface {
+    background-color: transparent;
+    color: white !important;
+    border-radius: 8px !important;
+  }
+
+  .mat-mdc-dialog-container .mdc-dialog__surface {
+      background-color: transparent !important;
+      backdrop-filter: blur(35px) brightness(4);
+      overflow: visible !important;
+  }
+
+  .mdc-menu-surface {
+    background-color: map-get($primary, 600) !important;
+    //background-color: #5e5e5e !important;
+    color: white !important;
+  }
+
+  .mat-mdc-text-field-wrapper {
+    background-color: rgba(0,0,0,0.25) !important;
+  }
+
+  .mdc-text-field--filled .mdc-line-ripple::after {
+    border-bottom-color: rgba(map-get($primary, 500),1) !important;
+  }
+
+  .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-line-ripple::before {
+    border-bottom-color: map-get($primary, 600) !important;
+  }
+
+  .theme-icon {
+    //color: #FDFD96 !important;
+    color: rgb(248, 194, 94) !important
+  }
+
+  .remove-icon {
+    color: map-get($primary, 700) !important;
+  }
+
+  .mat-mdc-standard-chip {
+    background-color: rgba(map-get($primary, 500), 1) !important;
+  }
+
+  .mat-mdc-standard-chip:not(.mdc-evolution-chip--disabled) .mdc-evolution-chip__icon--trailing {
+    color: rgba(map-get($primary, 900),.6) !important;
+  }
+  /*
+  ::-webkit-scrollbar-thumb {
+    background: map-get($primary, 800);
+    border-radius: 0px;
+  }
+
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: map-get($primary, 900);
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: #121212;
+  }
+  */
+  /* Styles the main scrollbar container */
+  ::-webkit-scrollbar {
+    width: 9px; /* for vertical scrollbars */
+    height: 12px; /* for horizontal scrollbars */
+  }
+  /* Styles the scrollbar thumb (the draggable portion) */
+  ::-webkit-scrollbar-thumb {
+    background: #121212;
+    //background: map-get($primary, 800);
+    border-radius: 4px;
+  }
+  /* Styles the scrollbar track (the background portion) */
+  ::-webkit-scrollbar-track {
+    background: #212121;
+    border-radius: 6px;
+  }
+  /* Styles the scrollbar button (arrows at the ends) */
+  ::-webkit-scrollbar-button {
+    display: none; /* Hides the buttons */
+  }
+  /* Styles the scrollbar corner (where horizontal and vertical scrollbars meet) */
+  ::-webkit-scrollbar-corner {
+    background: #121212;
+  }
+}
+
+@mixin light-theme($theme) {
+  // Extract the palettes you need from the theme definition.
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, warn);
+
+  .topic-container {
+    background-color: rgba(#fff,.8);
+  }
+
+  .base-sidenav-pattern {
+    background: conic-gradient(from -45deg at calc(100%/3) calc(100%/3), #ffffff 90deg, #0000 0), conic-gradient(from -135deg at calc(100%/3) calc(2*100%/3), #ffffff 90deg, #fcfbfe 0 135deg, #0000 0), conic-gradient(from 135deg at calc(2*100%/3) calc(2*100%/3), #ffffff 90deg, #fcfbfe 0 135deg, #0000 0), conic-gradient(from 45deg at calc(2*100%/3) calc(100%/3), #ffffff 90deg, #fcfbfe 0 135deg, #0000 0,#ffffff 0 225deg,#fcfbfe 0);
+    background-size: 40px 40px;
+  }
+
+  mat-sidenav-container {
+    //background-color: #F5F8FF;
+    background-color: rgba(map-get($primary, 50),1) !important;
+  }
+
+  mat-sidenav, body, mat-sidenav-content, mat-expansion-panel {
+    background-color: #fff !important;
+    color: rgba(0,0,0,1) !important;
+  }
+
+  mat-panel-title, mat-panel-description {
+    color: black;
+  }
+
+  .mat-expansion-indicator::after {
+    color: rgba(0,0,0,.9) !important;
+  }
+
+  button {
+    color: black !important;
+  }
+
+  span.material-symbols-outlined {
+    color: rgba(0,0,0,1) !important;
+  }
+
+  input {
+    caret-color: rgba(map-get($primary, 600),1) !important;
+  }
+
+  .mat-toolbar {
+    //background-color: #F5F8FF !important;
+    background-color: rgba(map-get($primary, 100),.2) !important;
+  }
+
+  .banner-container {
+    //background-color: #F5F8FF !important;
+    background-color: rgba(map-get($primary, 100),.2) !important;
+  }
+
+  mat-dialog-content {
+    color: black !important;
+  }
+
+  .form-panel {
+    padding: 50px 30px 30px 30px !important;
+    background: rgba(map-get($primary, 100),.4) !important;
+    margin-top: 0 !important;
+    border: 1px solid rgba(map-get($primary, 100),.8) !important;
+    border-top: none !important;
+    border-radius: 0px 0px 10px 10px;
+    overflow: hidden;
+
+    .sub-banner {
+      background-color: rgba(map-get($primary, 300),1) !important;
+      color: #fff;
+      max-width: 200px;
+      text-align: center;
+      position: relative;
+      top: -35px;
+      height: 48px;
+      margin-left: 10px;
+      border-radius: 4px;
+      margin-bottom: -10px;
+    }
+
+    .mat-card-inner {
+      margin-bottom: 60px;
+      box-shadow: none;
+      border-radius: 10px !important;
+      background-color: transparent !important;
+      border: 1px solid rgba(map-get($primary, 100),1) !important;
+    }
+  }
+
+  .mat-mdc-raised-button.mat-primary {
+    background-color: rgba(map-get($primary, default),1) !important;
+    outline: 1px solid rgba(map-get($primary, default),.9) !important;
+  }
+
+  .mat-mdc-raised-button.mat-warn {
+    background-color: rgba(map-get($warn, 400),1) !important;
+    outline: 1px solid rgba(map-get($warn, 600),.9) !important;
+  }
+
+  .modal-primary {
+    color: rgba(map-get($primary, 600),1) !important;
+  }
+
+  .mat-mdc-outlined-button[disabled][disabled] {
+    color: dimgrey !important;
+  }
+
+  .sticky-row {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 99;
+    background-color: rgba(map-get($primary, 300), .8) !important;
+    border-radius: 6px 6px 0px 0px !important;
+  }
+
+  .sticky-row-icon {
+    position: absolute;
+    top: 32%;
+    left: 2%;
+    font-size: 22px;
+    color: rgba(map-get($primary, 400), .95) !important;
+  }
+
+  .filter-button {
+    border-color: rgba(map-get($primary, 600), 1) !important;
+    background-color: rgba(map-get($primary, 400), 1) !important;
+    color: white !important;
+  }
+
+  .reset-filter-button {
+    border-color: rgba(map-get($warn, 700), 1) !important;
+    background-color: rgba(map-get($warn, 500), .9) !important;
+    color: white !important;
+  }
+
+  .mdc-evolution-chip__text-label {
+    color: white !important;
+  }
+  // All Chip Set List Items (mat-chip must have 'list-chip' class)
+  .mdc-evolution-chip.list-chip {
+    background-color: rgba(map-get($primary, 400), .2) !important;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 0px 0px 4px 4px !important;
+  }
+  // First Chip Set List Item (Uncomment as needed for UI changes)
+  .mdc-evolution-chip:nth-child(1).list-chip {
+    // Space between first chip and middle chips
+    margin-right: 0px !important;
+  }
+  // Middle Chip Set List Items
+  .mdc-evolution-chip:nth-child(n+2):nth-child(-n+2).list-chip {
+    // Space between middle chips and last chip
+    margin-right: 0px !important;
+  }
+  // Last Chip Set List Item
+  .mdc-evolution-chip:nth-last-child(-n+1).list-chip {
+    //border-radius: 0px 4px 4px 0px !important;
+  }
+
+  .mat-datepicker-toggle-default-icon {
+    color: #5C5E6B;
+  }
+
+  .mat-mdc-checkbox .mdc-checkbox .mdc-checkbox__native-control:enabled:checked ~ .mdc-checkbox__background,
+  .mat-mdc-checkbox .mdc-checkbox .mdc-checkbox__native-control:enabled:indeterminate ~ .mdc-checkbox__background,
+  .mat-mdc-checkbox .mdc-checkbox .mdc-checkbox__native-control[data-indeterminate=true]:enabled ~ .mdc-checkbox__background {
+    background-color: map-get($primary, 500) !important;
+    border-color: map-get($primary, 500) !important;
+  }
+
+  .mat-mdc-slide-toggle .mdc-switch:enabled .mdc-switch__track::after {
+    // background: map-get($primary, 900) !important;
+    background: white !important;
+  }
+
+  .mdc-switch__track::before {
+    // background-color: map-get($primary, 100) !important;
+    background-color: white !important;
+  }
+
+  .mdc-switch__icons {
+    // background: map-get($primary, 500) !important;
+    background: white !important;
+    border-radius: 3px !important;
+  }
+
+  .mat-mdc-button.mat-accent, .mat-mdc-outlined-button.mat-accent {
+    --mat-mdc-button-persistent-ripple-color: none !important;
+    --mat-mdc-button-ripple-color: none !important;
+  }
+
+  .mat-mdc-button.mat-accent {
+    background-color: rgba(map-get($primary, 500),.02) !important;
+    //background-color: transparent !important;
+    border-bottom: 2px rgba(map-get($primary, 500),.5) solid !important;
+    border-radius: 0px !important;
+  }
+
+  .mdc-icon-button .mat-mdc-paginator-icon {
+    fill: rgba(0,0,0,.54) !important;
+  }
+
+  .mat-mdc-icon-button:disabled .mat-mdc-paginator-icon {
+    fill: rgba(0,0,0,.12) !important;
+  }
+
+  .div-mobile {
+    background-color: rgba(map-get($primary, 300),.65) !important;
+    border: 1px solid;
+    border-color: map-get($primary, 600) !important;
+    border-radius: 8px 8px 8px 8px;
+    margin-top: 4px;
+    // Enable below if implementing profile box extension to top of page.
+    // This container width would need to be made dynamic, since Name text is variable
+    //border-radius: 0px 0px 8px 8px;
+    //border-top: none;
+    //margin-top: -7px;
+  }
+
+  .avatar {
+    filter: brightness(1.25) !important;
+  }
+
+  .theme-icon.fa-solid.fa-brush {
+    //color: rgba(map-get($primary, 700),.7) !important;
+    color: black;
+  }
+
+  .theming-container {
+    background-color: transparent;
+    // Enable below if implementing profile box extension to top of page.
+    // This container width would need to be made dynamic, since Name text is variable
+    //background-color: rgba(map-get($primary, 900),.3) !important;
+    //border: 1px solid map-get($primary, 400);
+    //border-top: none;
+    //border-bottom: none;
+    // border-bottom: 2px solid rgba(map-get($primary, 500),.2);
+  }
+
+  .theme-label {
+    border-bottom: solid 4px rgba(map-get($primary, 300),.85);
+    padding-bottom: 3px;
+    letter-spacing: 1px;
+  }
+
+  .mat-mdc-card {
+    // Use mat-color to extract individual colors from a palette.
+    background-color: rgba(map-get($primary, 200),.1) !important;
+  }
+
+
+  .header-background {
+    background-color: rgba(map-get($primary, 100),.8) !important;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    //background-color: white !important;
+  }
+
+  a.ng-star-inserted.active {
+    color: black !important;
+  }
+
+  .mat-mdc-table {
+    background-color: rgba(map-get($primary, 400),.9) !important;
+    border-radius: 4px 4px 0px 0px;
+    overflow: hidden !important;
+  }
+
+  .mat-mdc-table thead, .mat-mdc-header-row, .mat-mdc-header-cell {
+    //background-color: white !important;
+    background-color: rgba(white,.46) !important;
+  }
+
+  .mat-mdc-paginator {
+    //background-color: white !important;
+    background-color: rgba(map-get($primary, 100),.3) !important;
+    color: black !important;
+    border-radius: 0px 0px 10px 10px;
+    overflow: hidden !important;
+    border: none;
+    border-top: none;
+    border-color: none;
+  }
+
+  .mat-mdc-row:nth-child(even) {
+    //background: rgba(255,255,255, 1);
+    background-color: rgba(white,.4);
+  }
+
+  .mat-mdc-row:nth-child(odd) {
+    //background: rgba(241, 241, 241, 1);
+    background-color: rgba(white,.45);
+  }
+  //light theme
+  // .mat-mdc-row:hover {
+  //   $base-color: map-get($light-accent, 100);
+  //   background-color: rgba(red($base-color), green($base-color), blue($base-color), 0.4) !important;
+  // }
+  // Light theme hover effect
+  .lightModePurple .mat-mdc-row:hover,
+  .lightModeDeepPurple .mat-mdc-row:hover,
+  .lightModeIndigo .mat-mdc-row:hover,
+  .lightModeBlue .mat-mdc-row:hover,
+  .lightModeLightBlue .mat-mdc-row:hover,
+  .lightModeCyan .mat-mdc-row:hover,
+  .lightModeTeal .mat-mdc-row:hover,
+  .lightModeGreen .mat-mdc-row:hover,
+  .lightModeLightGreen .mat-mdc-row:hover,
+  .lightModeBlueGrey .mat-mdc-row:hover,
+  .lightModeGrey .mat-mdc-row:hover,
+  .lightModeOrange .mat-mdc-row:hover,
+  .lightModeDeepOrange .mat-mdc-row:hover,
+  .lightModeBrown .mat-mdc-row:hover,
+  .lightModeRed .mat-mdc-row:hover {
+    background-color: rgba(0, 0, 0, 0.1) !important; // Slightly darker for light theme hover
+  }
+
+  .mat-mdc-chip {
+    background-color: map-get($primary, 300) !important;
+  }
+
+  .mat-mdc-cell, .mat-mdc-header-cell, .mat-mdc-select-value,
+  .mat-mdc-select-arrow, .mat-mdc-list-item::selection, .mdc-list-item__primary-text, .mat-mdc-dialog-title,
+  .mat-toolbar, .mat-sort-header-stem, .mat-sort-header-arrow, .mat-mdc-input-element,
+  .mat-mdc-form-field-hint, .none-found-text {
+    color: black !important;
+  }
+
+
+  label {
+    color: #212121 !important;
+  }
+
+  .mat-mdc-select-panel {
+    background-color: map-get($primary, default) !important;
+    //background-color: #fff !important;
+  }
+
+  .mdc-list-item--selected .mdc-list-item__primary-text, .mdc-list-item--activated .mdc-list-item__primary-text {
+    color: black !important;
+    font-weight: bold !important;
+  }
+
+  .mat-select-search-input {
+    color: black !important;
+  }
+
+  .mat-select-search-clear {
+    color: black !important
+  }
+
+  .mdc-checkbox__background {
+    border-color: rgba(map-get($primary, default),1) !important;
+  }
+
+  .theme-select-container {
+    background-color: rgba(map-get($primary, 100),1) !important;
+    color: black !important;
+    border: solid 1px rgba(map-get($primary, 300),1) !important;
+  }
+
+  .theme-select-arrow-up {
+    border-bottom-color: rgba(map-get($primary, 100),1) !important;
+  }
+
+  .mat-mdc-dialog-container {
+    background-color: white !important;
+  }
+
+  .mat-mdc-dialog-surface {
+    background-color: white !important;
+    color: black !important;
+    border-radius: 8px !important;
+  }
+
+  .mdc-menu-surface {
+    background-color: white !important;
+    color: black !important;
+  }
+
+  .mat-mdc-text-field-wrapper {
+    background-color: rgba(map-get($primary, 100),.5) !important;
+  }
+
+  .mdc-text-field--filled .mdc-line-ripple::after {
+    border-bottom-color: rgba(map-get($primary, 500),1) !important;
+  }
+
+  .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-line-ripple::before {
+    border-bottom-color: map-get($primary, 600) !important;
+  }
+
+  .theme-icon {
+    //color: #FDFD96 !important;
+    color: black !important
+  }
+
+  .remove-icon {
+    color: map-get($warn, 700) !important;
+  }
+
+  .mat-mdc-standard-chip:not(.mdc-evolution-chip--disabled) .mdc-evolution-chip__icon--trailing {
+    color: rgba(map-get($primary, 50),.65) !important;
+  }
+
+  .edit-icon {
+    color: map-get($primary, 700) !important;
+  }
+  /*
+  ::-webkit-scrollbar-thumb {
+    background: map-get($primary, 400);
+    border-radius: 0px
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: map-get($primary, 500);
+  }
+ 
+  ::-webkit-scrollbar-track {
+    background-color: map-get($primary, 100);
+  }
+  */
+  /* Styles the main scrollbar container */
+  ::-webkit-scrollbar {
+    width: 9px; /* for vertical scrollbars */
+    height: 12px; /* for horizontal scrollbars */
+  }
+  /* Styles the scrollbar thumb (the draggable portion) */
+  ::-webkit-scrollbar-thumb {
+    background: #E9E9E9;
+    border-radius: 4px;
+  }
+  /* Styles the scrollbar track (the background portion) */
+  ::-webkit-scrollbar-track {
+    background: white;
+    border-radius: 6px;
+  }
+  /* Styles the scrollbar button (arrows at the ends) */
+  ::-webkit-scrollbar-button {
+    display: none; /* Hides the buttons */
+  }
+  /* Styles the scrollbar corner (where horizontal and vertical scrollbars meet) */
+  ::-webkit-scrollbar-corner {
+    background: black;
+  }
+}
+
+// Apply Dark Indigo Theme as Default:
+@include dark-theme($dark-indigo-theme);
+
+
+// Light Classes
+.lightModePurple {
+  @include light-theme($light-purple-theme);
+}
+
+.lightModeDeepPurple {
+  @include light-theme($light-deeppurple-theme);
+}
+
+.lightModeIndigo {
+  @include light-theme($light-indigo-theme);
+}
+
+.lightModeBlue {
+  @include light-theme($light-blue-theme);
+}
+
+.lightModeLightBlue {
+  @include light-theme($light-lightblue-theme);
+}
+
+.lightModeCyan {
+  @include light-theme($light-cyan-theme);
+}
+
+.lightModeTeal {
+  @include light-theme($light-teal-theme);
+}
+
+.lightModeGreen {
+  @include light-theme($light-green-theme);
+}
+
+.lightModeLightGreen {
+  @include light-theme($light-lightgreen-theme);
+}
+
+.lightModeBlueGrey {
+  @include light-theme($light-bluegrey-theme);
+}
+
+.lightModeGrey {
+  @include light-theme($light-grey-theme);
+}
+
+.lightModeOrange {
+  @include light-theme($light-orange-theme);
+}
+
+.lightModeDeepOrange {
+  @include light-theme($light-deeporange-theme);
+}
+
+
+.lightModeBrown {
+  @include light-theme($light-brown-theme);
+}
+
+
+.lightModeRed {
+  @include light-theme($light-red-theme);
+}
+
+
+// Dark Classes
+.darkModePurple {
+  @include dark-theme($dark-purple-theme);
+}
+
+.darkModeDeepPurple {
+  @include dark-theme($dark-deeppurple-theme);
+}
+
+.darkModeIndigo {
+  @include dark-theme($dark-indigo-theme);
+}
+
+.darkModeBlue {
+  @include dark-theme($dark-blue-theme);
+}
+
+.darkModeLightBlue {
+  @include dark-theme($dark-lightblue-theme);
+}
+
+.darkModeCyan {
+  @include dark-theme($dark-cyan-theme);
+}
+
+.darkModeTeal {
+  @include dark-theme($dark-teal-theme);
+}
+
+.darkModeGreen {
+  @include dark-theme($dark-green-theme);
+}
+
+.darkModeLightGreen {
+  @include dark-theme($dark-lightgreen-theme);
+}
+
+.darkModeBlueGrey {
+  @include dark-theme($dark-bluegrey-theme);
+}
+
+.darkModeGrey {
+  @include dark-theme($dark-grey-theme);
+}
+
+.darkModeOrange {
+  @include dark-theme($dark-orange-theme);
+}
+
+.darkModeDeepOrange {
+  @include dark-theme($dark-deeporange-theme);
+}
+
+
+.darkModeBrown {
+  @include dark-theme($dark-brown-theme);
+}
+
+
+.darkModeRed {
+  @include dark-theme($dark-red-theme);
+}
+
+

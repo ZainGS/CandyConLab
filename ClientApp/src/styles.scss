@@ -1,0 +1,100 @@
+/* You can add global styles to this file, and also import other style files */
+@import '/src/app/theme.scss';
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+/* Provide sufficient contrast against white background */
+
+/*
+body, mat-sidenav-content, mat-sidenav, div {
+  background-color: #121212;
+  color: white;
+}
+*/
+
+a {
+  color: #0366d6;
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+code {
+  color: #e01a76;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.cdk-overlay-dark-backdrop {
+  /* Increase the opacity for a dimmer effect */
+  background-color: rgba(0, 0, 0, .8) !important;
+}
+
+::selection {
+  /* Change highlight background color to black */
+  background: teal;
+  /* Change highlight text color to red */
+  color: white;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.nodrag {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+}
+
+.mdc-button__label {
+  display: contents !important;
+}
+
+.mat-drawer-inner-container{
+  overflow: hidden !important;
+}
+
+.video-container {
+  font-weight: bold; 
+  border: 1px solid rgba(255,255,255,.6) !important; 
+  text-align: center; 
+  padding: 250px 100px 250px 100px; 
+  margin: 2% 10% 2% 10%; 
+  border-radius: 5px; 
+  background-color: rgba(0,0,0,.8) !important;
+}
+
+mat-slider .mat-ripple-element {
+  display: none !important;
+}
+
+.mdc-slider__track--inactive {
+  /* This class targets the background of the slider. You might try adding a pseudo-element 
+    or manipulate the background to visually appear as though the inactive track is longer. */
+  transform: scale(1.2) !important;
+}
+
+.mdc-slider__thumb-knob {
+    display: none !important;
+}
+
+.mdc-switch--selected .mdc-switch__icon--on, .mdc-switch--unselected .mdc-switch__icon--off {
+    opacity: 0 !important;
+}
+
+.mat-mdc-slide-toggle.mat-accent {
+  // --mdc-switch-selected-focus-track-color: #f06292;
+  --mdc-switch-selected-focus-track-color: white;
+  --mdc-switch-selected-hover-track-color: white;
+}
