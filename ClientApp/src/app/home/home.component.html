@@ -296,18 +296,16 @@
 
             <!-- BUNDLES AND SUBMIT -->
             <!-- Tools -->
-            <div class="flex-item" style="align-content: end; text-align: -webkit-right; white-space: nowrap; overflow: hidden;">
-              <div style="position: absolute; left: 78%; top: 11vw; margin-top: 10px;">
-                <div class="randomizer-container-mobile">
-                  <!-- Randomizer -->
-                  <button class="mat-elevation-z1" (click)="randomize()" style="z-index: 100;  max-width: 80px; max-height: 80px; width: 60px; height: 60px;  transform: scale(.95); background-color: transparent; border: 5px solid rgba(255,255,255,.05); border-radius: 10px; backdrop-filter: blur(10px); ">
-                    <img [@rotate-jump]="rotateJumpState" src="assets/dice.svg" alt="randomize icon" style="opacity: .6; margin-left: -6px; transform-origin: center;" width="50" />
-                  </button>
-                  <!-- Clear Parts -->
-                  <button class="mat-elevation-z1" (click)="clearParts()" style="z-index: 100; max-width: 80px; max-height: 80px; width: 60px; height: 60px; transform: scale(.95); background-color: transparent; border: 5px solid rgba(255,255,255,.05); border-radius: 10px; backdrop-filter: blur(10px); margin-left: 10px;">
-                    <img [@trash-shake]="trashShakeState" src="assets/delete_controller.svg" alt="reset icon" style="opacity: .6; margin-left: -6px; transform-origin: center;" width="50" />
-                  </button>
-                </div>
+            <div class="flex-item" style="text-align: -webkit-right; white-space: nowrap; overflow: hidden;">
+              <div class="randomizer-container-mobile" style="position: relative; margin-bottom: 20vh; margin-right: 8vw;">
+                <!-- Randomizer -->
+                <button class="mat-elevation-z1" (click)="randomize()" style="z-index: 100;  max-width: 80px; max-height: 80px; width: 60px; height: 60px;  transform: scale(.95); background-color: transparent; border: 5px solid rgba(255,255,255,.05); border-radius: 10px; backdrop-filter: blur(10px); ">
+                  <img [@rotate-jump]="rotateJumpState" src="assets/dice.svg" alt="randomize icon" style="opacity: .6; margin-left: -6px; transform-origin: center;" width="50" />
+                </button>
+                <!-- Clear Parts -->
+                <button class="mat-elevation-z1" (click)="clearParts()" style="z-index: 100; max-width: 80px; max-height: 80px; width: 60px; height: 60px; transform: scale(.95); background-color: transparent; border: 5px solid rgba(255,255,255,.05); border-radius: 10px; backdrop-filter: blur(10px); margin-left: 3vw;">
+                  <img [@trash-shake]="trashShakeState" src="assets/delete_controller.svg" alt="reset icon" style="opacity: .6; margin-left: -6px; transform-origin: center;" width="50" />
+                </button>
               </div>
 
               <!-- Lock In: Show Parts Links -->

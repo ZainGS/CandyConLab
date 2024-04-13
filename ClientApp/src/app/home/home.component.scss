@@ -117,7 +117,7 @@ font-weight: 400;
 
 
 .lockin-button-text {
-font-size: 86px;
+font-size: 6vw;
 padding-top: 20px;
 text-shadow: 4px 4px 2px rgba(255, 0, 157, 1);
 font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -147,7 +147,7 @@ max-width: fit-content;
 
 .submit-button {
 white-space: nowrap;
-margin-bottom: 32%;
+margin-bottom: 2vh;
 margin-right: 10vh;
 }
 
@@ -380,14 +380,14 @@ flex-direction:column;
 .flex-item {
 flex: 1 1 30%; /* Adjust the flex-basis to control the width of the columns */
 box-sizing: border-box;
-padding: 10px;
+padding: 3vh;
 text-align: center;
 }
 
 .flex-item-mobile {
   flex: 1 1 100%; /* Adjust the flex-basis to control the width of the columns */
   box-sizing: border-box;
-  padding: 10px;
+  padding: 3vh;
   text-align: center;
 }
 
@@ -541,7 +541,7 @@ width: 100px
 
 .submit-button {
 white-space: nowrap;
-margin-bottom: 45%;
+margin-bottom: 3vh;
 margin-right: 10vh;
 }
 }
@@ -1030,7 +1030,7 @@ sub-title-container-mobile {
 }
 
 .lockin-button-text-mobile {
-  font-size: 100px !important;
+  font-size: 70px !important;
   text-shadow: 4px 4px 2px rgba(255, 0, 157, 1);
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-weight: 100;
@@ -1129,8 +1129,9 @@ sub-title-container-mobile {
 
   .submit-box {
     position: absolute;
-    margin-top: -350px;
-    margin-left: 96px;
+    //margin-top: -350px;
+    //margin-left: 96px;
+    right: 0;
   }
 }
 
