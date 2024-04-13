@@ -1135,26 +1135,33 @@ sub-title-container-mobile {
   }
 }
 
-/* Base styles - hide mobile-container by default */
+/* Base styles - assume landscape by default */
 .mobile-container {
-display: none;
+  display: none; /* Hide mobile-container by default */
 }
 
 .desktop-container {
-display: block; /* Show desktop container by default */
+  display: block; /* Show desktop container by default */
 }
 
-/* Media Query for when the height is greater than the width */
-@media (max-aspect-ratio: 1/1.05) {
-.mobile-container {
-display: block; /* Show mobile container when width < height */
+/* Media Query for devices in portrait orientation */
+@media (orientation: portrait) {
+  .mobile-container {
+    display: block; /* Show mobile container in portrait mode */
+  }
+
+  .desktop-container {
+    display: none; /* Hide desktop container in portrait mode */
+  }
 }
 
-.desktop-container {
-display: none; /* Hide desktop container when width < height */
-}
+/* Media Query for devices in landscape orientation */
+@media (orientation: landscape) {
+  .mobile-container {
+    display: none; /* Hide mobile container in landscape mode */
+  }
 
-  .candycon-slogan {
-      display: none;
+  .desktop-container {
+    display: block; /* Show desktop container in landscape mode */
   }
 }
