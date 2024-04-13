@@ -1,54 +1,78 @@
 <h1 mat-dialog-title>CANDY CON Controller Parts List</h1>
-<div mat-dialog-content>
+<div mat-dialog-content style="overflow-x: hidden;">
 
   <div style="margin-top: 5px;">
-    <h4>
-      <img class="header-icon" src="assets/faceplate.svg" alt="Faceplate icon">
-      CANDY CON Base Unit
-    </h4>
+    <div class="header-bar">
+      <h4>
+        <img class="header-icon" src="assets/faceplate.svg" alt="Faceplate icon">
+        CANDY CON Base Unit
+      </h4>
+    </div>
     <hr />
-    <img class="part-image" src="assets/candycon_controller.png" width="150" style="margin-top:5px !important; margin-bottom:35px !important; margin-left: 24px !important;"  />
-    <a href="{{faceplateData!.productUrl}}" target="_blank"><button class="view-button">PURCHASE BASE UNIT</button></a>
+    <div class="part-container">
+      <img class="part-image" src="assets/candycon_controller.png" width="150" style="margin-top:5px !important; margin-bottom:35px !important;" />
+      <div class="right-align">
+        <a href="{{faceplateData!.productUrl}}" target="_blank"><button class="view-button">PURCHASE BASE UNIT</button></a>
+      </div>
+    </div>
   </div>
 
   <div>
-    <h4>
-      <img class="header-icon" src="assets/faceplate.svg" alt="Faceplate icon">
-      {{faceplateData!.name}} - {{faceplateData!.partColor}}
-    </h4>
+    <div class="header-bar">
+      <h4>
+        <img class="header-icon" src="assets/faceplate.svg" alt="Faceplate icon">
+        {{faceplateData!.name}} - {{faceplateData!.partColor}}
+      </h4>
+    </div>
     <hr />
-    <img class="part-image" [src]="faceplateData!.imageUrls[0]" width="200" />
-    <a href="{{faceplateData!.productUrl}}" target="_blank"><button class="view-button">PURCHASE FACEPLATE</button></a>
+    <div class="part-container">
+      <img class="part-image" [src]="faceplateData!.imageUrls[0]" width="200" />
+      <div class="right-align">
+        <a href="{{faceplateData!.productUrl}}" target="_blank"><button class="view-button">PURCHASE FACEPLATE</button></a>
+      </div>
+    </div>
   </div>
 
   <div>
-    <h4>
-      <img class="header-icon" src="assets/joystick.svg" alt="Faceplate icon">
-      {{leftThumbstickData!.name}} - {{leftThumbstickData!.partColor}}
-    </h4>
+    <div class="header-bar">
+      <h4>
+        <img class="header-icon" src="assets/joystick.svg" alt="Faceplate icon">
+        {{leftThumbstickData!.name}} - {{leftThumbstickData!.partColor}}
+      </h4>
+    </div>
     <hr />
-    <img class="part-image" [src]="leftThumbstickData!.imageUrls[0]" width="180" />
-    <a href="{{leftThumbstickData!.productUrl}}" target="_blank"><button class="view-button">PURCHASE THUMBSTICK</button></a>
+    <div class="part-container">
+      <img class="part-image" [src]="leftThumbstickData!.imageUrls[0]" width="180" />
+      <a href="{{leftThumbstickData!.productUrl}}" target="_blank"><button class="view-button">PURCHASE JOYSTICK</button></a>
+    </div>
   </div>
 
   <div *ngIf="rightThumbstickData!.partColor != leftThumbstickData!.partColor">
-    <h4>
-      <img class="header-icon" src="assets/joystick.svg" alt="Faceplate icon">
-      {{rightThumbstickData!.name}} - {{rightThumbstickData!.partColor}}
-    </h4>
+    <div class="header-bar">
+      <h4>
+        <img class="header-icon" src="assets/joystick.svg" alt="Faceplate icon">
+        {{rightThumbstickData!.name}} - {{rightThumbstickData!.partColor}}
+      </h4>
+    </div>
     <hr />
-    <img class="part-image" [src]="rightThumbstickData!.imageUrls[0]" width="180" />
-    <a href="{{rightThumbstickData!.productUrl}}" target="_blank"><button class="view-button">PURCHASE THUMBSTICK</button></a>
+    <div class="part-container">
+      <img class="part-image" [src]="rightThumbstickData!.imageUrls[0]" width="180" />
+      <a href="{{rightThumbstickData!.productUrl}}" target="_blank"><button class="view-button">PURCHASE JOYSTICK</button></a>
+    </div>
   </div>
 
   <div>
-    <h4>
-      <img class="header-icon" src="assets/dpad.svg" alt="Faceplate icon">
-      {{dpadData!.name}} - {{dpadData!.partColor}}
-    </h4>
+    <div class="header-bar">
+      <h4>
+        <img class="header-icon" src="assets/dpad.svg" alt="Faceplate icon">
+        {{dpadData!.name}} - {{dpadData!.partColor}}
+      </h4>
+    </div>
     <hr />
-    <img class="part-image" [src]="dpadData!.imageUrls[0]" width="200" />
-    <a href="{{dpadData!.productUrl}}" target="_blank"><button class="view-button">PURCHASE DPADS</button></a>
+    <div class="part-container">
+      <img class="part-image" [src]="dpadData!.imageUrls[0]" width="200" />
+      <a href="{{dpadData!.productUrl}}" target="_blank"><button class="view-button">PURCHASE DPADS</button></a>
+    </div>
   </div>
 </div>
 

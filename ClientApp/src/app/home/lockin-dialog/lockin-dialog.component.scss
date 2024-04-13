@@ -15,6 +15,49 @@ h4 {
     width:fit-content;
 }
 
+.header-bar {
+  background-color: rgba(255,255,255,.2);
+  border-radius: 10px 10px 0px 0px;
+  padding: 5px 5px 1px 5px;
+  margin-bottom: -12px !important;
+}
+
+hr {
+  border: none !important;
+  height: 2px !important;
+  background-color: white !important;
+}
+
+/// Keep image and link in line
+.part-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Puts space between the image and the button */
+  flex-wrap: nowrap;
+}
+
+.right-align {
+  margin-left: auto; /* Pushes the right-align div to the right */
+}
+
+.part-image {
+  width: auto; /* Default width is automatic */
+  max-width: 200px; /* Ensures image does not exceed 200px */
+  height: auto; /* Maintains aspect ratio */
+  flex-shrink: 1; /* Allows the image to shrink if necessary */
+}
+
+.view-button {
+  white-space: nowrap; /* Prevents text inside the button from wrapping */
+  margin-top: -50px;
+}
+
+a {
+  text-decoration: none; /* Optional: Removes underline from links */
+  color: inherit; /* Optional: Ensures link color matches the surrounding text */
+}
+///
+
 h1 {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif !important;
   text-align: center;
@@ -31,7 +74,6 @@ button {
   background-color: transparent;
   text-shadow: 4px 4px 2px rgba(255, 0, 157, 1);
   float: inline-end;
-  margin-top: 15px;
   font-size: 32px;
   color: white;
   border: none;
@@ -91,4 +133,112 @@ button {
   }
 }
 
+
+@media (max-width: 650px) {
+  .header-bar h4 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+    width: fit-content;
+    text-align: center;
+  }
+
+  .view-button {
+    font-size: 26px;
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 580px) {
+  .header-bar h4 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+    width: fit-content;
+    text-align: center;
+  }
+
+  .part-container img {
+    transform: scale(.8);
+  }
+
+  .view-button {
+    font-size: 22px;
+    margin-right:20px;
+  }
+}
+
+@media (max-width: 540px) {
+  .header-bar h4 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+    width: fit-content;
+    text-align: center;
+  }
+
+  .part-container img {
+    transform: scale(.6);
+    margin-left: -20px !important;
+  }
+
+  .view-button {
+    font-size: 18px;
+    margin-left: -30px;
+  }
+}
+
+@media (max-width: 500px) {
+  .header-bar h4 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+    width: fit-content;
+    text-align: center;
+  }
+
+  .part-container img {
+    transform: scale(.6);
+    margin-left: -30px !important;
+  }
+
+  .view-button {
+    font-size: 18px;
+    margin-left: -40px;
+  }
+}
+
+@media (max-width: 472px) {
+  .header-bar h4 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+    width: fit-content;
+    text-align: center;
+  }
+
+  .part-container img {
+    transform: scale(.6);
+    margin-left: -60px !important;
+  }
+
+  .view-button {
+    font-size: 16px;
+    margin-left: -50px;
+  }
+}
+
+@media (max-width: 472px) {
+  .header-bar h4 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+    width: fit-content;
+    text-align: center;
+  }
+
+  .part-container img {
+    transform: scale(.5) !important;
+    margin-left: -60px !important;
+  }
+
+  .view-button {
+    font-size: 16px;
+    margin-left: -50px;
+  }
+}
 

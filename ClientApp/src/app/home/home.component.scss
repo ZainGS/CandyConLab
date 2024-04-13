@@ -22,88 +22,93 @@ display: block; /* Or 'block', depending on your layout needs */
 }
 
 .faceplate-overlay {
-position: absolute;
-width: 175%;
-top: -23.5%;
-transform: scale(1.5) !important;
-right: -75%;
-filter: drop-shadow(0 0 0.75rem black);
-transform: scale(1.35) !important;
-opacity: .98;
-/* No need for 'right' and 'margin-top' properties here */
+  position: absolute;
+  width: 175%;
+  top: -23.5%;
+  transform: scale(1.5) !important;
+  right: -75%;
+  filter: drop-shadow(0 0 0.75rem black);
+  transform: scale(1.35) !important;
+  opacity: .98;
+  pointer-events: none;
 }
 
 
 .thumbstick-1-overlay {
-position: absolute;
-width: 100%;
-top: 1%;
-right: -35.5%;
-filter: drop-shadow(0 0 0.75rem black);
-/* No need for 'right' and 'margin-top' properties here */
-  
+  position: absolute;
+  width: 100%;
+  top: 1%;
+  right: -35.5%;
+  filter: drop-shadow(0 0 0.75rem black);
+  pointer-events: none;
 }
 
 
 .thumbstick-2-overlay {
-position: absolute;
-width: 100%;
-top: -20%;
-right: 27.3%;
-filter: drop-shadow(0 0 0.75rem black);
-/* No need for 'right' and 'margin-top' properties here */
+  position: absolute;
+  width: 100%;
+  top: -20%;
+  right: 27.3%;
+  filter: drop-shadow(0 0 0.75rem black);
+  pointer-events: none;
 }
 
 
 .cropped-thumbstick {
-width: 50%; /* width of container */
-height: 100%; /* height of container */
-object-fit: cover;
-object-position: 87% 87%; /* try 20px 10px */
-transform: scale(.73) !important;
+  width: 50%; /* width of container */
+  height: 100%; /* height of container */
+  object-fit: cover;
+  object-position: 87% 87%; /* try 20px 10px */
+  transform: scale(.73) !important;
+  pointer-events: none;
 }
 
 .cropped-thumbstick {
-width: 50%; /* width of container */
-height: 100%; /* height of container */
-object-fit: cover;
-object-position: 87% 87%; /* try 20px 10px */
-transform: scale(.73) !important;
+  width: 50%; /* width of container */
+  height: 100%; /* height of container */
+  object-fit: cover;
+  object-position: 87% 87%; /* try 20px 10px */
+  transform: scale(.73) !important;
+  pointer-events: none;
 }
 
 .cropped-selection-thumbstick {
-width: 36%; /* width of container */
-height: 100%; /* height of container */
-object-fit: cover;
-object-position: 87% 87%; /* try 20px 10px */
-transform: scale(.73) !important;
+  width: 36%; /* width of container */
+  height: 100%; /* height of container */
+  object-fit: cover;
+  object-position: 87% 87%; /* try 20px 10px */
+  transform: scale(.73) !important;
+  pointer-events: none;
 }
 
 .dpad-overlay {
-position: absolute;
-width: 100%;
-top: 8.5%;
-transform: scale(1.5) !important;
-right: 4.5%;
-filter: drop-shadow(0 0 0.75rem black);
+  position: absolute;
+  width: 100%;
+  top: 8.5%;
+  transform: scale(1.5) !important;
+  right: 4.5%;
+  filter: drop-shadow(0 0 0.75rem black);
+  pointer-events: none;
 }
 
 .cropped-dpad-classic {
-width: 50%; /* width of container */
-height: 100%; /* height of container */
-object-fit: cover;
-object-position: 86.25% 87%; /* try 20px 10px */
-transform: scale(1) !important;
-margin-top: -2px !important;
+  width: 50%; /* width of container */
+  height: 100%; /* height of container */
+  object-fit: cover;
+  object-position: 86.25% 87%; /* try 20px 10px */
+  transform: scale(1) !important;
+  margin-top: -2px !important;
+  pointer-events: none;
 }
 
 .cropped-dpad-modern {
-width: 50%; /* width of container */
-height: 100%; /* height of container */
-object-fit: cover;
-object-position: 20.5% 17%; /* try 20px 10px */
-transform: scale(1) !important;
-margin-top: -5px !important;
+  width: 50%; /* width of container */
+  height: 100%; /* height of container */
+  object-fit: cover;
+  object-position: 20.5% 17%; /* try 20px 10px */
+  transform: scale(1) !important;
+  margin-top: -5px !important;
+  pointer-events: none;
 }
 
 .shadow-text {
@@ -978,12 +983,13 @@ sub-title-container-mobile {
 }
 
 .controller-container-mobile {
-  position: relative;  /* Ensures that child elements are positioned relative to this container */
+  position: relative; /* Ensures that child elements are positioned relative to this container */
   margin-top: 10vh !important;
-  width: 100%;         /* Responsive width */
-  max-width: 600px;    /* Optional: maximum width */
-  margin: auto;        /* Centers the container */
+  width: 100%; /* Responsive width */
+  max-width: 600px; /* Optional: maximum width */
+  margin: auto; /* Centers the container */
   transform: scale(2.5); /* Adjust scale for mobile, start with scale(1) and adjust as needed */
+  pointer-events: none;
 }
 
 .faceplate-overlay-mobile {
@@ -993,6 +999,7 @@ sub-title-container-mobile {
   left: 16%; /* Adjust horizontal position */
   transform: scale(.8);
   filter: drop-shadow(0 0 0.75rem black);
+  pointer-events: none;
 }
 
 .thumbstick-1-overlay-mobile {
@@ -1001,6 +1008,7 @@ sub-title-container-mobile {
   left: 1.23%; /* Adjust horizontal position */
   transform: scale(.194);
   filter: drop-shadow(0 0 0.75rem black);
+  pointer-events: none;
 }
 
 .thumbstick-2-overlay-mobile {
@@ -1009,6 +1017,7 @@ sub-title-container-mobile {
   left: -13.3%; /* Adjust horizontal position */
   transform: scale(.194);
   filter: drop-shadow(0 0 0.75rem black);
+  pointer-events: none;
 }
 
 .dpad-overlay-mobile {
@@ -1018,11 +1027,13 @@ sub-title-container-mobile {
   left: -9.38%; /* Adjust horizontal position */
   transform: scale(.261);
   filter: drop-shadow(0 0 0.75rem black);
+  pointer-events: none;
 }
 
 .cropped-thumbstick-mobile {
   width: 100%; /* width of container */
-  clip-path: inset(0% 0% 0% 50%)
+  clip-path: inset(0% 0% 0% 50%);
+  pointer-events: none;
 }
 
 .cropped-selection-thumbstick-mobile {
@@ -1031,21 +1042,25 @@ sub-title-container-mobile {
   object-fit: cover;
   object-position: 87% 87%; /* try 20px 10px */
   transform: scale(.73) !important;
+  pointer-events: none;
 }
 
 .cropped-dpad-classic-mobile {
   width: 100%;
   clip-path: inset(0% 0% 0% 50%);
+  pointer-events: none;
 }
 
 .cropped-dpad-modern-mobile {
   width: 100%;
   clip-path: inset(0% 50% 0% 0%);
+  pointer-events: none;
 }
 
 .candycon-logo-container-mobile {
   transform: scale(1);
   margin-top: 16vw;
+  pointer-events: none;
 }
 
 .submit-box-mobile {
