@@ -16,16 +16,17 @@ h4 {
 }
 
 .header-bar {
-  background-color: rgba(255,255,255,.2);
-  border-radius: 10px 10px 0px 0px;
+  background-color: rgba(0,0,0,.2);
+  border-radius: 6px 6px 0px 0px;
   padding: 5px 5px 1px 5px;
   margin-bottom: -12px !important;
+  padding-left: 8px;
 }
 
 hr {
   border: none !important;
   height: 2px !important;
-  background-color: white !important;
+  background-color: black !important;
 }
 
 /// Keep image and link in line
@@ -34,6 +35,12 @@ hr {
   align-items: center;
   justify-content: space-between; /* Puts space between the image and the button */
   flex-wrap: nowrap;
+  background-color: rgba(0,0,0,.1);
+  border-radius: 5px;
+  margin-bottom: 8px;
+  margin-top: -12px;
+  padding-top: 10px;
+
 }
 
 .right-align {
@@ -50,6 +57,7 @@ hr {
 .view-button {
   white-space: nowrap; /* Prevents text inside the button from wrapping */
   margin-top: -50px;
+  margin-right: 30px;
 }
 
 a {

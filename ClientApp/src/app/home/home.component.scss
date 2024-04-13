@@ -237,7 +237,7 @@ overflow-y: hidden !important;
 }
 
 mat-sidenav-container {
-height: 94vh; /* Adjust the height as needed */
+height: 96vh; /* Adjust the height as needed */
 }
 
 mat-sidenav-content {
@@ -439,7 +439,7 @@ margin-bottom: -16px;
 --mdc-slider-focus-handle-color: rgba(255,255,255,0);
 --mdc-slider-focus-handle--shadow-color: rgba(255,255,255,0);
 --mdc-slider-active-track-color: rgba(255,255,255,.3);
---mdc-slider-inactive-track-color: rgba(255,255,255,.25);
+--mdc-slider-inactive-track-color: rgba(255,255,255,.5);
 --mdc-slider-inactive-track-height: 16px;
 --mdc-slider-inactive-track-shape: 8px;
 --mdc-slider-active-track-height: 8px;
