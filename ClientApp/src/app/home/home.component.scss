@@ -139,10 +139,41 @@ border: none;
 background-color: transparent;
 }
 
+.randomizer-button {
+  z-index: 100;
+  max-width: 8vw;
+  max-height: 8vw;
+  width: 8vw;
+  height: 8vw;
+  transform: scale(1.2);
+  padding: -100px;
+  background-color: transparent;
+  border: 5px solid rgba(255,255,255,.05);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: visible;
+}
+
+.reset-button {
+  z-index: 100;
+  max-width: 8vw;
+  max-height: 8vw;
+  width: 8vw;
+  height: 8vw;
+  transform: scale(1.2);
+  background-color: transparent;
+  border: 5px solid rgba(255,255,255,.05);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  margin-left: 3vw;
+}
+
 .submit-box {
 position: relative;
 text-align: -webkit-center;
 max-width: fit-content;
+margin-top: 42vh;
 }
 
 .submit-button {
@@ -387,7 +418,7 @@ text-align: center;
 .flex-item-mobile {
   flex: 1 1 100%; /* Adjust the flex-basis to control the width of the columns */
   box-sizing: border-box;
-  padding: 3vh;
+  padding: 0vh;
   text-align: center;
 }
 
@@ -812,7 +843,7 @@ white-space:normal;
 }
 }
 
-@media (min-height: 715px) and (max-height: 750px) {
+@media (min-height: 715px) and (max-height: 750px) and (max-width: 1200px) {
 
 .candycon-slogan {
 margin-top: 20px !important;
@@ -1036,6 +1067,159 @@ sub-title-container-mobile {
   font-weight: 100;
   border: none;
   background-color: transparent;
+}
+
+@media (min-width: 1100px) and (max-height: 690px) {
+  .submit-box {
+    position: relative;
+    text-align: -webkit-center;
+    max-width: fit-content;
+    margin-top: 36vh;
+  }
+}
+
+@media (min-width: 1100px) and (max-height: 630px) {
+  .submit-box {
+    position: relative;
+    text-align: -webkit-center;
+    max-width: fit-content;
+    margin-top: 28vh;
+  }
+}
+
+
+@media (min-width: 1100px) and (max-height: 530px) {
+  .submit-box {
+    position: relative;
+    text-align: -webkit-center;
+    max-width: fit-content;
+    margin-top: 24vh;
+  }
+
+  .lockin-button-text {
+    font-size: 5vw;
+    padding-top: 20px;
+    text-shadow: 4px 4px 2px rgba(255, 0, 157, 1);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 100;
+    border: none;
+    background-color: transparent;
+  }
+}
+
+@media (max-width: 1100px) and (max-height: 620px) {
+  .submit-box {
+    position: relative;
+    text-align: -webkit-center;
+    max-width: fit-content;
+    margin-top: 22vh;
+  }
+
+  .lockin-button-text {
+    font-size: 5vw;
+    padding-top: 20px;
+    text-shadow: 4px 4px 2px rgba(255, 0, 157, 1);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 100;
+    border: none;
+    background-color: transparent;
+  }
+}
+
+@media (min-width: 1850px) and (min-height:1200) {
+  .submit-box {
+    position: relative;
+    text-align: -webkit-center;
+    max-width: fit-content;
+    margin-top: 20vh !important;
+  }
+}
+
+@media (max-width: 1100px) and (max-height: 465px) {
+  .submit-box {
+    position: relative;
+    text-align: -webkit-center;
+    max-width: fit-content;
+    margin-top: -5vh;
+  }
+
+  .lockin-button-text {
+    font-size: 5vw;
+    padding-top: 20px;
+    text-shadow: 4px 4px 2px rgba(255, 0, 157, 1);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 100;
+    border: none;
+    background-color: transparent;
+  }
+}
+
+@media (min-width: 1400px) and (min-height: 465px) {
+  .submit-box {
+    position: relative;
+    text-align: -webkit-center;
+    max-width: fit-content;
+    margin-top: 30vh !important;
+  }
+
+  .lockin-button-text {
+    font-size: 5vw;
+    padding-top: 20px;
+    text-shadow: 4px 4px 2px rgba(255, 0, 157, 1);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 100;
+    border: none;
+    background-color: transparent;
+  }
+
+  .randomizer-button {
+    z-index: 100;
+    max-width: 5vw;
+    max-height: 5vw;
+    width: 5vw;
+    height: 5vw;
+    transform: scale(1.2);
+    padding: -100px;
+    background-color: transparent;
+    border: 5px solid rgba(255,255,255,.05);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: visible;
+  }
+
+  .reset-button {
+    z-index: 100;
+    max-width: 5vw;
+    max-height: 5vw;
+    width: 5vw;
+    height: 5vw;
+    transform: scale(1.2);
+    background-color: transparent;
+    border: 5px solid rgba(255,255,255,.05);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    margin-left: 3vw;
+  }
+}
+
+@media (max-width: 1100px) and (max-height: 430px) {
+  .submit-box {
+    position: relative;
+    text-align: -webkit-center;
+    max-width: fit-content;
+    margin-top: -10vh;
+  }
+
+  .lockin-button-text {
+    font-size: 5vw;
+    padding-top: 20px;
+    text-shadow: 4px 4px 2px rgba(255, 0, 157, 1);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 100;
+    border: none;
+    background-color: transparent;
+  }
 }
 
 @media (width: 390px) and (height: 844px) {

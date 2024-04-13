@@ -299,12 +299,12 @@
             <div class="flex-item" style="text-align: -webkit-right; white-space: nowrap; overflow: hidden;">
               <div class="randomizer-container-mobile" style="position: relative; margin-bottom: 20vh; margin-right: 8vw;">
                 <!-- Randomizer -->
-                <button class="mat-elevation-z1" (click)="randomize()" style="z-index: 100;  max-width: 80px; max-height: 80px; width: 60px; height: 60px;  transform: scale(.95); background-color: transparent; border: 5px solid rgba(255,255,255,.05); border-radius: 10px; backdrop-filter: blur(10px); ">
-                  <img [@rotate-jump]="rotateJumpState" src="assets/dice.svg" alt="randomize icon" style="opacity: .6; margin-left: -6px; transform-origin: center;" width="50" />
+                <button class="mat-elevation-z1 randomizer-button" (click)="randomize()">
+                  <img [@rotate-jump]="rotateJumpState" src="assets/dice.svg" alt="randomize icon" style="opacity: .6; transform-origin: center;" width="50" />
                 </button>
                 <!-- Clear Parts -->
-                <button class="mat-elevation-z1" (click)="clearParts()" style="z-index: 100; max-width: 80px; max-height: 80px; width: 60px; height: 60px; transform: scale(.95); background-color: transparent; border: 5px solid rgba(255,255,255,.05); border-radius: 10px; backdrop-filter: blur(10px); margin-left: 3vw;">
-                  <img [@trash-shake]="trashShakeState" src="assets/delete_controller.svg" alt="reset icon" style="opacity: .6; margin-left: -6px; transform-origin: center;" width="50" />
+                <button class="mat-elevation-z1 reset-button" (click)="clearParts()">
+                  <img [@trash-shake]="trashShakeState" src="assets/delete_controller.svg" alt="reset icon" style="opacity: .6; transform-origin: center;" width="50" />
                 </button>
               </div>
 
@@ -457,12 +457,12 @@
               <div style="margin-top: 6vh;">
                 <div class="randomizer-container">
                   <!-- Randomizer -->
-                  <button class="mat-elevation-z1" (click)="randomize()" style="z-index: 100;  max-width: 80px; max-height: 80px; width: 60px; height: 60px;  transform: scale(.95); background-color: transparent; border: 5px solid rgba(255,255,255,.05); border-radius: 10px; backdrop-filter: blur(10px); ">
-                    <img [@rotate-jump]="rotateJumpState" src="assets/dice.svg" alt="randomize icon" style="opacity: .6; margin-left: -6px; transform-origin: center;" width="50" />
+                  <button class="mat-elevation-z1" (click)="randomize()" style="z-index: 100;  max-width: 8vw; max-height: 8vw; width: 8vw; height: 8vw;  transform: scale(.95); background-color: transparent; border: 5px solid rgba(255,255,255,.05); border-radius: 10px; backdrop-filter: blur(10px); ">
+                    <img [@rotate-jump]="rotateJumpState" src="assets/dice.svg" alt="randomize icon" style="opacity: .6; transform-origin: center;" width="50" />
                   </button>
                   <!-- Clear Parts -->
-                  <button class="mat-elevation-z1" (click)="clearParts()" style="z-index: 100; max-width: 80px; max-height: 80px; width: 60px; height: 60px; transform: scale(.95); background-color: transparent; border: 5px solid rgba(255,255,255,.05); border-radius: 10px; backdrop-filter: blur(10px); margin-left: 30px;">
-                    <img [@trash-shake]="trashShakeState" src="assets/delete_controller.svg" alt="reset icon" style="opacity: .6; margin-left: -6px; transform-origin: center;" width="50" />
+                  <button class="mat-elevation-z1" (click)="clearParts()" style="z-index: 100; max-width: 8vw; max-height: 8vw; width: 8vw; height: 8vw; transform: scale(.95); background-color: transparent; border: 5px solid rgba(255,255,255,.05); border-radius: 10px; backdrop-filter: blur(10px); margin-left: 30px; ">
+                    <img [@trash-shake]="trashShakeState" src="assets/delete_controller.svg" alt="reset icon" style="opacity: .6; transform-origin: center;" width="50" />
                   </button>
                 </div>
               </div>
