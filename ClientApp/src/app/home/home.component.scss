@@ -896,9 +896,7 @@ margin-top: 40vh;
   text-shadow: none;
   white-space: nowrap;
   overflow: hidden;
-  max-width: 322px;
   font-size: 30px;
-  margin-left: 60px;
   margin-top: 10px;
 }
 
@@ -906,7 +904,6 @@ sub-title-container-mobile {
   margin-top: -10px;
   margin-bottom: 6px;
   text-align: start;
-  margin-left: 60px;
 }
 
 .selection-container-mobile {
@@ -933,10 +930,10 @@ sub-title-container-mobile {
   align-content: center;
   text-align: center;
   backdrop-filter: blur(10px);
-  min-width: 50px;
-  min-height: 50px;
-  max-width: 7vw;
-  max-height: 7vw;
+  min-width: 8vw;
+  min-height: 8vw;
+  max-width: 8vw;
+  max-height: 8vw;
   width: 100%;
 }
 
@@ -1032,6 +1029,15 @@ sub-title-container-mobile {
   margin-right: 10vh;
 }
 
+.lockin-button-text-mobile {
+  font-size: 100px !important;
+  text-shadow: 4px 4px 2px rgba(255, 0, 157, 1);
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: 100;
+  border: none;
+  background-color: transparent;
+}
+
 @media (width: 390px) and (height: 844px) {
 
   .versioning {
@@ -1062,12 +1068,12 @@ sub-title-container-mobile {
   .candycon-logo {
     margin-top: 100px;
     width: 100px;
-    margin-right: 85px;
+    margin-right: 3vh;
   }
 
   .candycon-slogan {
     margin-top: -20px !important;
-    margin-right: 85px;
+    margin-right: 3vh;
     display: inherit;
     transform: scale(.7);
   }
@@ -1113,7 +1119,10 @@ sub-title-container-mobile {
   }
 
   .randomizer-container {
-    margin-left: -380px;
+    transform: scale(.7);
+  }
+
+  .randomizer-container-mobile {
     margin-top: 150px;
     transform: scale(.7);
   }

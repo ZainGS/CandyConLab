@@ -135,7 +135,7 @@
     -->
   </mat-sidenav>
 
-  <mat-sidenav-content class="base-sidenav-pattern" style="white-space: nowrap; overflow: hidden;">
+  <mat-sidenav-content class="base-sidenav-pattern" style="overflow: hidden;">
 
     <!-- Background Video -->
     <video #videoPlayer id="vid" autoplay muted loop onloadedmetadata="this.muted=true" preload="auto" class="bgVideo">
@@ -163,7 +163,7 @@
                 <span class="shadow-text glow-anim sub-title-text" style="margin-left: 7vw;">POWERED BY // GAMESTOP</span>
 
               </div>
-              <span class="faded-repeat-text" style="margin-left: 7vw; position: absolute; opacity: .2; font-size: 30px; margin-top: -48px;">CREATE. PLAY. REPEAT. CREATE. PLAY. REPEAT. CREATE. PLAY. REPEAT. CREATE. PLAY. REPEAT. CREATE. PLAY. REPEAT.</span>
+              <span class="faded-repeat-text" style="margin-left: 7vw; position: absolute; opacity: .2; font-size: 30px; margin-top: -48px; white-space: nowrap; ">CREATE. PLAY. REPEAT. CREATE. PLAY. REPEAT. CREATE. PLAY. REPEAT. CREATE. PLAY. REPEAT. CREATE. PLAY. REPEAT.</span>
             </div>
 
             <!-- SELECTED ITEMS CELL -->
@@ -298,7 +298,7 @@
             <!-- Tools -->
             <div class="flex-item" style="align-content: end; text-align: -webkit-right; white-space: nowrap; overflow: hidden;">
               <div style="position: absolute; left: 78%; top: 11vw; margin-top: 10px;">
-                <div class="randomizer-container">
+                <div class="randomizer-container-mobile">
                   <!-- Randomizer -->
                   <button class="mat-elevation-z1" (click)="randomize()" style="z-index: 100;  max-width: 80px; max-height: 80px; width: 60px; height: 60px;  transform: scale(.95); background-color: transparent; border: 5px solid rgba(255,255,255,.05); border-radius: 10px; backdrop-filter: blur(10px); ">
                     <img [@rotate-jump]="rotateJumpState" src="assets/dice.svg" alt="randomize icon" style="opacity: .6; margin-left: -6px; transform-origin: center;" width="50" />
@@ -358,7 +358,7 @@
           <div class="flex-container-mobile">
             <!-- Row 0 -->
             <!-- TITLE CELL -->
-            <div class="flex-item-mobile special-overflow" style="border-bottom: double 20px rgba(1,1,1,.1); margin-top: -10px; margin-left: -10px;">
+            <div class="flex-item-mobile special-overflow" style="border-bottom: double 20px rgba(1,1,1,.1); margin-top: -10px; ">
               <div class="noselect nodrag title-container-mobile">
                 <span class="glow" style="color: #FF0095; font-weight:500; white-space:nowrap;">CANDY CON LAB</span>
               </div>
@@ -366,7 +366,7 @@
                 <span class="shadow-text glow-anim-mobile sub-title-text" style="margin-left: 7vw;">BUILD YOUR CONTROLLER</span>
 
               </div>
-              <span class="faded-repeat-text" style="margin-left: 7vw; position: absolute; opacity: .2; font-size: 30px; margin-top: -48px;">CREATE. PLAY. REPEAT. CREATE. PLAY. REPEAT. CREATE. PLAY. REPEAT. CREATE. PLAY. REPEAT. CREATE. PLAY. REPEAT.</span>
+              <span class="faded-repeat-text" style="position: absolute; opacity: .2; font-size: 30px; margin-top: -48px;">CREATE. PLAY. REPEAT. CREATE. PLAY. REPEAT. CREATE. PLAY. REPEAT. CREATE. PLAY. REPEAT. CREATE. PLAY. REPEAT.</span>
             </div>
 
             <!-- SELECTED ITEMS CELL -->
@@ -472,7 +472,7 @@
             </div>
 
             <!-- CONTROLLER AND BRANDING-->
-            <div class="flex-item-mobile" style="align-content: center; margin-top: 8vh;">
+            <div class="flex-item-mobile" style="align-content: center;">
               <div class="controller-container-mobile">
                 <div class="floating-anim">
 
@@ -505,7 +505,7 @@
 
               <!-- CANDY CON Branding: Logo + Slogan -->
               <div class="submit-box-mobile">
-                <button (click)="lockedIn()" class="lockin-button-text"
+                <button (click)="lockedIn()" class="lockin-button-text-mobile"
                         [ngStyle]="{'color' : selectedCount === 4 ? 'deeppink' : 'white',
                             'opacity' : selectedCount=== 4 ? '1' : '.5'}">
                   LOCK IN
