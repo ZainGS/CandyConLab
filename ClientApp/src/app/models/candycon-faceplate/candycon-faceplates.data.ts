@@ -3,7 +3,6 @@ import { CandyconFaceplate } from './candycon-faceplate.model';
 
 var baseUrl = 'https://www.gamestop.com/gaming-accessories/skins/nintendo-switch/products/candy-con-face-plate--';
 export const FACEPLATES: CandyconFaceplate[] = [
-  
   {
     id: -1,
     UPC: 840305903848,
@@ -30,6 +29,22 @@ export const FACEPLATES: CandyconFaceplate[] = [
     imageUrls: ['assets/products/faceplate_onyxblack.png'],
     productUrl: 'https://www.gamestop.com/gaming-accessories/controllers/nintendo-switch/products/candy-con-combo-pack-controller-kit---onyx-black/402254.html',
     partColor: 'Onyx Black',
+    price: 14.99,
+    productLength: 6.89,
+    productWidth: 1.38,
+    productHeight: 5.31,
+    productWeight: 0.33
+  },
+  {
+    id: -6,
+    UPC: 840305903831,
+    brandName: 'CANDY CON',
+    vendorPartNumber: '24VG-GSPL-CC-Combo-OceanMirage',
+    name: 'CANDY CON Faceplate',
+    description: 'Welcome to CANDY CON, the newest line in customizable controllers. Grab your BASE Customizable Controller, Pick D-Pads, Thumb Sticks, and a Face Plate and create your own unique Controller. Craft your CANDY CON masterpiece and show off your incredible combos in style. The FACE PLATE comes ready to add to your new CANDY CON Controller, over 10 colors to choose from to easily mix and match. CREATE. PLAY. REPEAT Mix with CANDY CON BASE UNIT, sold separately',
+    imageUrls: ['assets/products/faceplate_oceanmirage.png'],
+    productUrl: 'https://www.gamestop.com/gaming-accessories/controllers/nintendo-switch/products/candy-con-combo-pack-controller-kit---ocean-mirage/402224.html',
+    partColor: 'Ocean Mirage',
     price: 14.99,
     productLength: 6.89,
     productWidth: 1.38,
@@ -195,5 +210,53 @@ export const FACEPLATES: CandyconFaceplate[] = [
     productWidth: 1.38,
     productHeight: 6.89,
     productWeight: 	0.18
+  },
+  {
+    id: -5,
+    UPC: 840305903817,
+    brandName: 'CANDY CON',
+    vendorPartNumber: '24VG-GSPL-CC-PRP-LavendarHaze',
+    name: 'CANDY CON Faceplate',
+    description: 'Welcome to CANDY CON, the newest line in customizable controllers. Grab your BASE Customizable Controller, Pick D-Pads, Thumb Sticks, and a Face Plate and create your own unique Controller. Craft your CANDY CON masterpiece and show off your incredible combos in style. The FACE PLATE comes ready to add to your new CANDY CON Controller, over 10 colors to choose from to easily mix and match. CREATE. PLAY. REPEAT Mix with CANDY CON BASE UNIT, sold separately',
+    imageUrls: ['assets/products/faceplate_lavenderhaze.png'],
+    productUrl: 'https://www.gamestop.com/gaming-accessories/controllers/nintendo-switch/products/candy-con-player-ready-pack-controller---lavendar-haze/402222.html',
+    partColor: 'Lavender Haze',
+    price: 49.99,
+    productLength: 6.89,
+    productWidth: 2.95,
+    productHeight: 5.31,
+    productWeight: 0.66
+  },
+  {
+    id: -3,
+    UPC: 840305903848,
+    brandName: 'CANDY CON',
+    vendorPartNumber: '24VG-GSPL-CC-PRP-SolarOrbit',
+    name: 'CANDY CON Faceplate',
+    description: 'Welcome to CANDY CON, the newest line in customizable controllers. Grab your BASE Customizable Controller, Pick D-Pads, Thumb Sticks, and a Face Plate and create your own unique Controller. Craft your CANDY CON masterpiece and show off your incredible combos in style. The FACE PLATE comes ready to add to your new CANDY CON Controller, over 10 colors to choose from to easily mix and match. CREATE. PLAY. REPEAT Mix with CANDY CON BASE UNIT, sold separately',
+    imageUrls: ['assets/products/faceplate_solarorbit.png'],
+    productUrl: 'https://www.gamestop.com/gaming-accessories/controllers/nintendo-switch/products/candy-con-player-ready-pack-controller---solar-orbit/402223.html',
+    partColor: 'Solar Orbit',
+    price: 49.99,
+    productLength: 6.89,
+    productWidth: 2.95,
+    productHeight: 5.31,
+    productWeight: 0.66
+  },
+  {
+    id: -4,
+    UPC: 840305904593,
+    brandName: 'CANDY CON',
+    vendorPartNumber: '24VG-GSPL-CC-PRP-LiquidMetal',
+    name: 'CANDY CON Faceplate',
+    description: 'Welcome to CANDY CON, the newest line in customizable controllers. Grab your BASE Customizable Controller, Pick D-Pads, Thumb Sticks, and a Face Plate and create your own unique Controller. Craft your CANDY CON masterpiece and show off your incredible combos in style. The FACE PLATE comes ready to add to your new CANDY CON Controller, over 10 colors to choose from to easily mix and match. CREATE. PLAY. REPEAT Mix with CANDY CON BASE UNIT, sold separately',
+    imageUrls: ['assets/products/faceplate_liquidmetal.png'],
+    productUrl: 'https://www.gamestop.com/gaming-accessories/controllers/nintendo-switch/products/candy-con-player-ready-pack-controller---liquid-metal/402253.html',
+    partColor: 'Liquid Metal',
+    price: 49.99,
+    productLength: 6.89,
+    productWidth: 2.95,
+    productHeight: 5.31,
+    productWeight: 0.66
   },
 ];

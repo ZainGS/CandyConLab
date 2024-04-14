@@ -88,7 +88,10 @@ export class HomeComponent {
     'Tiara Teal': '#08ffb1',
     'Toxic Waste': '#00ff1a',
     'Electro City': '#a30036',
-    'Retro Shapes': '#d9d9d9'
+    'Retro Shapes': '#d9d9d9',
+    'Liquid Metal': '#ededed',
+    'Lavender Haze': '#efe0ff',
+    'Solar Orbit': '#426CA6'
   };
 
   // For Sidenav and Parts

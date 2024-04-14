@@ -459,6 +459,15 @@ $light-red-theme: mat.define-light-theme((
     color: white !important;
   }
 
+  .sidenav-button {
+    color: white !important;
+  }
+
+  .sidenav-button:hover {
+    color: deeppink !important;
+    background-color: black !important;
+  }
+
   span.material-symbols-outlined {
     color: rgba(255,255,255,.7) !important;
   }
@@ -798,9 +807,9 @@ $light-red-theme: mat.define-light-theme((
   }
 
   .mat-mdc-dialog-container .mdc-dialog__surface {
-      background-color: transparent !important;
-      backdrop-filter: blur(35px) brightness(4);
-      overflow: visible !important;
+    background-color: transparent !important;
+    backdrop-filter: blur(35px) brightness(4);
+    overflow: visible !important;
   }
 
   .mdc-menu-surface {
