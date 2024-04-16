@@ -22,10 +22,18 @@ html {
   box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
 }
 
+.navbar-item {
+    color: white;
+    will-change: color;
+}
+
+.navbar-item:hover {
+    color: deeppink !important;
+}
+
 @media (max-width: 950px) {
 
-    .five-percent-digital {
-      display: none;
+  .five-percent-digital {
+    display: none;
   }
-
 }

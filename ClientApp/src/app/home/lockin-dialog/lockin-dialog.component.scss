@@ -88,6 +88,12 @@ button {
   width: fit-content;
   height: 70px;
   line-height: .9;
+  will-change: transform, brightness;
+}
+
+.view-button:hover {
+  filter: brightness(1.25);
+  transform: scale(1.025);
 }
 
 .overflow-image {
@@ -98,6 +104,42 @@ button {
   transform: scale(.3);
   border-radius: 50px;
   filter: drop-shadow(20px 20px 0.45rem black);
+  will-change: transform, filter;
+}
+
+.overflow-image:hover {
+  filter: brightness(1.2);
+  transform: scale(.304);
+}
+
+/*.details-image {
+  position: absolute;
+  bottom: -53vw;*/ /* Adjust as necessary */
+  /*right: -15vw;*/ /* Adjust as necessary */
+  /*z-index: 1000;*/ /* Ensure it's above the dialog but below modal overlay if needed */
+  /*transform: scale(.2);
+  border-radius: 50px;
+  filter: drop-shadow(20px 20px 0.45rem black) contrast(1.25);
+}*/
+
+/*.promo-image {
+  position: absolute;
+  bottom: 0vw;*/ /* Adjust as necessary */
+  /*right: 22vw;*/ /* Adjust as necessary */
+  /*z-index: 1000;*/ /* Ensure it's above the dialog but below modal overlay if needed */
+  /*transform: scale(.4);
+  border-radius: 50px;
+  filter: drop-shadow(20px 20px 0.45rem black) contrast(1.5);
+}*/
+
+.promo-image {
+  position: absolute;
+  bottom: -300px; /* Adjust as necessary */
+  right: -800px; /* Adjust as necessary */
+  z-index: 1000; /* Ensure it's above the dialog but below modal overlay if needed */
+  transform: scale(.35);
+  border-radius: 50px;
+  filter: drop-shadow(20px 20px 0.45rem black) contrast(1.5);
 }
 
 @media (max-width: 1800px) {

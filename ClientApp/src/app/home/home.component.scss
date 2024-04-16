@@ -261,6 +261,7 @@ min-height: 10vh;
 border-radius: 10px;
 border-width: 0px;
 background-color: white;
+will-change: background-color;
 }
 
 .sidenav-expansion-button:hover {
@@ -270,6 +271,7 @@ background-color: deeppink;
 .floating-anim {
 transform: rotateZ(-2.4deg) rotateY(-20deg);
 animation: rotating 6s ease-in-out infinite alternate;
+will-change: transform;
 }
 
 @keyframes rotating {
@@ -279,16 +281,17 @@ transform: rotateZ(1.2deg) rotateY(20deg);
 }
 
 .text-jump-anim span {
-position: relative;
-font-size: 18px;
-top: 0px;
-display: inline-block;
-animation: bounce 0.3s ease infinite alternate;
+  position: relative;
+  font-size: 18px;
+  top: 0px;
+  display: inline-block;
+  animation: bounce 0.3s ease infinite alternate;
+  will-change: transform;
 }
 
 @keyframes bounce {
 100% {
-top: -2px;
+transform: translateY(-2px);
 /*
 text-shadow: 0 1px #ccc, 
           0 2px #ccc, 
@@ -359,7 +362,7 @@ right: 0;
 bottom: 0;
 min-width: 100%;
 min-height: 100%;
-filter: brightness(.95) blur(8px);
+filter: brightness(.85) blur(8px);
 }
 
 .title-container {
@@ -378,6 +381,7 @@ text-align: center;
 -webkit-animation: glow 2s ease-in-out infinite alternate;
 -moz-animation: glow 1s ease-in-out infinite alternate;
 animation: glow 2s ease-in-out infinite alternate;
+will-change: text-shadow;
 }
 
 .glow-anim-mobile {
@@ -449,16 +453,15 @@ mat-expansion-panel-header:hover mat-panel-title {
 .tool-image {
   opacity: .9;
   transform-origin: center;
+  will-change: opacity;
 }
 
 .reset-button:hover .tool-image {
   opacity: 1;
-  transform-origin: center;
 }
 
 .randomizer-button:hover .tool-image {
   opacity: 1;
-  transform-origin: center;
 }
 
 .cycle-container {
@@ -480,13 +483,11 @@ mat-expansion-panel-header:hover mat-panel-title {
   transform-origin: center;
   opacity: .9;
   filter: sepia(1) hue-rotate(220deg) saturate(50) brightness(8);
+  will-change: opacity;
 }
 
 .cycle-container:hover .cycle-image {
-  transform: scale(1);
-  transform-origin: center;
   opacity: 1;
-  filter: sepia(1) hue-rotate(220deg) saturate(50) brightness(8);
 }
 
 .modern-dpad-image {
@@ -504,6 +505,7 @@ mat-expansion-panel-header:hover mat-panel-title {
 .toggle-image {
   transform: rotate(-90deg) scale(1);
   opacity: .7;
+  will-change: opacity;
 }
 
 .toggle-image:hover {
@@ -524,16 +526,7 @@ mat-expansion-panel-header:hover mat-panel-title {
 }
 
 .mat-mdc-slider.mat-accent:hover {
-  --mdc-slider-handle-color: rgba(175, 195, 201,0);
-  --mdc-slider-focus-handle-color: rgba(255,255,255,0);
-  --mdc-slider-focus-handle--shadow-color: rgba(255,255,255,0);
   --mdc-slider-active-track-color: rgba(255,255,255,1);
-  --mdc-slider-inactive-track-color: rgba(255,255,255,.5);
-  --mdc-slider-inactive-track-height: 16px;
-  --mdc-slider-inactive-track-shape: 8px;
-  --mdc-slider-active-track-height: 8px;
-  --mdc-slider-handle-height: 8px;
-  --mdc-slider-handle-width: 8px;
 }
 
 .mat-ripple .mat-mdc-focus-indicator .mat-ripple-element .mat-mdc-slider-active-ripple {
@@ -1453,4 +1446,9 @@ sub-title-container-mobile {
   .desktop-container {
     display: block; /* Show desktop container in landscape mode */
   }
+}
+
+.lockin-button-text:hover {
+  filter: brightness(1.2);
+  transform: scale(1.01);
 }

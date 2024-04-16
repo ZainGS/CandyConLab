@@ -90,9 +90,19 @@
                     mat-button mat-stroked-button
                     (mouseenter)='mouseEnterProduct(product)'
                     (mouseleave)='mouseLeaveProduct(product)'
-                    (click)="sidebarClicked(product)">
+                    (click)="sidebarOptionClicked(product)">
               <span style="display: contents; flex-shrink: 1; white-space: nowrap;">{{product.partColor.toUpperCase()}}</span>
+              <span *ngIf="!product.isComboPack && !product.isPlayerReadyPack" style="margin-left: auto; z-index: 1000; opacity: .15;">
+                <!-- <img src="assets/faceplate.svg" /> -->
+              </span>
+              <span *ngIf="product.isComboPack" style="margin-left: auto; z-index: 1000;" matTooltip="This item is part of a CANDY CON Combo Pack (Faceplate, Thumbsticks, & DPads included)" matTooltipPosition="right">
+                <img class="detail-hover" style="transform: scale(.8);" src="assets/warning.svg" />
+              </span>
+              <span *ngIf="product.isPlayerReadyPack" style="margin-left: auto; z-index: 1000;" matTooltip="This item is part of a Player Ready Pack (Base Unit, Faceplate, Thumbsticks, & DPads included)" matTooltipPosition="right">
+              <img class="detail-hover" style="transform: scale(.7);" src="assets/asterisk.svg" />
+              </span>
             </button>
+            
             <button *ngIf="category.name == 'LEFT THUMBSTICKS'"
                     style="display: flex; align-items: center; flex-wrap: nowrap; width: 100%; border-radius: 0px; border-left: 2px solid; justify-content: flex-start;"
                     [ngStyle]="{'background-color' : product.id == selectedLeftThumbstick?.id ? '#121212' : '#212121',
@@ -101,7 +111,7 @@
                     mat-button mat-stroked-button
                     (mouseenter)='mouseEnterProduct(product, "left")'
                     (mouseleave)='mouseLeaveProduct(product, "left")'
-                    (click)="sidebarClicked(product, 'left')">
+                    (click)="sidebarOptionClicked(product, 'left')">
               <span style="display: contents; flex-shrink: 1; white-space: nowrap;">{{product.partColor.toUpperCase()}}</span>
             </button>
             <button *ngIf="category.name == 'RIGHT THUMBSTICKS'"
@@ -112,7 +122,7 @@
                     mat-button mat-stroked-button
                     (mouseenter)='mouseEnterProduct(product, "right")'
                     (mouseleave)='mouseLeaveProduct(product, "right")'
-                    (click)="sidebarClicked(product, 'right')">
+                    (click)="sidebarOptionClicked(product, 'right')">
               <span style="display: contents; flex-shrink: 1; white-space: nowrap;">{{product.partColor.toUpperCase()}}</span>
             </button>
             <button *ngIf="category.name == 'DPADS'"
@@ -123,7 +133,7 @@
                     mat-button mat-stroked-button
                     (mouseenter)='mouseEnterProduct(product)'
                     (mouseleave)='mouseLeaveProduct(product)'
-                    (click)="sidebarClicked(product)">
+                    (click)="sidebarOptionClicked(product)">
               <span style="display: contents; flex-shrink: 1; white-space: nowrap;">{{product.partColor.toUpperCase()}}</span>
             </button>
           </ng-container>
@@ -144,7 +154,7 @@
 
     <!-- Background Video -->
     <video #videoPlayer id="vid" autoplay muted loop onloadedmetadata="this.muted=true" preload="auto" class="bgVideo">
-      <source src="https://cclab.blob.core.windows.net/part-images/bg_video.mp4" type="video/mp4">
+      <source src="https://cclab.blob.core.windows.net/part-images/bg_video_compressed.mp4" type="video/mp4">
     </video>
 
     <!-- Video Loading Overlay -->
@@ -238,7 +248,7 @@
                   </div>
                   <!-- DPAD Switcher -->
                   <div class="selection-box-setting">
-                    <div class="mat-elevation-z3" style="max-width: 3vw; margin-left: 3vw; border-radius: 10px; padding-top: 5px; padding-bottom: 5px;">
+                    <div class="mat-elevation-z3" style="max-width: 60px; margin-left: 3.25vw; border-radius: 10px; padding-top: 5px; padding-bottom: 5px;">
                       <!-- Top Toggle: Classic DPad -->
                       <div>
                         <img src="assets/classic_dpad.svg" alt="visibility icon" class="classic-dpad-image" width="24px" />

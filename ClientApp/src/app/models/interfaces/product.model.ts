@@ -18,4 +18,8 @@ export interface Product {
   productHeight: number;
   // lbs
   productWeight: number;
+
+  // For bundle checks
+  isPlayerReadyPack?: boolean;
+  isComboPack?: boolean;
 }

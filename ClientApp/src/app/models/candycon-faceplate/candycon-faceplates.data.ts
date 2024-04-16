@@ -17,7 +17,8 @@ export const FACEPLATES: CandyconFaceplate[] = [
     productLength: 6.89,
     productWidth: 1.38,
     productHeight: 5.31,
-    productWeight: 0.33
+    productWeight: 0.33,
+    isComboPack: true
   },
   {
     id: -2,
@@ -33,7 +34,8 @@ export const FACEPLATES: CandyconFaceplate[] = [
     productLength: 6.89,
     productWidth: 1.38,
     productHeight: 5.31,
-    productWeight: 0.33
+    productWeight: 0.33,
+    isComboPack: true
   },
   {
     id: -6,
@@ -49,7 +51,8 @@ export const FACEPLATES: CandyconFaceplate[] = [
     productLength: 6.89,
     productWidth: 1.38,
     productHeight: 5.31,
-    productWeight: 0.33
+    productWeight: 0.33,
+    isComboPack: true
   },
   {
     id: 1,
@@ -225,7 +228,8 @@ export const FACEPLATES: CandyconFaceplate[] = [
     productLength: 6.89,
     productWidth: 2.95,
     productHeight: 5.31,
-    productWeight: 0.66
+    productWeight: 0.66,
+    isPlayerReadyPack: true
   },
   {
     id: -3,
@@ -241,7 +245,8 @@ export const FACEPLATES: CandyconFaceplate[] = [
     productLength: 6.89,
     productWidth: 2.95,
     productHeight: 5.31,
-    productWeight: 0.66
+    productWeight: 0.66,
+    isPlayerReadyPack: true
   },
   {
     id: -4,
@@ -257,6 +262,7 @@ export const FACEPLATES: CandyconFaceplate[] = [
     productLength: 6.89,
     productWidth: 2.95,
     productHeight: 5.31,
-    productWeight: 0.66
+    productWeight: 0.66,
+    isPlayerReadyPack: true
   },
 ];

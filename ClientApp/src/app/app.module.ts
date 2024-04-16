@@ -21,6 +21,7 @@ import { MatSliderModule } from '@angular/material/slider';
 import { MatRippleModule } from '@angular/material/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 
 
@@ -46,6 +47,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatCardModule,
     DragDropModule,
     MatExpansionModule,
+    MatTooltipModule,
     BrowserAnimationsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },

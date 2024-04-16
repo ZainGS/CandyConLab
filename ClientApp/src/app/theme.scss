@@ -461,15 +461,29 @@ $light-red-theme: mat.define-light-theme((
 
   .sidenav-button {
     color: white !important;
+    will-change: color, background-color;
+    transform: translateZ(0);
+    will-change: background-color, color;
+
+    .detail-hover {
+      opacity: .1;
+    }
   }
 
   .sidenav-button:hover {
     color: deeppink !important;
     background-color: black !important;
+    transform: translateZ(0);
+    will-change: background-color, color;
+
+    .detail-hover {
+      filter: invert(47%) sepia(94%) saturate(2770%) hue-rotate(307deg) brightness(85%) contrast(180%);
+      opacity: 1;
+    }
   }
 
-  span.material-symbols-outlined {
-    color: rgba(255,255,255,.7) !important;
+  .mat-mdc-button .mat-mdc-button-touch-target, .mat-mdc-unelevated-button .mat-mdc-button-touch-target, .mat-mdc-raised-button .mat-mdc-button-touch-target, .mat-mdc-outlined-button .mat-mdc-button-touch-target span.material-symbols-outlined {
+    height: min-content !important;
   }
 
   input {

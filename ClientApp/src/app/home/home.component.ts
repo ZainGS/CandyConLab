@@ -4,7 +4,7 @@ import { THUMBSTICKS } from '../models/candycon-thumbstick/candycon-thumbsticks.
 import { DPADS } from '../models/candycon-dpad/candycon-dpads.data';
 import { FACEPLATES } from '../models/candycon-faceplate/candycon-faceplates.data';
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import { MatDialog } from '@angular/material/dialog';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { LockinDialogComponent } from './lockin-dialog/lockin-dialog.component';
 import { MatDrawerMode } from '@angular/material/sidenav';
 
@@ -124,6 +124,9 @@ export class HomeComponent {
   // For dark/light mode theming
   mode = '#fff';
 
+  // Lock In Dialog
+  dialogRef?: MatDialogRef<LockinDialogComponent>;
+
   dynamicSidenavContentStyle = {
     'background': 'conic-gradient(from -45deg at calc(100%/3) calc(100%/3), #ffffff 90deg, #0000 0), conic-gradient(from -135deg at calc(100%/3) calc(2*100%/3), #ffffff 90deg, #fcfbfe 0 135deg, #0000 0), conic-gradient(from 135deg at calc(2*100%/3) calc(2*100%/3), #ffffff 90deg, #fcfbfe 0 135deg, #0000 0), conic-gradient(from 45deg at calc(2*100%/3) calc(100%/3), #ffffff 90deg, #fcfbfe 0 135deg, #0000 0,#ffffff 0 225deg,#fcfbfe 0)',
     'background-size': '40px 40px'
@@ -133,35 +136,6 @@ export class HomeComponent {
   constructor(private themeService: ThemeService, public dialog: MatDialog) {
     this.adjustSidenavMode();
   }
-
-  /*
-  @ViewChild('videoPlayer') videoPlayer!: ElementRef<HTMLVideoElement>;
-  isVideoLoading: boolean = true;
-    
-  ngBeforeViewInit(): void {
-    if (this.videoPlayer.nativeElement.readyState >= 1) {
-      this.initializeComponent();
-    }
-  }
-
-  ngAfterViewInit(): void {
-
-    // Check if the video is already loaded
-    if (this.videoPlayer.nativeElement.readyState >= 1) {
-      this.initializeComponent();
-    }
-    // Use addEventListener to attach the loadedmetadata event handler
-    // can also try canplaythrough
-    this.videoPlayer.nativeElement.addEventListener('loadedmetadata', () => {
-      this.initializeComponent();
-    });
-  }
-
-  initializeComponent() {
-    this.isVideoLoading = false;
-  }
-
-  */
 
   // Listen to window resize events
   @HostListener('window:resize', ['$event'])
@@ -175,6 +149,12 @@ export class HomeComponent {
   }
 
   ngOnInit(): void {
+
+    // Pre-instantiate Lock In dialog
+    this.dialogRef = this.dialog.open(LockinDialogComponent, { disableClose: true });
+    this.dialogRef.close(); // immediately close
+
+    // Set initial state
     this.updateSelectedCount();
     this.expandedCategory = "FACEPLATES";
     localStorage.getItem('mode')?.includes('dark') ? this.mode = 'black' : this.mode = 'white';
@@ -185,13 +165,14 @@ export class HomeComponent {
   }
 
   openDialog(controllerData: any): void {
-    const dialogRef = this.dialog.open(LockinDialogComponent, {
+
+    this.dialogRef = this.dialog.open(LockinDialogComponent, {
       width: '600px',
       data: controllerData,
       panelClass: 'dialog-container'
     });
 
-    dialogRef.afterClosed().subscribe(result => {
+    this.dialogRef.afterClosed().subscribe(result => {
       // Handle dialog close result if needed
     });
   }
@@ -220,7 +201,7 @@ export class HomeComponent {
     }
   }
 
-  sidebarClicked(product: any, type?: string): void {
+  sidebarOptionClicked(product: any, type?: string): void {
 
     if (product.name.includes('Faceplate')) {
 
