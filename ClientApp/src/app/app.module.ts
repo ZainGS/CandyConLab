@@ -22,6 +22,7 @@ import { MatRippleModule } from '@angular/material/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { AlertDialogComponent } from './home/alert-dialog/alert-dialog.component';
 
 
 
@@ -30,7 +31,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     AppComponent,
     NavMenuComponent,
     HomeComponent,
-    LockinDialogComponent
+    LockinDialogComponent,
+    AlertDialogComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

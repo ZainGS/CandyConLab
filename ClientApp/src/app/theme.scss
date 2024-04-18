@@ -826,6 +826,14 @@ $light-red-theme: mat.define-light-theme((
     overflow: visible !important;
   }
 
+  .alert-dialog .mat-mdc-dialog-container .mdc-dialog__surface {
+    //background-color: deeppink !important;
+    background-color: transparent !important;
+    backdrop-filter: blur(35px) brightness(4);
+    box-shadow: 0 0 8px 10px rgba(255, 255, 255, 0.1);
+    overflow: visible !important;
+  }
+
   .mdc-menu-surface {
     background-color: map-get($primary, 600) !important;
     //background-color: #5e5e5e !important;

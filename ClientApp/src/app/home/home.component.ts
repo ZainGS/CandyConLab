@@ -7,6 +7,7 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { LockinDialogComponent } from './lockin-dialog/lockin-dialog.component';
 import { MatDrawerMode } from '@angular/material/sidenav';
+import { AlertDialogComponent } from './alert-dialog/alert-dialog.component';
 
 type ColorDictionary = {
   [key: string]: string;
@@ -133,7 +134,7 @@ export class HomeComponent {
   };
 
 
-  constructor(private themeService: ThemeService, public dialog: MatDialog) {
+  constructor(private themeService: ThemeService, public dialog: MatDialog, public alertDialog: MatDialog) {
     this.adjustSidenavMode();
   }
 
@@ -149,6 +150,14 @@ export class HomeComponent {
   }
 
   ngOnInit(): void {
+
+    // Initial alert
+    /*
+    this.alertDialog.open(AlertDialogComponent, {
+      width: '600px',
+      panelClass: 'alert-dialog'
+    });
+    */
 
     // Pre-instantiate Lock In dialog
     this.dialogRef = this.dialog.open(LockinDialogComponent, { disableClose: true });
