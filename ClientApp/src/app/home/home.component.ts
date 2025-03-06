@@ -220,7 +220,7 @@ export class HomeComponent {
       }
       else {
         this.selectedFaceplate = product;
-        this.faceplateUrl = 'assets/products/faceplate_' + this.selectedFaceplate.partColor.toLowerCase().replace(/\s/g, '') + '.png';
+        this.faceplateUrl = 'assets/products/faceplate_' + this.selectedFaceplate.partColor.toLowerCase().replace(/\s/g, '') + '.webp';
       }
     }
     else if (product.name.includes('Thumb Stick') && type == 'left') {
@@ -231,7 +231,7 @@ export class HomeComponent {
       }
       else {
         this.selectedLeftThumbstick = product;
-        this.thumbstickLeftUrl = 'assets/products/thumbsticks_' + this.selectedLeftThumbstick.partColor.toLowerCase().replace(/\s/g, '') + '.png';
+        this.thumbstickLeftUrl = 'assets/products/thumbsticks_' + this.selectedLeftThumbstick.partColor.toLowerCase().replace(/\s/g, '') + '.webp';
       }
     }
     else if (product.name.includes('Thumb Stick') && type == 'right') {
@@ -241,7 +241,7 @@ export class HomeComponent {
       }
       else {
         this.selectedRightThumbstick = product;
-        this.thumbstickRightUrl = 'assets/products/thumbsticks_' + this.selectedRightThumbstick.partColor.toLowerCase().replace(/\s/g, '') + '.png';
+        this.thumbstickRightUrl = 'assets/products/thumbsticks_' + this.selectedRightThumbstick.partColor.toLowerCase().replace(/\s/g, '') + '.webp';
       }
     }
     else if (product.name.includes('DPad')) {
@@ -252,7 +252,7 @@ export class HomeComponent {
       }
       else {
         this.selectedDPad = product;
-        this.dpadUrl = 'assets/products/dpad_' + this.selectedDPad.partColor.toLowerCase().replace(/\s/g, '') + '.png';
+        this.dpadUrl = 'assets/products/dpad_' + this.selectedDPad.partColor.toLowerCase().replace(/\s/g, '') + '.webp';
       }
     }
     this.updateSelectedCount();
@@ -315,10 +315,10 @@ export class HomeComponent {
     this.selectedDPad = this.categories[3].products[Math.floor(Math.random() * this.categories[3].products.length)];
 
 
-    this.faceplateUrl = 'assets/products/faceplate_' + this.selectedFaceplate?.partColor?.toLowerCase().replace(/\s/g, '') + '.png';
-    this.thumbstickLeftUrl = 'assets/products/thumbsticks_' + this.selectedLeftThumbstick?.partColor?.toLowerCase().replace(/\s/g, '') + '.png';
-    this.thumbstickRightUrl = 'assets/products/thumbsticks_' + this.selectedRightThumbstick?.partColor?.toLowerCase().replace(/\s/g, '') + '.png';
-    this.dpadUrl = 'assets/products/dpad_' + this.selectedDPad?.partColor?.toLowerCase().replace(/\s/g, '') + '.png';
+    this.faceplateUrl = 'assets/products/faceplate_' + this.selectedFaceplate?.partColor?.toLowerCase().replace(/\s/g, '') + '.webp';
+    this.thumbstickLeftUrl = 'assets/products/thumbsticks_' + this.selectedLeftThumbstick?.partColor?.toLowerCase().replace(/\s/g, '') + '.webp';
+    this.thumbstickRightUrl = 'assets/products/thumbsticks_' + this.selectedRightThumbstick?.partColor?.toLowerCase().replace(/\s/g, '') + '.webp';
+    this.dpadUrl = 'assets/products/dpad_' + this.selectedDPad?.partColor?.toLowerCase().replace(/\s/g, '') + '.webp';
 
     this.updateSelectedCount();
   }
